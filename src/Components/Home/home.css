@@ -1,0 +1,28 @@
+.bounce {
+   
+    background-color: #3498db00;
+    
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    /* 0%, 20%, 50%, 80%, 100% {
+        transform: translateY(50px);
+    }
+    40% {
+        transform: translateY(-50px);
+    }
+    60% {
+        transform: translateY(-50px);
+    } */
+
+    0%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
