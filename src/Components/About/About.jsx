@@ -51,16 +51,16 @@ stakeholders to bring ideas to life.</p>
 
 <h3 className="border-b-4 border-dotted w-full text-2xl font-semibold text-orange-600 pb-2">Experience :</h3>
  
-<p className="text-xl font-semibold"><a href="https://flexsoftr.com/our-team/" className="text-sky-600 text-3xl font-bold">FlexSoftr</a> , Dhaka — React.js Developer</p>
+<p className="text-xl font-semibold"><a href="https://flexsoftr.com/our-team/" className="text-sky-400 hover:text-indigo-500 text-3xl font-bold underline">FlexSoftr</a> , Dhaka — React.js Developer</p>
 <p className="text-xl font-semibold">As a React.js developer, I'll build UIs, manage state,
 optimize performance, integrate APIs, collaborate with
 teams, and ensure code quality.</p>
 <p className="text-xl font-semibold">May 2024 - PRESENT</p>
 
 <div className="flex flex-row justify-start gap-5">
-<FaFacebook className="h-10 text-orange-500 w-10" />
-<FaGithub className="h-10 text-orange-500 w-10" />
-<FaLinkedin className="h-10 text-orange-500 w-10" />
+<a href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL"><FaFacebook className="h-10 text-orange-500 w-10" /></a>
+ <a href="https://github.com/dashboard"><FaGithub className="h-10 text-orange-500 w-10" /></a> 
+<a href="https://www.linkedin.com/uas/login-submit"><FaLinkedin className="h-10 text-orange-500 w-10" /></a>
 
 </div>
 
