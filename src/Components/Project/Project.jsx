@@ -7,7 +7,7 @@ import img4 from '../../../public/images/Screenshot 2024-07-16 123221.png'
 
 const Project = () => {
     return (
-        <div className="bg-[#1e2c12] min-h-screen pt-28 px-10 pb-10 text-white">
+        <div className="bg-[#1e2c12] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white">
              <h2 className="text-center text-5xl font-semibold">Projects</h2>
              <p className="text-center mt-7 font-semibold text-lg">Below are the projects on React,MongoDB,Node js!</p>
 
@@ -15,7 +15,7 @@ const Project = () => {
 
 
              <Link to={'https://hospital-mu-six.vercel.app'}>
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48 w-full"
       src={img1}
@@ -24,14 +24,14 @@ const Project = () => {
   <div className="card-body bg-[#232222] rounded-b-lg">
     <h2 className="card-title">
     MediPro
-      <div className="badge badge-info">Hospital</div>
+      <div className="badge badge-success text-white">Hospital</div>
       
     </h2>
     <p>A responsive Medical Hospital Website using Next.js, React, MongoDB.</p>
     <div className="card-actions justify-end">
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
+      <div className="badge bg-green-600 pb-[2px]  badge-outline">React</div>
+      <div className="badge bg-green-600 pb-[2px]  badge-outline">Next Js</div>
+      <div className="badge bg-green-600 pb-[2px]  badge-outline">MongoDB</div>
     </div>
   </div>
 </div>
@@ -41,7 +41,7 @@ const Project = () => {
 
 
              <Link to={'https://trendy-threads-clothing.web.app'}>
-<div className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48"
       src={img}
@@ -67,7 +67,7 @@ const Project = () => {
 
 
              <Link to={'https://blood-donation-1ed49.web.app'}>
-<div className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48"
       src={img2}
@@ -90,7 +90,7 @@ const Project = () => {
 </Link>
 
 <Link to={'https://resturant-7f83a.web.app'}>
-<div className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48"
       src={img3}
@@ -115,7 +115,7 @@ const Project = () => {
 
 <Link to={'https://tourism-41ddf.web.app'}>
 
-<div className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48 w-full"
       src={img4}
@@ -137,7 +137,7 @@ const Project = () => {
 </Link>
 
 <Link to={'https://review-book-site.netlify.app'}>
-<div className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48 "
       src="https://i.ibb.co/NsWgZGz/Screenshot-2024-07-16-123448.png"

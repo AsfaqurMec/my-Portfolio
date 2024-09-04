@@ -363,7 +363,7 @@ teams, and ensure code quality.</p>
 
 
 <section>
-<div className="bg-[#0e1d0a] min-h-screen pt-28 px-10 pb-10 text-white w-full">
+<div className="bg-[#0e1d0a] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white w-full">
              <h2 data-aos="zoom-in-up" data-aos-duration="1000" className="text-center text-5xl font-semibold">Projects</h2>
              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100" className="text-center mt-7 font-semibold text-lg">Below are the projects on <span className="text-orange-700 text-2xl ml-2"> M E R N Stack!</span></p>
 
@@ -371,7 +371,7 @@ teams, and ensure code quality.</p>
 
 
              <Link to={'https://hospital-mu-six.vercel.app'}>
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48 w-full"
       src={img1}
@@ -380,21 +380,21 @@ teams, and ensure code quality.</p>
   <div className="card-body bg-[#232222] rounded-b-lg">
     <h2 className="card-title">
     MediPro
-      <div className="badge badge-info">Hospital</div>
+      <div className="badge badge-success text-white">Hospital</div>
       
     </h2>
     <p>A responsive Medical Hospital Website using Next.js, React, MongoDB.</p>
     <div className="card-actions justify-end">
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
+      <div className="badge bg-green-600 pb-[2px]  badge-outline">React</div>
+      <div className="badge bg-green-600 pb-[2px]  badge-outline">Next Js</div>
+      <div className="badge bg-green-600 pb-[2px]  badge-outline">MongoDB</div>
     </div>
   </div>
 </div>
 </Link>
 
              <Link to={'https://trendy-threads-clothing.web.app'}>
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48 w-full"
       src={img}
@@ -419,7 +419,7 @@ teams, and ensure code quality.</p>
 
 
 <Link to={'https://blood-donation-1ed49.web.app'}>
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48"
       src={img2}
@@ -442,7 +442,7 @@ teams, and ensure code quality.</p>
 </Link>
 
 <Link to={'https://resturant-7f83a.web.app'}>
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="700" className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="700" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48"
       src={img3}
@@ -467,7 +467,7 @@ teams, and ensure code quality.</p>
 
 <Link to={'https://tourism-41ddf.web.app'}>
 
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="000" className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="000" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48 w-full"
       src={img4}
@@ -489,7 +489,7 @@ teams, and ensure code quality.</p>
 </Link>
 
 <Link to={'https://review-book-site.netlify.app'}>
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card  w-[340px] md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48 "
       src="https://i.ibb.co/NsWgZGz/Screenshot-2024-07-16-123448.png"

@@ -14,7 +14,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-transparent fixed z-50">
+        <div className="navbar backdrop-blur-sm fixed z-50">
         <div className="navbar-start">
         
           <a className="btn bg-transparent border-none text-slate-50  hover:bg-transparent">
