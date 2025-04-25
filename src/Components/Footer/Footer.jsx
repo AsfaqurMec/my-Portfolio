@@ -2,7 +2,7 @@ import logo from '../../../public/images/Preview.png'
 const Footer = () => {
     return (
         <div>
-         <footer className="footer p-10 mt-6 bg-[#163214] text-white ">
+         <footer className="footer p-10  bg-[#08140a] text-white text-xl">
   <aside>
     {/* <img className='w-20 h-20 rounded-sm' src={logo} alt="logo" /> */}
     <img data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" className='h-14 w-[75px] rounded-sm' src={logo} alt="" />
@@ -13,7 +13,7 @@ const Footer = () => {
     <a className="link link-hover font-medium text-gray-300">hamimhamim044@gmail.com</a>
     <a className="link link-hover font-medium text-gray-300">01956230265</a>
     <a className="link link-hover font-medium text-gray-300">01572908354</a>
-  </nav> 
+  </nav>
   <nav>
     <h6 className="footer-title text-lg text-orange-400 opacity-100">Company</h6> 
     <a className="link link-hover font-medium text-gray-300">About Me</a>

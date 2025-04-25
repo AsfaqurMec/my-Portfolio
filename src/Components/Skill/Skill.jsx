@@ -2,7 +2,8 @@
 
 const Skill = () => {
     return (
-        <div className="bg-[#1e2c12] h-auto lg:h-screen pt-28 px-10 pb-10">
+        <>
+        <div className="bg-[#1e2c12] h-auto pt-28 px-10 pb-3">
             <h2 className="text-3xl font-bold text-teal-200 pb-5 border-b-4 border-dotted">My Skills</h2>
 
             <div className=" mt-16 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -54,8 +55,26 @@ const Skill = () => {
 </div>
 
 
-            </div>
+     </div>
+
+            
+
+
         </div>
+
+<div className="bg-[#1e2c12] py-10">
+<h1 className="text-center text-6xl font-semibold text-white mt-10 border-b-4 border-dotted pb-5 mx-10">CMS</h1>
+
+<div className="flex flex-col gap-2 w-[250px] md:w-[450px] mx-10 mt-5 " data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">
+                <div className="flex flex-row justify-between mt-5">
+                  <h3 className="text-white font-semibold">WordPress</h3>
+                  <h3 className="text-white font-semibold">85%</h3>
+                </div>
+                <progress className="progress progress-success w-full md:w-full h-2 rounded-md bg-sky-700" value="85" max="100">HTML</progress>
+              </div>
+
+     </div>
+     </>
     );
 };
 

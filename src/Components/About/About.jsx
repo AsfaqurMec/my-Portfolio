@@ -14,7 +14,7 @@ const About = () => {
              
             <h2 className="text-2xl font-semibold">Front-end Developer</h2>
             <h3 className="border-b-4 border-dotted w-full text-3xl font-semibold text-orange-600 pb-2">Skills :</h3>
-            <p className="text-xl font-semibold ">React | Node Js | Express js | MongoDB | JavaScript | <br /> Css | Html
+            <p className="text-xl font-semibold ">Next.js | React | Node Js | Express js | Mongoose | <br /> MongoDB |  JavaScript | BootStrap | Css | Html
 </p>
 
 <h3 className="border-b-4 border-dotted w-full text-3xl font-semibold text-orange-600 pb-2">Education :</h3>
@@ -51,7 +51,7 @@ stakeholders to bring ideas to life.</p>
 
 <h3 className="border-b-4 border-dotted w-full text-2xl font-semibold text-orange-600 pb-2">Experience :</h3>
  
-<p className="text-xl font-semibold"><a href="https://flexsoftr.com/our-team/" className="text-sky-400 hover:text-indigo-500 text-3xl font-bold underline">FlexSoftr</a> , Dhaka — React.js Developer</p>
+<p className="text-xl font-semibold"><a href="https://flexsoftr.com/our-team/" className="text-sky-400 hover:text-indigo-500 text-3xl font-bold underline">FlexSoftr</a> , Dhaka — Front-End Developer</p>
 <p className="text-xl font-semibold">As a React.js developer, I'll build UIs, manage state,
 optimize performance, integrate APIs, collaborate with
 teams, and ensure code quality.</p>
