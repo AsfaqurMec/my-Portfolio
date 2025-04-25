@@ -22,6 +22,8 @@ import img6 from '../../../public/images/masua.png'
 import img7 from '../../../public/images/Screenshot 2024-12-24 024756.png'
 import img8 from '../../../public/images/Screenshot 2024-12-24 025135.png'
 import img9 from '../../../public/images/Screenshot 2024-12-24 025438.png'
+import asl from '../../../public/images/asl.png'
+import exponential from '../../../public/images/exponential.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import CountUp from 'react-countup';
@@ -40,6 +42,7 @@ import mongodb from '../../../public/images/mongodb.png'
 import mongoose from '../../../public/images/mongoose.png'
 import redux from '../../../public/images/redux-icon-2048x1945-ahvhunxp.png'
 import Typescript from '../../../public/images/Typescript.svg.png'
+
 
 
 const Home = () => { 
@@ -293,7 +296,7 @@ const Home = () => {
               <p data-aos-duration="2000" data-aos-delay="200" data-aos="flip-left" className="text-3xl text-orange-600 font-semibold">Front-end Developer</p>
 
               <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="text-lg font-medium">I'm Asfaqur Rahman, a front-end developer
-                proficient in HTML, CSS, JavaScript, React, Node.js, Next.js, Express.js, MongoDB, Mongoose, Redux
+                proficient in HTML, CSS, JavaScript, React, Node.js, Next.js, Express.js, MongoDB, Mongoose, TypeScript, Redux
                 and Tailwind CSS. With a passion for crafting
                 engaging digital experiences, I specialize in
                 translating designs into seamless, responsive
@@ -443,17 +446,17 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 w-full md:w-[80%] mx-auto my-20">
 
             <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={10} duration={5} />+</h1>
+              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={12} duration={5} />+</h1>
               <h1 className="text-xl">Total Projects</h1>
             </div>
 
             <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={8} duration={5} />+</h1>
+              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={10} duration={5} />+</h1>
               <h1 className="text-xl">Full Stack</h1>
             </div>
 
             <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={3} duration={8} />+</h1>
+              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={5} duration={8} />+</h1>
               <h1 className="text-xl fon">Next Js</h1>
             </div>
              
@@ -468,6 +471,51 @@ const Home = () => {
 
           <div className="flex flex-wrap gap-16 md:gap-10 justify-evenly mt-20 mx-auto w-full">
           
+          <Link to={'https://schedular-asl.vercel.app/'}>
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+                <figure>
+                  <img className="h-48 w-full"
+                    src={asl}
+                    alt="Shoes" />
+                </figure>
+                <div className="card-body bg-[#232222] rounded-b-lg">
+                  <h2 className="card-title">
+                    Smart Class Scheduler ASL
+                    <div className="badge badge-info"></div>
+
+                  </h2>
+                  <p>A smart class scheduling Website using Next.js, React, MongoDB.</p>
+                  <div className="card-actions justify-end">
+                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
+                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
+                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link to={'https://exponential-du.vercel.app/'}>
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+                <figure>
+                  <img className="h-48 w-full"
+                    src={exponential}
+                    alt="Shoes" />
+                </figure>
+                <div className="card-body bg-[#232222] rounded-b-lg">
+                  <h2 className="card-title">
+                    Exponential DU
+                    <div className="badge badge-info"></div>
+
+                  </h2>
+                  <p>A online course Website using Next.js, React, MongoDB.</p>
+                  <div className="card-actions justify-end">
+                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
+                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
+                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
+                  </div>
+                </div>
+              </div>
+            </Link>
 
           <Link to={'https://www.masuafoundation.org/'}>
               <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
