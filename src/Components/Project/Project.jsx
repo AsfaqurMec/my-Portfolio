@@ -12,6 +12,7 @@ import img9 from '../../../public/images/Screenshot 2024-12-24 025438.png'
 import asl from '../../../public/images/asl.png'
 import exponential from '../../../public/images/exponential.png'
 import CountUp from 'react-countup';
+import as from '../../../public/images/as.png';
 const Project = () => {
     return (
         <div className="bg-[#1e2c12] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white">
@@ -46,6 +47,29 @@ const Project = () => {
 
           <h2 className="text-center text-5xl font-semibold mb-5 mt-14">M E R N Stack!</h2>
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
+
+            <Link to={'https://as-global.vercel.app/'}>
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+                <figure>
+                  <img className="h-48 w-full"
+                    src={as}
+                    alt="Shoes" />
+                </figure>
+                <div className="card-body bg-[#232222] rounded-b-lg">
+                  <h2 className="card-title">
+                    AS Global Styles
+                    <div className="badge badge-warning">Garment</div>
+
+                  </h2>
+                  <p>A garment Website using Next.js, React, MongoDB.</p>
+                  <div className="card-actions justify-end">
+                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">React</div>
+                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">Next Js</div>
+                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">MongoDB</div>
+                  </div>
+                </div>
+              </div>
+            </Link>
 
             <Link to={'https://schedular-asl.vercel.app/'}>
                           <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">

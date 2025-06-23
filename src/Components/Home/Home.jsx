@@ -23,6 +23,7 @@ import img7 from '../../../public/images/Screenshot 2024-12-24 024756.png'
 import img8 from '../../../public/images/Screenshot 2024-12-24 025135.png'
 import img9 from '../../../public/images/Screenshot 2024-12-24 025438.png'
 import asl from '../../../public/images/asl.png'
+import as from '../../../public/images/as.png'
 import exponential from '../../../public/images/exponential.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -202,7 +203,7 @@ const Home = () => {
                 <div className="px-8 lg:px-0">
 
                   <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300" className="text-6xl font-bold pb-4">I'm <br className="block md:hidden" />  <span className="name text-[42px] md:text-6xl text-[#0ef] md:pl-4">{text}</span></h1>
-                  <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" className="text-4xl font-bold">A <span>Front-End Web Developer</span></h1>
+                  <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" className="text-4xl font-bold">A <span>MERN Stack Developer</span></h1>
                   <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800" className="py-6 text-2xl">I am a developer & coder. I do it because i like to do it. Hope you like my works.</p>
                   <a data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1000" href="https://docs.google.com/document/d/19gulR31q5tCQXaeCgdP0hzeqGq398_N773mQnJ37rME/edit?usp=sharing"><button className="btn bg-sky-400 hover:bg-amber-600 text-white text-xl lg:text-2xl border-none">Download Resume</button></a>
                   <div className="mt-8 flex flex-row justify-start gap-5">
@@ -274,9 +275,9 @@ const Home = () => {
 
               <img src="images/IMG_E4927@1x_1.jpg" className="w-[25%] rounded-full shadow-2xl object-cover " data-aos-duration="1000" data-aos="flip-left" />
 
-              <h2 className="text-2xl font-semibold">Front-end Developer</h2>
+              <h2 className="text-2xl font-semibold">MERN Stack Developer</h2>
               <h3 data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="border-b-4 border-dotted w-full text-3xl font-semibold text-orange-600 pb-2">Skills :</h3>
-              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400" className="text-xl font-semibold ">Next.js | React | Node Js | Express js | Mongoose | <br /> MongoDB |  JavaScript | BootStrap | Css | Html
+              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400" className="text-xl font-semibold ">Next.js | TypeScript | Redux | React | Node Js | <br /> Express js | Mongoose |  MongoDB |  JavaScript | BootStrap | Css | Html
               </p>
               <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100" className="w-full">
                 <h3 className="border-b-4 border-dotted w-full text-3xl font-semibold text-orange-600 mb-5 pb-2">Education :</h3>
@@ -293,9 +294,9 @@ const Home = () => {
 
             <div className="w-full lg:w-1/2 flex flex-col items-start space-y-5">
 
-              <p data-aos-duration="2000" data-aos-delay="200" data-aos="flip-left" className="text-3xl text-orange-600 font-semibold">Front-end Developer</p>
+              <p data-aos-duration="2000" data-aos-delay="200" data-aos="flip-left" className="text-3xl text-orange-600 font-semibold">MERN Stack Developer</p>
 
-              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="text-lg font-medium">I'm Asfaqur Rahman, a front-end developer
+              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="text-lg font-medium">I'm Asfaqur Rahman, a MERN Stack developer
                 proficient in HTML, CSS, JavaScript, React, Node.js, Next.js, Express.js, MongoDB, Mongoose, TypeScript, Redux
                 and Tailwind CSS. With a passion for crafting
                 engaging digital experiences, I specialize in
@@ -307,8 +308,8 @@ const Home = () => {
 
               <h3 className="border-b-4 border-dotted w-full text-2xl font-semibold text-orange-600 pb-2" data-aos-duration="2000" data-aos-delay="400" data-aos="flip-left">Experience :</h3>
 
-              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="text-xl font-semibold"><a href="https://flexsoftr.com/our-team/" className="text-sky-400 hover:text-indigo-500 text-3xl font-bold underline">FlexSoftr</a> , Dhaka — Front-End Developer</p>
-              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="text-xl font-semibold">As a React.js developer, I'll build UIs, manage state,
+              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="text-xl font-semibold"><a href="https://flexsoftr.com/our-team/" className="text-sky-400 hover:text-indigo-500 text-3xl font-bold underline">FlexSoftr</a> , Dhaka — MERN Stack Developer</p>
+              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="text-xl font-semibold">As a MERN Stack developer, I'll build UIs, manage state,
                 optimize performance, integrate APIs, collaborate with
                 teams, and ensure code quality.</p>
               <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="text-xl font-semibold">May 2024 - PRESENT</p>
@@ -335,13 +336,18 @@ const Home = () => {
 
           <div className=" mt-16 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-36 lg:gap-10">
 
-            <div className="flex flex-col space-y-10">
-              <h2 data-aos="zoom-in-right" data-aos-duration="1000" className="text-2xl font-bold text-orange-400 pb-2 border-b-4 mb-8">Front End</h2>
+            <div className="flex flex-col space-y-8">
+              <h2 data-aos="zoom-in-right" data-aos-duration="1000" className="text-2xl font-bold text-orange-400 pb-2 border-b-4 mb-3">Front End</h2>
 
+                <h1 className="text-xl text-white font-semibold">HTML</h1>
+                <h1 className="text-xl text-white font-semibold">CSS</h1>
+                <h1 className="text-xl text-white font-semibold">JAVASCRIPT</h1>
+                <h1 className="text-xl text-white font-semibold">REACT</h1>
+                <h1 className="text-xl text-white font-semibold">Next.js</h1>
+                <h1 className="text-xl text-white font-semibold">TypeScript</h1>
+                <h1 className="text-xl text-white font-semibold">Redux</h1>
 
-
-
-
+{/* 
               <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">
                 <div className="flex flex-row justify-between">
                   <h3 className="text-white font-semibold">HTML</h3>
@@ -379,12 +385,28 @@ const Home = () => {
                 </div>
                 <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="75" max="100">HTML</progress>
               </div>
+              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">
+                <div className="flex flex-row justify-between">
+                  <h3 className="text-white font-semibold">TypeScript</h3>
+                  <h3 className="text-white font-semibold">70%</h3>
+                </div>
+                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="75" max="100">HTML</progress>
+              </div>
+              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">
+                <div className="flex flex-row justify-between">
+                  <h3 className="text-white font-semibold">Redux</h3>
+                  <h3 className="text-white font-semibold">60%</h3>
+                </div>
+                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="60" max="100">HTML</progress>
+              </div> */}
             </div>
 
             <div className="flex flex-col space-y-10">
               <h2 className="text-2xl font-bold text-orange-400 pb-2 border-b-4 mb-8" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Back End</h2>
 
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="300">
+               <h1 className="text-xl text-white font-semibold">NODE JS</h1>
+                <h1 className="text-xl text-white font-semibold">EXPRESS JS</h1>
+              {/* <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="300">
                 <div className="flex flex-row justify-between">
                   <h3 className="text-white font-semibold">NODE JS</h3>
                   <h3 className="text-white font-semibold">75%</h3>
@@ -397,21 +419,37 @@ const Home = () => {
                   <h3 className="text-white font-semibold">85%</h3>
                 </div>
                 <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="85" max="100">HTML</progress>
-              </div>
+              </div> */}
 
 
             </div>
 
             <div className="flex flex-col space-y-5" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">
               <h2 className="text-2xl font-bold text-orange-400 pb-2 border-b-4 mb-8">Database</h2>
-
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="500">
+                   <h1 className="text-xl text-white font-semibold">MONGODB</h1>
+                <h1 className="text-xl text-white font-semibold">SQL</h1>
+                <h1 className="text-xl text-white font-semibold">PostgreSQL</h1>
+              {/* <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="500">
                 <div className="flex flex-row justify-between mt-5">
                   <h3 className="text-white font-semibold">MONGODB</h3>
                   <h3 className="text-white font-semibold">70%</h3>
                 </div>
                 <progress className="progress progress-accent w-full md:w-full h-2 rounded-md bg-orange-700" value="70" max="100">HTML</progress>
               </div>
+              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="500">
+                <div className="flex flex-row justify-between mt-5">
+                  <h3 className="text-white font-semibold">MySQL</h3>
+                  <h3 className="text-white font-semibold">60%</h3>
+                </div>
+                <progress className="progress progress-accent w-full md:w-full h-2 rounded-md bg-orange-700" value="60" max="100">HTML</progress>
+              </div>
+              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="500">
+                <div className="flex flex-row justify-between mt-5">
+                  <h3 className="text-white font-semibold">PostgreSQL</h3>
+                  <h3 className="text-white font-semibold">60%</h3>
+                </div>
+                <progress className="progress progress-accent w-full md:w-full h-2 rounded-md bg-orange-700" value="60" max="100">HTML</progress>
+              </div> */}
 
             </div>
 
@@ -422,13 +460,14 @@ const Home = () => {
      <div>
 <h1 className="text-center text-6xl font-semibold text-white mt-10 border-b-4 border-dotted pb-5 mx-10">CMS</h1>
 
-<div className="flex flex-col gap-2 w-[250px] md:w-[450px] mx-10 mt-5 " data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">
-                <div className="flex flex-row justify-between mt-5">
+ <div className="flex flex-col gap-2 w-[250px] md:w-[450px] mx-10 mt-5 " data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">
+<h1 className="text-xl text-white font-semibold">WordPress</h1>
+                {/* <div className="flex flex-row justify-between mt-5">
                   <h3 className="text-white font-semibold">WordPress</h3>
                   <h3 className="text-white font-semibold">85%</h3>
                 </div>
-                <progress className="progress progress-success w-full md:w-full h-2 rounded-md bg-sky-700" value="85" max="100">HTML</progress>
-              </div>
+                <progress className="progress progress-success w-full md:w-full h-2 rounded-md bg-sky-700" value="85" max="100">HTML</progress> */}
+              </div> 
 
      </div>
 
@@ -471,6 +510,29 @@ const Home = () => {
 
           <div className="flex flex-wrap gap-16 md:gap-10 justify-evenly mt-20 mx-auto w-full">
           
+          <Link to={'https://as-global.vercel.app/'}>
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+                <figure>
+                  <img className="h-48 w-full"
+                    src={as}
+                    alt="Shoes" />
+                </figure>
+                <div className="card-body bg-[#232222] rounded-b-lg">
+                  <h2 className="card-title">
+                    AS Global Styles
+                    <div className="badge badge-warning">Garment</div>
+
+                  </h2>
+                  <p>A garment Website using Next.js, React, MongoDB.</p>
+                  <div className="card-actions justify-end">
+                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">React</div>
+                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">Next Js</div>
+                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">MongoDB</div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
           <Link to={'https://schedular-asl.vercel.app/'}>
               <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
                 <figure>
