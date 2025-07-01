@@ -112,8 +112,8 @@ const Home = () => {
   return (
     <>
       <div>
-        <section className="relative bg-[#102815]  h-[1300px] md:min-h-[90vh] lg:h-[130vh] lg:mb-0">
-          <div className="hero pt-8 pb-5 absolute bg-[#20371a]  h-[1300px] md:min-h-[90vh] lg:h-[130vh]">
+        <section className="relative bg-[#081506]  h-[1300px] md:min-h-[90vh] lg:h-[130vh] lg:mb-0">
+          <div className="hero pt-8 pb-5 absolute bg-[#081506]  h-[1300px] md:min-h-[90vh] lg:h-[130vh]">
 
 
             <Particles
@@ -199,17 +199,17 @@ const Home = () => {
 
             <div>
               <div className="hero-content w-full flex-col p-0 justify-between gap-12 lg:flex-row-reverse text-slate-200">
-                <div className="bounce w-2/3 md:w-1/2 lg:w-1/3 mb-5 justify-center flex mt-28 lg:mt-0"><img src="images/IMG_E4927@1x_1.jpg" className=" rounded-full shadow-2xl shadow-lime-600 mb-5" /></div>
+                <div className="bounce w-2/3 md:w-1/2 lg:w-1/3 mb-5 justify-center flex mt-28 lg:mt-0"><img src="images/IMG_E4927@1x_1.jpg" className=" rounded-full shadow-xl shadow-lime-800 mb-5" /></div>
                 <div className="px-8 lg:px-0">
 
-                  <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300" className="text-6xl font-bold pb-4">I'm <br className="block md:hidden" />  <span className="name text-[42px] md:text-6xl text-[#0ef] md:pl-4">{text}</span></h1>
-                  <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" className="text-4xl font-bold">A <span>MERN Stack Developer</span></h1>
-                  <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800" className="py-6 text-2xl">I am a developer & coder. I do it because i like to do it. Hope you like my works.</p>
-                  <a data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1000" href="https://docs.google.com/document/d/19gulR31q5tCQXaeCgdP0hzeqGq398_N773mQnJ37rME/edit?usp=sharing"><button className="btn bg-sky-400 hover:bg-amber-600 text-white text-xl lg:text-2xl border-none">Download Resume</button></a>
+                  <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300" className="text-6xl font-mono font-bold pb-4">I'm <br className="block md:hidden" />  <span className="name text-[42px] md:text-6xl text-[#22f0ff] md:pl-4">{text}</span></h1>
+                  <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" className="text-3xl md:text-4xl font-bold font-mono">A <span>MERN Stack Developer</span></h1>
+                  <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800" className="py-6 text-2xl">I am a developer & coder. I do it because i like to do it. Hope you like my works.</p>
+                  <a data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1000" href="https://docs.google.com/document/d/19gulR31q5tCQXaeCgdP0hzeqGq398_N773mQnJ37rME/edit?usp=sharing"><button className="btn bg-sky-400 hover:bg-amber-600 text-white text-xl lg:text-2xl border-none shadow-lg shadow-[#adadada0]">Download Resume</button></a>
                   <div className="mt-8 flex flex-row justify-start gap-5">
-                    <a data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1000" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL"><FaFacebook className="h-10 text-orange-500 w-10" /></a>
+                    <a data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="1000" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL"><FaFacebook className="h-10 text-orange-500 w-10" /></a>
                     <a data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1200" href="https://github.com/dashboard"><FaGithub className="h-10 text-orange-500 w-10" /></a>
-                    <a data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="1400" href="https://www.linkedin.com/uas/login-submit"><FaLinkedin className="h-10 text-orange-500 w-10" /></a>
+                    <a data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="1400" href="https://www.linkedin.com/in/asfaqur-rahman-hamim"><FaLinkedin className="h-10 text-orange-500 w-10" /></a>
 
                   </div>
                 </div>
@@ -268,7 +268,7 @@ const Home = () => {
 
       <section>
 
-        <div className="bg-[#0e1d0a] min-h-screen mt-0 pt-28 px-10 pb-10 text-white">
+        <div className="bg-[#081506] min-h-screen mt-0 pt-28 px-10 pb-10 text-white">
           <h2 className="text-5xl mb-10 font-bold text-teal-200 pb-5 border-b-4 border-dotted text-center" data-aos="zoom-in-up" data-aos-duration="1000">About Me</h2>
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="w-full lg:w-1/2 flex flex-col items-start space-y-5">
@@ -317,7 +317,7 @@ const Home = () => {
               <div className="flex flex-row justify-start gap-5">
                 <a data-aos="zoom-in-right" data-aos-duration="600" data-aos-delay="1000" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL"><FaFacebook className="h-10 text-orange-500 w-10" /></a>
                 <a data-aos="zoom-in-up" data-aos-duration="700" data-aos-delay="1200" href="https://github.com/dashboard"><FaGithub className="h-10 text-orange-500 w-10" /></a>
-                <a data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="1400" href="https://www.linkedin.com/uas/login-submit"><FaLinkedin className="h-10 text-orange-500 w-10" /></a>
+                <a data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="1400" href="https://www.linkedin.com/in/asfaqur-rahman-hamim"><FaLinkedin className="h-10 text-orange-500 w-10" /></a>
 
               </div>
 
@@ -330,23 +330,61 @@ const Home = () => {
 
       </section>
 
-      <section>
-        <div className="bg-[#0e1d0a] h-auto lg:h-screen pt-28 px-10 pb-10">
+      <section className="bg-[#081506]">
+        <div className="bg-[#081506]  pt-28 px-10 pb-10">
           <h2 data-aos="zoom-in-up" data-aos-duration="1000" className="text-5xl font-bold text-teal-200 pb-5 border-b-4 border-dotted text-center">My Skills</h2>
 
           <div className=" mt-16 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-36 lg:gap-10">
 
-            <div className="flex flex-col space-y-8">
-              <h2 data-aos="zoom-in-right" data-aos-duration="1000" className="text-2xl font-bold text-orange-400 pb-2 border-b-4 mb-3">Front End</h2>
+            <div className="flex flex-col space-y-8 bg-[#06230e9a] glass rounded-md px-4 py-5 hover:scale-110">
+              
+                <h2 data-aos="zoom-in-right" data-aos-duration="1000" className="text-2xl font-bold text-orange-500 pb-2 border-b-4 mb-3">Front End</h2>
+                <div className="flex flex-wrap px-5 md:px-1 gap-10">
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                    <img src={html} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Html</h1>
+                  </div>
+                
+                <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                    <img src={css} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Css</h1>
+                  </div>
 
-                <h1 className="text-xl text-white font-semibold">HTML</h1>
-                <h1 className="text-xl text-white font-semibold">CSS</h1>
-                <h1 className="text-xl text-white font-semibold">JAVASCRIPT</h1>
-                <h1 className="text-xl text-white font-semibold">REACT</h1>
-                <h1 className="text-xl text-white font-semibold">Next.js</h1>
-                <h1 className="text-xl text-white font-semibold">TypeScript</h1>
-                <h1 className="text-xl text-white font-semibold">Redux</h1>
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                    <img src={JavaScriptl} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">JavaScript</h1>
+                  </div>
 
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                    <img src={bootstrap} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Bootstrap</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                    <img src={react} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">React</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center gap-2 justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black pt-2">
+                    <img src={Tailwind} alt="html" className="h-14 w-14"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Tailwind Css</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center gap-2 justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
+                    <img src={Typescript} alt="html" className="h-14 w-14"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">TypeScript</h1>
+                  </div>
+                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
+                    <img src={redux} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Redux</h1>
+                  </div>
+                {/* <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">CSS</h1>
+                <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">JAVASCRIPT</h1>
+                <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">REACT</h1>
+                <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">Next.js</h1>
+                <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">TypeScript</h1>
+                <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">Redux</h1> */}
+              </div>
 {/* 
               <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">
                 <div className="flex flex-row justify-between">
@@ -401,11 +439,23 @@ const Home = () => {
               </div> */}
             </div>
 
-            <div className="flex flex-col space-y-10">
-              <h2 className="text-2xl font-bold text-orange-400 pb-2 border-b-4 mb-8" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Back End</h2>
+            <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
+              <h2 className="text-2xl font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Back End</h2>
+                <div className="flex flex-wrap gap-10 px-5">
+                  
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                    <img src={node} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Node.js</h1>
+                  </div>
 
-               <h1 className="text-xl text-white font-semibold">NODE JS</h1>
-                <h1 className="text-xl text-white font-semibold">EXPRESS JS</h1>
+                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={express} alt="html" className="h-16 w-28"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Express.js</h1>
+                  </div>
+
+                 </div>
+               {/* <h1 className="text-xl text-white font-semibold">NODE JS</h1>
+                <h1 className="text-xl text-white font-semibold">EXPRESS JS</h1> */}
               {/* <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="300">
                 <div className="flex flex-row justify-between">
                   <h3 className="text-white font-semibold">NODE JS</h3>
@@ -424,11 +474,26 @@ const Home = () => {
 
             </div>
 
-            <div className="flex flex-col space-y-5" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">
-              <h2 className="text-2xl font-bold text-orange-400 pb-2 border-b-4 mb-8">Database</h2>
-                   <h1 className="text-xl text-white font-semibold">MONGODB</h1>
-                <h1 className="text-xl text-white font-semibold">SQL</h1>
-                <h1 className="text-xl text-white font-semibold">PostgreSQL</h1>
+            <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
+              <h2 className="text-2xl font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">DataBase</h2>
+                <div className="flex flex-wrap gap-8 px-5">
+                  
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                    <img src={mongodb} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">MongoDB</h1>
+                  </div>
+
+                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                    <img src={mongoose} alt="html" className="h-16 w-[100px]"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Mongoose</h1>
+                  </div>
+
+                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
+                    <img src={mongoose} alt="html" className="h-16 w-[100px]"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">PostgreSQL</h1>
+                  </div>
+
+                 </div>
               {/* <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="500">
                 <div className="flex flex-row justify-between mt-5">
                   <h3 className="text-white font-semibold">MONGODB</h3>
@@ -461,7 +526,10 @@ const Home = () => {
 <h1 className="text-center text-6xl font-semibold text-white mt-10 border-b-4 border-dotted pb-5 mx-10">CMS</h1>
 
  <div className="flex flex-col gap-2 w-[250px] md:w-[450px] mx-10 mt-5 " data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">
-<h1 className="text-xl text-white font-semibold">WordPress</h1>
+{/* <h1 className="text-xl text-white font-semibold">WordPress</h1> */}
+<div className="flex flex-col space-y-8 bg-[#06230e9a] glass rounded-md px-4 py-5 hover:scale-110">
+  <h1 className="text-xl text-white font-semibold">WordPress</h1>
+</div>
                 {/* <div className="flex flex-row justify-between mt-5">
                   <h3 className="text-white font-semibold">WordPress</h3>
                   <h3 className="text-white font-semibold">85%</h3>
@@ -477,7 +545,7 @@ const Home = () => {
 
 
       <section>
-        <div className="bg-[#0e1d0a] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white w-full">
+        <div className="bg-[#081506] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white w-full">
           <h2 data-aos="zoom-in-up" data-aos-duration="1000" className="text-center text-5xl font-semibold">Projects</h2>
           <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100" className="text-center mt-7 font-semibold text-lg">Below are the projects on <span className="text-orange-700 text-2xl ml-2"> M E R N Stack!</span> & <span className="text-blue-700 text-2xl ml-2"> W o r d P r e s s</span></p>
 
@@ -510,326 +578,327 @@ const Home = () => {
 
           <div className="flex flex-wrap gap-16 md:gap-10 justify-evenly mt-20 mx-auto w-full">
           
-          <Link to={'https://as-global.vercel.app/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={as}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    AS Global Styles
-                    <div className="badge badge-warning">Garment</div>
-
-                  </h2>
-                  <p>A garment Website using Next.js, React, MongoDB.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">React</div>
-                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">Next Js</div>
-                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">MongoDB</div>
-                  </div>
-                </div>
+           <Link to={'https://as-global.vercel.app/'}>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                          <figure>
+                            <img className="h-48 w-full"
+                              src={as}
+                              alt="Shoes" />
+                          </figure>
+                          <div className="card-body bg-[#00000020] rounded-b-lg">
+                            <h2 className="card-title">
+                              AS Global Styles
+                              <div className="badge badge-warning shadow-sm shadow-[#ffffff]">Garment</div>
+          
+                            </h2>
+                            <p>A garment Website using Next.js, React, MongoDB.</p>
+                            <div className="card-actions justify-end">
+                              <div className="badge bg-amber-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">React</div>
+                              <div className="badge bg-amber-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">Next Js</div>
+                              <div className="badge bg-amber-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">MongoDB</div>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+          
+                      <Link to={'https://schedular-asl.vercel.app/'}>
+                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                                      <figure>
+                                        <img className="h-48 w-full"
+                                          src={asl}
+                                          alt="Shoes" />
+                                      </figure>
+                                      <div className="card-body bg-[#00000020] rounded-b-lg">
+                                        <h2 className="card-title">
+                                          Smart Class Scheduler ASL
+                                          <div className="badge badge-info shadow-sm shadow-[#ffffff]">Schedular</div>
+                      
+                                        </h2>
+                                        <p>A smart class scheduling Website using Next.js, React, MongoDB.</p>
+                                        <div className="card-actions justify-end">
+                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">React</div>
+                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">Next Js</div>
+                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">MongoDB</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </Link>
+                      
+                                  <Link to={'https://exponential-du.vercel.app/'}>
+                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                                      <figure>
+                                        <img className="h-48 w-full"
+                                          src={exponential}
+                                          alt="Shoes" />
+                                      </figure>
+                                      <div className="card-body bg-[#00000020] rounded-b-lg">
+                                        <h2 className="card-title">
+                                          Exponential DU
+                                          <div className="badge badge-info shadow-sm shadow-[#ffffff]">Online Course</div>
+                      
+                                        </h2>
+                                        <p>A online course Website using Next.js, React, MongoDB.</p>
+                                        <div className="card-actions justify-end">
+                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">React</div>
+                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">Next Js</div>
+                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">MongoDB</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </Link>
+                      
+          
+          
+                       <Link to={'https://www.masuafoundation.org/'}>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                          <figure>
+                            <img className="h-48 w-full"
+                              src={img6}
+                              alt="Shoes" />
+                          </figure>
+                          <div className="card-body bg-[#00000020] rounded-b-lg">
+                            <h2 className="card-title">
+                              Masua Foundation
+                              <div className="badge badge-info shadow-sm shadow-[#ffffff]">Foundation</div>
+          
+                            </h2>
+                            <p>A responsive Website using Next.js, React, MongoDB.</p>
+                            <div className="card-actions justify-end">
+                              <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">React</div>
+                              <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">Next Js</div>
+                              <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">MongoDB</div>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+          
+          
+                       <Link to={'https://electro-brown.vercel.app/'}>
+          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+            <figure>
+              <img className="h-48 w-full"
+                src={img5}
+                alt="Shoes" />
+            </figure>
+            <div className="card-body bg-[#00000020] rounded-b-lg">
+              <h2 className="card-title">
+              Electro
+              <div className="badge badge-info shadow-sm shadow-[#ffffff]">E-Commerce</div>
+                
+              </h2>
+              <p>A responsive E-commerce Website using Next.js, React, MongoDB.</p>
+              <div className="card-actions justify-end">
+                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">React</div>
+                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">Next Js</div>
+                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">MongoDB</div>
               </div>
-            </Link>
-
-          <Link to={'https://schedular-asl.vercel.app/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={asl}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    Smart Class Scheduler ASL
-                    <div className="badge badge-info"></div>
-
-                  </h2>
-                  <p>A smart class scheduling Website using Next.js, React, MongoDB.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
-                  </div>
-                </div>
+            </div>
+          </div>
+          </Link>
+          
+                       <Link to={'https://hospital-mu-six.vercel.app'}>
+          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+            <figure>
+              <img className="h-48 w-full"
+                src={img1}
+                alt="Shoes" />
+            </figure>
+            <div className="card-body bg-[#00000020] rounded-b-lg">
+              <h2 className="card-title">
+              MediPro
+                <div className="badge badge-success text-white shadow-sm shadow-[#ffffff]">Hospital</div>
+                
+              </h2>
+              <p>A responsive Medical Hospital Website using Next.js, React, MongoDB.</p>
+              <div className="card-actions justify-end">
+                <div className="badge bg-green-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">React</div>
+                <div className="badge bg-green-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">Next Js</div>
+                <div className="badge bg-green-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">MongoDB</div>
               </div>
-            </Link>
-
-            <Link to={'https://exponential-du.vercel.app/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={exponential}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    Exponential DU
-                    <div className="badge badge-info"></div>
-
-                  </h2>
-                  <p>A online course Website using Next.js, React, MongoDB.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
-                  </div>
-                </div>
+            </div>
+          </div>
+          </Link>
+          
+          
+          
+          
+                       <Link to={'https://trendy-threads-clothing.web.app'}>
+          <div className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+            <figure>
+              <img className="h-48 w-full"
+                src={img}
+                alt="Shoes" />
+            </figure>
+            <div className="card-body bg-[#00000020] rounded-b-lg">
+              <h2 className="card-title">
+                Bostro
+                <div className="badge badge-info shadow-sm shadow-[#ffffff]">E-Commerce</div>
+                
+              </h2>
+              <p>A e-commerce clothing website for cloths. User easily wishlist, cart & purchase cloths.</p>
+              <div className="card-actions justify-end">
+                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">React</div>
+                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">Stripe</div>
+                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">MongoDB</div>
               </div>
-            </Link>
-
-          <Link to={'https://www.masuafoundation.org/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img6}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    Masua Foundation
-                    <div className="badge badge-info"></div>
-
-                  </h2>
-                  <p>A responsive Website using Next.js, React, MongoDB.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
-                  </div>
-                </div>
+            </div>
+          </div>
+          </Link>
+          
+          
+          
+          
+                       <Link to={'https://blood-donation-1ed49.web.app'}>
+          <div className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+            <figure>
+              <img className="h-48 w-full"
+                src={img2}
+                alt="Shoes" />
+            </figure>
+            <div className="card-body bg-[#00000020] rounded-b-lg">
+              <h2 className="card-title">
+                OneBlood!
+                <div className="badge badge-secondary shadow-sm shadow-[#ffffff]">Blood Donation</div>
+                
+              </h2>
+              <p>A blood donation website for searching doner and donate blood & money.</p>
+              <div className="card-actions justify-end">
+                <div className="badge bg-orange-800 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">React</div>
+                <div className="badge bg-orange-800 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">Stripe</div>
+                <div className="badge bg-orange-800 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">MongoDB</div>
               </div>
-            </Link>
-
-          <Link to={'https://electro-brown.vercel.app/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img5}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    Electro
-                    <div className="badge badge-info">E-Commerce</div>
-
-                  </h2>
-                  <p>A responsive E-commerce Website using Next.js, React, MongoDB.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
-                  </div>
-                </div>
+            </div>
+          </div>
+          </Link>
+          
+          <Link to={'https://resturant-7f83a.web.app'}>
+          <div className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+            <figure>
+              <img className="h-48 w-full"
+                src={img3}
+                alt="Shoes" />
+            </figure>
+            <div className="card-body bg-[#00000020] rounded-b-lg">
+              <h2 className="card-title">
+              DineEase!
+                <div className="badge badge-primary shadow-sm shadow-[#ffffff]">Resturant</div>
+              </h2>
+              <p>A resturant website using MongoDB and React.
+          
+              </p>
+              <div className="card-actions justify-end">
+                <div className="badge bg-fuchsia-800 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">React</div>
+                <div className="badge bg-fuchsia-800 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">Node.js</div>
+                <div className="badge bg-fuchsia-800 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">MongoDB</div>
               </div>
-            </Link>
-
-
-
-            <Link to={'https://hospital-mu-six.vercel.app'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img1}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    MediPro
-                    <div className="badge badge-success text-white">Hospital</div>
-
-                  </h2>
-                  <p>A responsive Medical Hospital Website using Next.js, React, MongoDB.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-green-600 pb-[2px]  badge-outline">React</div>
-                    <div className="badge bg-green-600 pb-[2px]  badge-outline">Next Js</div>
-                    <div className="badge bg-green-600 pb-[2px]  badge-outline">MongoDB</div>
-                  </div>
-                </div>
+            </div>
+          </div>
+          </Link>
+          
+          <Link to={'https://tourism-41ddf.web.app'}>
+          
+          <div className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+            <figure>
+              <img className="h-48 w-full"
+                src={img4}
+                alt="Shoes" />
+            </figure>
+            <div className="card-body bg-[#00000020] rounded-b-lg">
+              <h2 className="card-title">
+              ExploreEpic
+                <div className="badge badge-accent shadow-sm shadow-[#ffffff]">Travel</div>
+              </h2>
+              <p>A tours & travels website where user can easily find his destination.</p>
+              <div className="card-actions justify-end">
+              <div className="badge   bg-sky-700 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">React</div>
+                <div className="badge bg-sky-700 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">Node.js</div>
+                <div className="badge bg-sky-700 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">MongoDB</div>
               </div>
-            </Link>
-
-            <Link to={'https://trendy-threads-clothing.web.app'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    Bostro
-                    <div className="badge badge-info">E-Commerce</div>
-
-                  </h2>
-                  <p>A e-commerce clothing website for cloths. User easily wishlist, cart & purchase cloths.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">Stripe</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
-                  </div>
-                </div>
+            </div>
+          </div>
+          </Link>
+          
+          <Link to={'https://review-book-site.netlify.app'}>
+          <div className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+            <figure>
+              <img className="h-48 w-full "
+                src="https://i.ibb.co/NsWgZGz/Screenshot-2024-07-16-123448.png"
+                alt="Shoes" />
+            </figure>
+            <div className="card-body bg-[#00000020] rounded-b-lg">
+              <h2 className="card-title">
+              Book Vibe
+                <div className="badge badge-info">Book Review</div>
+              </h2>
+              <p>A book website. Here user can read books easily & save them for later.</p>
+              <div className="card-actions justify-end">
+              <div className="badge   bg-lime-700 pb-[2px] badge-outline">React</div>
+                <div className="badge bg-lime-700 pb-[2px] badge-outline">Node.js</div>
+                <div className="badge bg-lime-700 pb-[2px] badge-outline">MongoDB</div>
               </div>
-            </Link>
-
-
-
-            <Link to={'https://blood-donation-1ed49.web.app'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48"
-                    src={img2}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    OneBlood!
-                    <div className="badge badge-secondary">Blood Donation</div>
-
-                  </h2>
-                  <p>A blood donation website for searching doner and donate blood & money.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-orange-800 pb-[2px]  badge-outline">React</div>
-                    <div className="badge bg-orange-800 pb-[2px]  badge-outline">Stripe</div>
-                    <div className="badge bg-orange-800 pb-[2px]  badge-outline">MongoDB</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link to={'https://resturant-7f83a.web.app'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="700" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48"
-                    src={img3}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    DineEase!
-                    <div className="badge badge-primary">Resturant</div>
-                  </h2>
-                  <p>A resturant website using MongoDB and React.
-
-                  </p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-fuchsia-800 pb-[2px] badge-outline">React</div>
-                    <div className="badge bg-fuchsia-800 pb-[2px] badge-outline">Node.js</div>
-                    <div className="badge bg-fuchsia-800 pb-[2px] badge-outline">MongoDB</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link to={'https://tourism-41ddf.web.app'}>
-
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="000" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img4}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    ExploreEpic
-                    <div className="badge badge-accent">Travel</div>
-                  </h2>
-                  <p>A tours & travels website where user can easily find his destination.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge   bg-sky-700 pb-[2px] badge-outline">React</div>
-                    <div className="badge bg-sky-700 pb-[2px] badge-outline">Node.js</div>
-                    <div className="badge bg-sky-700 pb-[2px] badge-outline">MongoDB</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link to={'https://review-book-site.netlify.app'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 "
-                    src="https://i.ibb.co/NsWgZGz/Screenshot-2024-07-16-123448.png"
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    Book Vibe
-                    <div className="badge badge-info">Book Review</div>
-                  </h2>
-                  <p>A book website. Here user can read books easily & save them for later.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge   bg-lime-700 pb-[2px] badge-outline">React</div>
-                    <div className="badge bg-lime-700 pb-[2px] badge-outline">Node.js</div>
-                    <div className="badge bg-lime-700 pb-[2px] badge-outline">MongoDB</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            </div>
+          </div>
+          </Link>
+          
+                       </div>
+                        
+                       <h2 className="text-center text-5xl font-semibold mb-5 mt-24">WordPress</h2>
+                       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
+          
+                       <Link to={'https://neosupremetech.com/'}>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                          <figure>
+                            <img className="h-48 w-full"
+                              src={img7}
+                              alt="Shoes" />
+                          </figure>
+                          <div className="card-body bg-[#00000020] rounded-b-lg">
+                            <h2 className="card-title">
+                              Neo Superme Tech
+                            </h2>
+                            <p>A responsive Website using WordPress.</p>
+                            
+                          </div>
+                        </div>
+                      </Link>
+          
+                      <Link to={'https://platinumamenity.com/'}>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                          <figure>
+                            <img className="h-48 w-full"
+                              src={img8}
+                              alt="Shoes" />
+                          </figure>
+                          <div className="card-body  rounded-b-lg">
+                            <h2 className="card-title">
+                            Platinum Amenity
+                            </h2>
+                            <p>A responsive Website using WordPress.</p>
+                            
+                          </div>
+                        </div>
+                      </Link>
+          
+                      <Link to={'https://goldenresolution.com/'}>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                          <figure>
+                            <img className="h-48 w-full"
+                              src={img9}
+                              alt="Shoes" />
+                          </figure>
+                          <div className="card-body  rounded-b-lg">
+                            <h2 className="card-title">
+                            Golden Resolution
+                            </h2>
+                            <p>A responsive Website using WordPress.</p>
+                            
+                          </div>
+                        </div>
+                      </Link>
 
           </div>
 
-        {/* Wordpress Projects */}
-
-        <section>
-
-        <h2 data-aos="zoom-in-up" data-aos-duration="1000" className="text-center text-3xl font-semibold mt-40 mb-10 text-blue-500">W o r d P r e s s !!!</h2>
-
-<div className="flex flex-wrap gap-16 md:gap-10 justify-evenly mt-20 mx-auto w-full">
-
-<Link to={'https://neosupremetech.com/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img7}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                    Neo Superme Tech
-                  </h2>
-                  <p>A responsive Website using WordPress.</p>
-                  
-                </div>
-              </div>
-            </Link>
-
-            <Link to={'https://platinumamenity.com/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img8}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                  Platinum Amenity
-                  </h2>
-                  <p>A responsive Website using WordPress.</p>
-                  
-                </div>
-              </div>
-            </Link>
-
-            <Link to={'https://goldenresolution.com/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img9}
-                    alt="Shoes" />
-                </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
-                  <h2 className="card-title">
-                  Golden Resolution
-                  </h2>
-                  <p>A responsive Website using WordPress.</p>
-                  
-                </div>
-              </div>
-            </Link>
-
-  </div>
-        </section>
+     
 
 
 
@@ -838,25 +907,25 @@ const Home = () => {
 
 
       <section>
-        <div className="bg-[#0e1d0a] h-auto lg:h-screen pt-28 px-10 pb-10 text-white">
+        <div className="bg-[#081506] h-auto lg:h-screen pt-28 px-10 pb-10 text-white">
           <h2 data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="000" className="text-center text-5xl font-semibold">Contact Me</h2>
           <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="text-center mt-7 font-semibold text-lg">Below are the details to reach out to me!</p>
 
           <div className="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center">
 
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" className="flex flex-col items-center gap-5 border rounded-md p-10">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" className="flex flex-col items-center gap-5 border border-black rounded-md p-10 shadow-lg shadow-[#2f5b32]">
               <FaRegAddressCard className="h-14 w-14 text-orange-600" />
               <h3 className="text-center">Address</h3>
               <p className="text-center mt-5">Rahamatpur, Mymensingh</p>
             </div>
 
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" className="flex flex-col items-center gap-5 border rounded-md p-10">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" className="flex flex-col items-center gap-5 border border-black rounded-md p-10 shadow-lg shadow-[#2f5b32]">
               <FaPhoneAlt className="h-14 w-14 text-orange-600" />
               <h3 className="text-center">Contact Number</h3>
               <p className="text-center mt-5">01956230265</p>
             </div>
 
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600" className="flex flex-col items-center gap-5 border rounded-md p-10">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600" className="flex flex-col items-center gap-5 border border-black rounded-md p-10 shadow-lg shadow-[#2f5b32]">
               <MdEmail className="h-14 w-14 text-orange-600" />
               <h3 className="text-center">Email</h3>
               <p className="text-center mt-5">asfaqurrahman055@gmail.com</p>

@@ -26,10 +26,10 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
         <ul className="menu menu-horizontal px-1 hidden lg:flex hover:bg-transparent">
-        <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200"><Link className='hover:bg-none' to='/about'><a className="hover:text-red-500 bg-none transform hover:scale-125 transition duration-300 hover-underline text-slate-50 text-2xl font-bold mr-3">About</a></Link></li>
-        <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400"> <Link to='/project'><a className="hover:text-sky-500 hover:bg-transparent text-slate-50 transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold  mr-3">Projects</a></Link></li>
-        <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600"> <Link to='/skill'><a className="hover:text-sky-500 hover:bg-transparent text-slate-50 transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold  mr-3">Skills</a></Link></li>
-        <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800"> <Link to='/contact'><a className="hover:text-sky-500 hover:bg-transparent text-slate-50 transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold">Contact</a></Link></li>
+        <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200"><Link className='hover:bg-none' to='/about'><a className="hover:text-red-500 font-mono bg-none transform hover:scale-125 transition duration-300 hover-underline text-slate-50 text-2xl font-bold mr-3">About</a></Link></li>
+        <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400"> <Link to='/project'><a className="hover:text-sky-500 hover:bg-transparent font-mono text-slate-50 transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold  mr-3">Projects</a></Link></li>
+        <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600"> <Link to='/skill'><a className="hover:text-sky-500 hover:bg-transparent text-slate-50 font-mono transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold  mr-3">Skills</a></Link></li>
+        <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800"> <Link to='/contact'><a className="hover:text-sky-500 hover:bg-transparent text-slate-50 font-mono transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold">Contact</a></Link></li>
           </ul>
           {/* <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -82,10 +82,10 @@ const Navbar = () => {
     <ul className="menu border-l-[1px] border-lime-900 bg-[#0e1d0a] text-base-content min-h-full w-80 p-4">
       {/* Sidebar content here */}
      
-      <Link className='hover:bg-none' to='/about'> <li><a className="hover:text-red-500 transform hover:scale-110 transition duration-300  text-slate-50 font-semibold text-xl hover:border-sky-400 border-b-2">About</a></li></Link>
-      <Link to='/project'>   <li ><a className="hover:text-sky-400 transform hover:scale-110 transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-sky-400">Projects</a></li></Link>
-        <Link to='/skill'>   <li ><a className="hover:text-sky-400 transform hover:scale-110 transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-sky-400">Skills</a></li></Link>
-        <Link to='/contact'> <li ><a className="hover:text-sky-400 transform hover:scale-110 transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-sky-400">Contact</a></li></Link>
+      <Link className='hover:bg-none' to='/about'> <li><a className="hover:text-red-500 font-mono transform hover:scale-110 transition duration-300  text-slate-50 font-semibold text-xl hover:border-sky-400 border-b-2">About</a></li></Link>
+      <Link to='/project'>   <li ><a className="hover:text-sky-400 transform hover:scale-110 font-mono transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-sky-400">Projects</a></li></Link>
+        <Link to='/skill'>   <li ><a className="hover:text-sky-400 transform hover:scale-110 font-mono transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-sky-400">Skills</a></li></Link>
+        <Link to='/contact'> <li ><a className="hover:text-sky-400 transform hover:scale-110 font-mono transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-sky-400">Contact</a></li></Link>
     </ul>
   </div>
 </div>

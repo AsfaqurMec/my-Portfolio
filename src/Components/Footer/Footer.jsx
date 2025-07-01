@@ -2,7 +2,7 @@ import logo from '../../../public/images/Preview.png'
 const Footer = () => {
     return (
         <div>
-         <footer className="footer p-10  bg-[#08140a] text-white text-xl">
+         <footer className="footer p-10  bg-[#000000] text-white text-xl">
   <aside>
     {/* <img className='w-20 h-20 rounded-sm' src={logo} alt="logo" /> */}
     <img data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" className='h-14 w-[75px] rounded-sm' src={logo} alt="" />

@@ -5,14 +5,14 @@ import { FaLinkedin } from "react-icons/fa";
 
 const About = () => {
     return (
-        <div className="bg-[#1e2c12] min-h-screen pt-28 px-10 pb-10 text-white">
+        <div className="bg-[#081506] min-h-screen pt-28 px-10 pb-10 text-white">
             <h2 className="text-3xl mb-10 font-bold text-teal-200 pb-5 border-b-4 border-dotted">About Me</h2>
 <div className="flex flex-col lg:flex-row gap-8">
             <div className="w-full lg:w-1/2 flex flex-col items-start space-y-5">
 
             <img src="images/IMG_E4927@1x_1.jpg" className="w-[25%] rounded-full shadow-2xl object-cover" />
              
-            <h2 className="text-2xl font-semibold">Front-end Developer</h2>
+            <h2 className="text-2xl font-semibold">MERN Stack Developer</h2>
             <h3 className="border-b-4 border-dotted w-full text-3xl font-semibold text-orange-600 pb-2">Skills :</h3>
             <p className="text-xl font-semibold ">Next.js | React | Node Js | Express js | Mongoose | <br /> MongoDB |  JavaScript | BootStrap | Css | Html
 </p>
@@ -37,9 +37,9 @@ const About = () => {
 
             <div  className="w-full lg:w-1/2 flex flex-col items-start space-y-5">
 
-            <p className="text-3xl text-orange-600 font-semibold">Front-end Developer</p>
+            <p className="text-3xl text-orange-600 font-semibold">MERN Stack Developer</p>
              
-             <p className="text-lg font-medium">I'm Asfaqur Rahman, a front-end developer
+             <p className="text-lg font-medium">I'm Asfaqur Rahman, a MERN Stack developer
 proficient in HTML, CSS, JavaScript,React,
 and Tailwind CSS. With a passion for crafting
 engaging digital experiences, I specialize in
@@ -51,8 +51,8 @@ stakeholders to bring ideas to life.</p>
 
 <h3 className="border-b-4 border-dotted w-full text-2xl font-semibold text-orange-600 pb-2">Experience :</h3>
  
-<p className="text-xl font-semibold"><a href="https://flexsoftr.com/our-team/" className="text-sky-400 hover:text-indigo-500 text-3xl font-bold underline">FlexSoftr</a> , Dhaka — Front-End Developer</p>
-<p className="text-xl font-semibold">As a React.js developer, I'll build UIs, manage state,
+<p className="text-xl font-semibold"><a href="https://flexsoftr.com/our-team/" className="text-sky-400 hover:text-indigo-500 text-3xl font-bold underline">FlexSoftr</a> , Dhaka — MERN Stack Developer</p>
+<p className="text-xl font-semibold">As a MERN Stack developer, I'll build UIs, manage state,
 optimize performance, integrate APIs, collaborate with
 teams, and ensure code quality.</p>
 <p className="text-xl font-semibold">May 2024 - PRESENT</p>
@@ -60,7 +60,7 @@ teams, and ensure code quality.</p>
 <div className="flex flex-row justify-start gap-5">
 <a href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL"><FaFacebook className="h-10 text-orange-500 w-10" /></a>
  <a href="https://github.com/dashboard"><FaGithub className="h-10 text-orange-500 w-10" /></a> 
-<a href="https://www.linkedin.com/uas/login-submit"><FaLinkedin className="h-10 text-orange-500 w-10" /></a>
+<a href="https://www.linkedin.com/in/asfaqur-rahman-hamim"><FaLinkedin className="h-10 text-orange-500 w-10" /></a>
 
 </div>
 

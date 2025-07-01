@@ -15,7 +15,7 @@ import CountUp from 'react-countup';
 import as from '../../../public/images/as.png';
 const Project = () => {
     return (
-        <div className="bg-[#1e2c12] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white">
+        <div className="bg-[#081506] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white">
              <h2 className="text-center text-5xl font-semibold">Projects</h2>
              <p className="text-center mt-7 font-semibold text-lg">Below are the projects on <span className="text-orange-600 font-bold"> Full Stack! </span> & <span className="text-sky-600 font-bold"> WordPress</span></p>
 
@@ -49,7 +49,7 @@ const Project = () => {
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
 
             <Link to={'https://as-global.vercel.app/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
                 <figure>
                   <img className="h-48 w-full"
                     src={as}
@@ -72,7 +72,7 @@ const Project = () => {
             </Link>
 
             <Link to={'https://schedular-asl.vercel.app/'}>
-                          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+                          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
                             <figure>
                               <img className="h-48 w-full"
                                 src={asl}
@@ -81,7 +81,7 @@ const Project = () => {
                             <div className="card-body bg-[#232222] rounded-b-lg">
                               <h2 className="card-title">
                                 Smart Class Scheduler ASL
-                                <div className="badge badge-info"></div>
+                                <div className="badge badge-info">Schedular</div>
             
                               </h2>
                               <p>A smart class scheduling Website using Next.js, React, MongoDB.</p>
@@ -95,7 +95,7 @@ const Project = () => {
                         </Link>
             
                         <Link to={'https://exponential-du.vercel.app/'}>
-                          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+                          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
                             <figure>
                               <img className="h-48 w-full"
                                 src={exponential}
@@ -104,7 +104,7 @@ const Project = () => {
                             <div className="card-body bg-[#232222] rounded-b-lg">
                               <h2 className="card-title">
                                 Exponential DU
-                                <div className="badge badge-info"></div>
+                                <div className="badge badge-info">Online Course</div>
             
                               </h2>
                               <p>A online course Website using Next.js, React, MongoDB.</p>
@@ -120,7 +120,7 @@ const Project = () => {
 
 
              <Link to={'https://www.masuafoundation.org/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
                 <figure>
                   <img className="h-48 w-full"
                     src={img6}
@@ -129,7 +129,7 @@ const Project = () => {
                 <div className="card-body bg-[#232222] rounded-b-lg">
                   <h2 className="card-title">
                     Masua Foundation
-                    <div className="badge badge-info"></div>
+                    <div className="badge badge-info">Foundation</div>
 
                   </h2>
                   <p>A responsive Website using Next.js, React, MongoDB.</p>
@@ -144,7 +144,7 @@ const Project = () => {
 
 
              <Link to={'https://electro-brown.vercel.app/'}>
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48 w-full"
       src={img5}
@@ -167,7 +167,7 @@ const Project = () => {
 </Link>
 
              <Link to={'https://hospital-mu-six.vercel.app'}>
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48 w-full"
       src={img1}
@@ -193,9 +193,9 @@ const Project = () => {
 
 
              <Link to={'https://trendy-threads-clothing.web.app'}>
-<div className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
   <figure>
-    <img className="h-48"
+    <img className="h-48 w-full"
       src={img}
       alt="Shoes" />
   </figure>
@@ -219,9 +219,9 @@ const Project = () => {
 
 
              <Link to={'https://blood-donation-1ed49.web.app'}>
-<div className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
   <figure>
-    <img className="h-48"
+    <img className="h-48 w-full"
       src={img2}
       alt="Shoes" />
   </figure>
@@ -242,9 +242,9 @@ const Project = () => {
 </Link>
 
 <Link to={'https://resturant-7f83a.web.app'}>
-<div className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
   <figure>
-    <img className="h-48"
+    <img className="h-48 w-full"
       src={img3}
       alt="Shoes" />
   </figure>
@@ -267,7 +267,7 @@ const Project = () => {
 
 <Link to={'https://tourism-41ddf.web.app'}>
 
-<div className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
   <figure>
     <img className="h-48 w-full"
       src={img4}
@@ -289,9 +289,9 @@ const Project = () => {
 </Link>
 
 <Link to={'https://review-book-site.netlify.app'}>
-<div className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+<div className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
   <figure>
-    <img className="h-48 "
+    <img className="h-48 w-full "
       src="https://i.ibb.co/NsWgZGz/Screenshot-2024-07-16-123448.png"
       alt="Shoes" />
   </figure>
@@ -316,7 +316,7 @@ const Project = () => {
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
 
              <Link to={'https://neosupremetech.com/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
                 <figure>
                   <img className="h-48 w-full"
                     src={img7}
@@ -333,7 +333,7 @@ const Project = () => {
             </Link>
 
             <Link to={'https://platinumamenity.com/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
                 <figure>
                   <img className="h-48 w-full"
                     src={img8}
@@ -350,7 +350,7 @@ const Project = () => {
             </Link>
 
             <Link to={'https://goldenresolution.com/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-96 shadow-2xl shadow-emerald-800 rounded-lg mx-auto hover:scale-110">
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
                 <figure>
                   <img className="h-48 w-full"
                     src={img9}
