@@ -44,7 +44,9 @@ import mongodb from '../../../public/images/mongodb.png'
 import mongoose from '../../../public/images/mongoose.png'
 import redux from '../../../public/images/redux-icon-2048x1945-ahvhunxp.png'
 import Typescript from '../../../public/images/Typescript.svg.png'
-
+import mysql from '../../../public/images/hd-mysql-logo-transparent-background-701751694771788209ydqoapx-removebg-preview.png'
+import postgre from '../../../public/images/Postgresql_elephant.svg.png'
+import prisma from '../../../public/images/prisma-icon-size_256.png'
 
 
 const Home = () => { 
@@ -418,8 +420,16 @@ const Home = () => {
                   </div>
 
                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
-                    <img src={mongoose} alt="html" className="h-16 w-[100px]"/>
+                    <img src={mysql} alt="html" className="h-16 w-[100px]"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">MySQL</h1>
+                  </div>
+                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
+                    <img src={postgre} alt="html" className="h-16 w-[100px]"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">PostgreSQL</h1>
+                  </div>
+                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
+                    <img src={prisma} alt="html" className="h-16 w-[100px]"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Prisma ORM</h1>
                   </div>
 
                  </div>

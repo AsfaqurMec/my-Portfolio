@@ -10,6 +10,7 @@ import img7 from '../../../public/images/Screenshot 2024-12-24 024756.png'
 import img8 from '../../../public/images/Screenshot 2024-12-24 025135.png'
 import img9 from '../../../public/images/Screenshot 2024-12-24 025438.png'
 import asl from '../../../public/images/asl.png'
+import img10 from '../../../public/images/Screenshot 2025-07-03 193732.png'
 import exponential from '../../../public/images/exponential.png'
 import CountUp from 'react-countup';
 import as from '../../../public/images/as.png';
@@ -365,6 +366,24 @@ const Project = () => {
                 </div>
               </div>
             </Link>
+
+             <Link to={'https://deshiohandicraft.com/'}>
+                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                                      <figure>
+                                        <img className="h-48 w-full"
+                                          src={img10}
+                                          alt="Shoes" />
+                                      </figure>
+                                      <div className="card-body  rounded-b-lg">
+                                        <h2 className="card-title">
+                                        Deshio HandiCraft
+                                        </h2>
+                                        <p>A responsive Website using WordPress.</p>
+                                        
+                                      </div>
+                                    </div>
+                                  </Link>
+
             </div>
         </div>
     );
