@@ -22,6 +22,7 @@ import img6 from '../../../public/images/masua.png'
 import img7 from '../../../public/images/Screenshot 2024-12-24 024756.png'
 import img8 from '../../../public/images/Screenshot 2024-12-24 025135.png'
 import img9 from '../../../public/images/Screenshot 2024-12-24 025438.png'
+import img10 from '../../../public/images/Screenshot 2025-07-03 193732.png'
 import asl from '../../../public/images/asl.png'
 import as from '../../../public/images/as.png'
 import exponential from '../../../public/images/exponential.png'
@@ -378,65 +379,9 @@ const Home = () => {
                     <img src={redux} alt="html" className="h-16 w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Redux</h1>
                   </div>
-                {/* <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">CSS</h1>
-                <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">JAVASCRIPT</h1>
-                <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">REACT</h1>
-                <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">Next.js</h1>
-                <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">TypeScript</h1>
-                <h1 data-aos="zoom-in-right" data-aos-duration="1000" className="text-xl text-white font-semibold">Redux</h1> */}
-              </div>
-{/* 
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">
-                <div className="flex flex-row justify-between">
-                  <h3 className="text-white font-semibold">HTML</h3>
-                  <h3 className="text-white font-semibold">95%</h3>
-                </div>
-
-                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="95" max="100">HTML</progress>
+               
               </div>
 
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">
-                <div className="flex flex-row justify-between">
-                  <h3 className="text-white font-semibold">CSS</h3>
-                  <h3 className="text-white font-semibold">90%</h3>
-                </div>
-                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="90" max="100">HTML</progress>
-              </div>
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="300">
-                <div className="flex flex-row justify-between">
-                  <h3 className="text-white font-semibold">JAVASCRIPT</h3>
-                  <h3 className="text-white font-semibold">75%</h3>
-                </div>
-                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="75" max="100">HTML</progress>
-              </div>
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">
-                <div className="flex flex-row justify-between">
-                  <h3 className="text-white font-semibold">REACT</h3>
-                  <h3 className="text-white font-semibold">85%</h3>
-                </div>
-                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="85" max="100">HTML</progress>
-              </div>
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">
-                <div className="flex flex-row justify-between">
-                  <h3 className="text-white font-semibold">Next,js</h3>
-                  <h3 className="text-white font-semibold">70%</h3>
-                </div>
-                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="75" max="100">HTML</progress>
-              </div>
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">
-                <div className="flex flex-row justify-between">
-                  <h3 className="text-white font-semibold">TypeScript</h3>
-                  <h3 className="text-white font-semibold">70%</h3>
-                </div>
-                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="75" max="100">HTML</progress>
-              </div>
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">
-                <div className="flex flex-row justify-between">
-                  <h3 className="text-white font-semibold">Redux</h3>
-                  <h3 className="text-white font-semibold">60%</h3>
-                </div>
-                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="60" max="100">HTML</progress>
-              </div> */}
             </div>
 
             <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
@@ -454,23 +399,7 @@ const Home = () => {
                   </div>
 
                  </div>
-               {/* <h1 className="text-xl text-white font-semibold">NODE JS</h1>
-                <h1 className="text-xl text-white font-semibold">EXPRESS JS</h1> */}
-              {/* <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="300">
-                <div className="flex flex-row justify-between">
-                  <h3 className="text-white font-semibold">NODE JS</h3>
-                  <h3 className="text-white font-semibold">75%</h3>
-                </div>
-                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="75" max="100">HTML</progress>
-              </div>
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">
-                <div className="flex flex-row justify-between">
-                  <h3 className="text-white font-semibold">EXPRESS JS</h3>
-                  <h3 className="text-white font-semibold">85%</h3>
-                </div>
-                <progress className="progress progress-accent rounded-md w-full md:w-full bg-orange-700" value="85" max="100">HTML</progress>
-              </div> */}
-
+               
 
             </div>
 
@@ -494,27 +423,7 @@ const Home = () => {
                   </div>
 
                  </div>
-              {/* <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="500">
-                <div className="flex flex-row justify-between mt-5">
-                  <h3 className="text-white font-semibold">MONGODB</h3>
-                  <h3 className="text-white font-semibold">70%</h3>
-                </div>
-                <progress className="progress progress-accent w-full md:w-full h-2 rounded-md bg-orange-700" value="70" max="100">HTML</progress>
-              </div>
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="500">
-                <div className="flex flex-row justify-between mt-5">
-                  <h3 className="text-white font-semibold">MySQL</h3>
-                  <h3 className="text-white font-semibold">60%</h3>
-                </div>
-                <progress className="progress progress-accent w-full md:w-full h-2 rounded-md bg-orange-700" value="60" max="100">HTML</progress>
-              </div>
-              <div className="flex flex-col gap-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="500">
-                <div className="flex flex-row justify-between mt-5">
-                  <h3 className="text-white font-semibold">PostgreSQL</h3>
-                  <h3 className="text-white font-semibold">60%</h3>
-                </div>
-                <progress className="progress progress-accent w-full md:w-full h-2 rounded-md bg-orange-700" value="60" max="100">HTML</progress>
-              </div> */}
+              
 
             </div>
 
@@ -530,11 +439,7 @@ const Home = () => {
 <div className="flex flex-col space-y-8 bg-[#06230e9a] glass rounded-md px-4 py-5 hover:scale-110">
   <h1 className="text-xl text-white font-semibold">WordPress</h1>
 </div>
-                {/* <div className="flex flex-row justify-between mt-5">
-                  <h3 className="text-white font-semibold">WordPress</h3>
-                  <h3 className="text-white font-semibold">85%</h3>
-                </div>
-                <progress className="progress progress-success w-full md:w-full h-2 rounded-md bg-sky-700" value="85" max="100">HTML</progress> */}
+                
               </div> 
 
      </div>
@@ -889,6 +794,23 @@ const Home = () => {
                           <div className="card-body  rounded-b-lg">
                             <h2 className="card-title">
                             Golden Resolution
+                            </h2>
+                            <p>A responsive Website using WordPress.</p>
+                            
+                          </div>
+                        </div>
+                      </Link>
+
+                       <Link to={'https://deshiohandicraft.com/'}>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                          <figure>
+                            <img className="h-48 w-full"
+                              src={img10}
+                              alt="Shoes" />
+                          </figure>
+                          <div className="card-body  rounded-b-lg">
+                            <h2 className="card-title">
+                            Deshio HandiCraft
                             </h2>
                             <p>A responsive Website using WordPress.</p>
                             
