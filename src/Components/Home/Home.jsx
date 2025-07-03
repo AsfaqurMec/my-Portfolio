@@ -48,6 +48,20 @@ import mysql from '../../../public/images/hd-mysql-logo-transparent-background-7
 import postgre from '../../../public/images/Postgresql_elephant.svg.png'
 import prisma from '../../../public/images/prisma-icon-size_256.png'
 import next from '../../../public/images/images__6_-removebg-preview.png'
+import zod from '../../../public/images/1_P1Xb4NoQ5JLqx9L8abXSSg.png'
+import jwt from '../../../public/images/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com-removebg-preview.png'
+import WordPress from '../../../public/images/pngimg.com - wordpress_PNG72.png'
+import postman from '../../../public/images/images__3_-removebg-preview.png'
+import cloudinary from '../../../public/images/cloudinary-icon8821.logowik.com-removebg-preview.png'
+import nodemailer from '../../../public/images/cropped-nm_logo_1000x680.png'
+import rest from '../../../public/images/free-rest-api-blue-logo-icon-22098-thumb.png'
+import git from '../../../public/images/Git_icon.svg.png'
+import c from '../../../public/images/png-clipart-c-logo-c-programming-language-icon-letter-c-blue-logo-thumbnail-removebg-preview.png';
+import java from '../../../public/images/java-coffee-cup-logo.png'
+import fire from '../../../public/images/firebase-icon-logo-png_seeklogo-615938-removebg-preview.png';
+import daisy from '../../../public/images/daisyui-logo-png_seeklogo-554509-removebg-preview.png';
+import ant from '../../../public/images/ant-design-logo-png_seeklogo-380495.png'
+
 
 const Home = () => { 
 
@@ -206,7 +220,7 @@ const Home = () => {
                 <div className="px-8 lg:px-0">
 
                   <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300" className="text-6xl font-mono font-bold pb-4">I'm <br className="block md:hidden" />  <span className="name text-[42px] md:text-6xl text-[#22f0ff] md:pl-4">{text}</span></h1>
-                  <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" className="text-3xl md:text-4xl font-bold font-mono">A <span>MERN Stack Developer</span></h1>
+                  <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" className="text-3xl md:text-4xl font-bold font-mono">A <span>Jr. Full Stack Developer</span></h1>
                   <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800" className="py-6 text-2xl">I am a developer & coder. I do it because i like to do it. Hope you like my works.</p>
                   <a data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1000" href="https://docs.google.com/document/d/19gulR31q5tCQXaeCgdP0hzeqGq398_N773mQnJ37rME/edit?usp=sharing"><button className="btn bg-sky-400 hover:bg-amber-600 text-white text-xl lg:text-2xl border-none shadow-lg shadow-[#adadada0]">Download Resume</button></a>
                   <div className="mt-8 flex flex-row justify-start gap-5">
@@ -278,7 +292,7 @@ const Home = () => {
 
               <img src="images/IMG_E4927@1x_1.jpg" className="w-[25%] rounded-full shadow-2xl object-cover " data-aos-duration="1000" data-aos="flip-left" />
 
-              <h2 className="text-2xl font-semibold">MERN Stack Developer</h2>
+              <h2 className="text-2xl font-semibold">Jr. Full Stack Developer</h2>
               <h3 data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="border-b-4 border-dotted w-full text-3xl font-semibold text-orange-600 pb-2">Skills :</h3>
               <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400" className="text-xl font-semibold ">Next.js | TypeScript | Redux | React | Node Js | <br /> Express js | Mongoose |  MongoDB |  JavaScript | BootStrap | Css | Html
               </p>
@@ -297,9 +311,9 @@ const Home = () => {
 
             <div className="w-full lg:w-1/2 flex flex-col items-start space-y-5">
 
-              <p data-aos-duration="2000" data-aos-delay="200" data-aos="flip-left" className="text-3xl text-orange-600 font-semibold">MERN Stack Developer</p>
+              <p data-aos-duration="2000" data-aos-delay="200" data-aos="flip-left" className="text-3xl text-orange-600 font-semibold">Jr. Full Stack Developer</p>
 
-              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="text-lg font-medium">I'm Asfaqur Rahman, a MERN Stack developer
+              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="text-lg font-medium">I'm Asfaqur Rahman, a Jr. Full Stack developer
                 proficient in HTML, CSS, JavaScript, React, Node.js, Next.js, Express.js, MongoDB, Mongoose, TypeScript, Redux
                 and Tailwind CSS. With a passion for crafting
                 engaging digital experiences, I specialize in
@@ -341,7 +355,7 @@ const Home = () => {
 
             <div className="flex flex-col space-y-8 bg-[#06230e9a] glass rounded-md px-4 py-5 hover:scale-110">
               
-                <h2 data-aos="zoom-in-right" data-aos-duration="1000" className="text-2xl font-bold text-orange-500 pb-2 border-b-4 mb-3">Front End</h2>
+                <h2 data-aos="zoom-in-right" data-aos-duration="1000" className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3">Front End</h2>
                 <div className="flex flex-wrap px-5 md:px-1 gap-10">
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
                     <img src={html} alt="html" className="h-16 w-16"/>
@@ -385,6 +399,16 @@ const Home = () => {
                     <img src={redux} alt="html" className="h-16 w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Redux</h1>
                   </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
+                    <img src={daisy} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">DaisyUI</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-28 pt-2">
+                    <img src={ant} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Ant Design</h1>
+                  </div>
                
                   
 
@@ -393,7 +417,7 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
-              <h2 className="text-2xl font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Back End</h2>
+              <h2 className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Back End</h2>
                 <div className="flex flex-wrap gap-10 px-5">
                   
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
@@ -406,13 +430,28 @@ const Home = () => {
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Express.js</h1>
                   </div>
 
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={fire} alt="html" className="h-16 w-28"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Firebase</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={jwt} alt="html" className="h-16 w-28"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">JWT</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={zod} alt="html" className="h-16 w-28"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Zod</h1>
+                  </div>
+
                  </div>
                
 
             </div>
 
             <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
-              <h2 className="text-2xl font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">DataBase</h2>
+              <h2 className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">DataBase</h2>
                 <div className="flex flex-wrap gap-8 px-5">
                   
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
@@ -443,8 +482,75 @@ const Home = () => {
 
             </div>
 
+               <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
+              <h2 className="text-3xl font-bold text-orange-500 pb-2 border-b-4 mb-3 text-center" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Tools</h2>
+                <div className="flex flex-wrap gap-10 px-5">
+                  
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                    <img src={git} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Git</h1>
+                  </div>
+
+                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={rest} alt="html" className="h-16 w-28"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Restful API</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={postman} alt="html" className="h-16 w-24"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Postman</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={cloudinary} alt="html" className="h-16 w-28"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Cloudinary</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={nodemailer} alt="html" className="h-16 w-28"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Nodemailer</h1>
+                  </div>
+
+                 </div>
+               
+
+            </div>
+
+               <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
+              <h2 className="text-3xl font-bold text-orange-500 pb-2 border-b-4 mb-3 text-center" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Languages</h2>
+                <div className="flex flex-wrap gap-10 px-5">
+                  
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                    <img src={c} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">C</h1>
+                  </div>
+
+                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={JavaScriptl} alt="html" className="h-16 w-28"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">JavaScript</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={java} alt="html" className="h-16 w-24"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Java</h1>
+                  </div>
+
+                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={Typescript} alt="html" className="h-16 w-28"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Typescript</h1>
+                  </div>
+
+                  
+
+                 </div>
+               
+
+            </div>
+
 
           </div>
+
+        
         </div>
 
      <div>
@@ -453,7 +559,10 @@ const Home = () => {
  <div className="flex flex-col gap-2 w-[250px] md:w-[450px] mx-10 mt-5 " data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">
 {/* <h1 className="text-xl text-white font-semibold">WordPress</h1> */}
 <div className="flex flex-col space-y-8 bg-[#06230e9a] glass rounded-md px-4 py-5 hover:scale-110">
-  <h1 className="text-xl text-white font-semibold">WordPress</h1>
+ <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                    <img src={WordPress} alt="html" className="h-16 w-28"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">WordPress</h1>
+                  </div>
 </div>
                 
               </div> 

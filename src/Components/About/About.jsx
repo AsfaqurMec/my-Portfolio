@@ -12,7 +12,7 @@ const About = () => {
 
             <img src="images/IMG_E4927@1x_1.jpg" className="w-[25%] rounded-full shadow-2xl object-cover" />
              
-            <h2 className="text-2xl font-semibold">MERN Stack Developer</h2>
+            <h2 className="text-2xl font-semibold">Jr. Full Stack Developer</h2>
             <h3 className="border-b-4 border-dotted w-full text-3xl font-semibold text-orange-600 pb-2">Skills :</h3>
             <p className="text-xl font-semibold ">Next.js | React | Node Js | Express js | Mongoose | <br /> MongoDB |  JavaScript | BootStrap | Css | Html
 </p>
@@ -37,9 +37,9 @@ const About = () => {
 
             <div  className="w-full lg:w-1/2 flex flex-col items-start space-y-5">
 
-            <p className="text-3xl text-orange-600 font-semibold">MERN Stack Developer</p>
+            <p className="text-3xl text-orange-600 font-semibold">Jr. Full Stack Developer</p>
              
-             <p className="text-lg font-medium">I'm Asfaqur Rahman, a MERN Stack developer
+             <p className="text-lg font-medium">I'm Asfaqur Rahman, a Jr. Full Stack developer
 proficient in HTML, CSS, JavaScript,React,
 and Tailwind CSS. With a passion for crafting
 engaging digital experiences, I specialize in
