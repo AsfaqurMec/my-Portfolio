@@ -47,7 +47,7 @@ import Typescript from '../../../public/images/Typescript.svg.png'
 import mysql from '../../../public/images/hd-mysql-logo-transparent-background-701751694771788209ydqoapx-removebg-preview.png'
 import postgre from '../../../public/images/Postgresql_elephant.svg.png'
 import prisma from '../../../public/images/prisma-icon-size_256.png'
-
+import next from '../../../public/images/images__6_-removebg-preview.png'
 
 const Home = () => { 
 
@@ -373,6 +373,10 @@ const Home = () => {
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Tailwind Css</h1>
                   </div>
 
+                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
+                    <img src={next} alt="html" className="h-16 w-16"/>
+                      <h1  className="text-lg text-[#ffffff98] font-semibold">Next.js</h1>
+                  </div>
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center gap-2 justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
                     <img src={Typescript} alt="html" className="h-14 w-14"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">TypeScript</h1>
@@ -382,6 +386,8 @@ const Home = () => {
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Redux</h1>
                   </div>
                
+                  
+
               </div>
 
             </div>
