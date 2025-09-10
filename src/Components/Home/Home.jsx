@@ -25,6 +25,7 @@ import img9 from '../../../public/images/Screenshot 2024-12-24 025438.png'
 import img10 from '../../../public/images/Screenshot 2025-07-03 193732.png'
 import asl from '../../../public/images/asl.png'
 import as from '../../../public/images/as.png'
+import launch from '../../../public/images/launch.png'
 import exponential from '../../../public/images/exponential.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -608,6 +609,30 @@ const Home = () => {
 
           <div className="flex flex-wrap gap-16 md:gap-10 justify-evenly mt-20 mx-auto w-full">
           
+          <Link to={'https://launchmybiz.net/'}>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                          <figure>
+                            <img className="h-48 w-full"
+                              src={launch}
+                              alt="Shoes" />
+                          </figure>
+                          <div className="card-body bg-[#00000020] rounded-b-lg">
+                            <h2 className="card-title">
+                              Launch
+                              <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">Business Formation</div>
+          
+                            </h2>
+                            <p>LaunchMyBiz: Complete Business Formation Platform.</p>
+                            <div className="card-actions justify-end">
+                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">React</div>
+                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">Node Js</div>
+                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">TypeScript</div>
+                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">MongoDB</div>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+
            <Link to={'https://as-global.vercel.app/'}>
                         <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
                           <figure>
