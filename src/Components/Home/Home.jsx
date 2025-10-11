@@ -2,7 +2,7 @@
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
@@ -62,9 +62,23 @@ import java from '../../../public/images/java-coffee-cup-logo.png'
 import fire from '../../../public/images/firebase-icon-logo-png_seeklogo-615938-removebg-preview.png';
 import daisy from '../../../public/images/daisyui-logo-png_seeklogo-554509-removebg-preview.png';
 import ant from '../../../public/images/ant-design-logo-png_seeklogo-380495.png'
+import { projectService } from '../../services/projectService';
 
 
 const Home = () => { 
+
+  const [dbProjects, setDbProjects] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const data = await projectService.getAllProjects();
+        setDbProjects(Array.isArray(data) ? data : []);
+      } catch (e) {
+        setDbProjects([]);
+      }
+    })();
+  }, []);
 
   const container = document.querySelector('.progress-bars');
   const progres = document.querySelector('.progres');
@@ -608,6 +622,27 @@ const Home = () => {
           <h2 data-aos="zoom-in-up" data-aos-duration="1000" className="text-center text-3xl font-semibold mt-40 mb-10">M E R N STACK!!!</h2>
 
           <div className="flex flex-wrap gap-16 md:gap-10 justify-evenly mt-20 mx-auto w-full">
+          {dbProjects.filter(p => p.category !== 'WordPress').map((p, idx) => (
+            <Link key={p._id || idx} to={`/projects/${p._id}`}>
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                <figure>
+                  <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
+                </figure>
+                <div className="card-body bg-[#00000020] rounded-b-lg">
+                  <h2 className="card-title">
+                    {p.title}
+                    <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">{p.category || 'Project'}</div>
+                  </h2>
+                  <p className="line-clamp-2">{p.description}</p>
+                  <div className="card-actions justify-end">
+                    {(p.technologies || []).slice(0,4).map((t,i) => (
+                      <div key={i} className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">{t}</div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
           
           <Link to={'https://launchmybiz.net/'}>
                         <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
@@ -900,7 +935,7 @@ const Home = () => {
                        <h2 className="text-center text-5xl font-semibold mb-5 mt-24">WordPress</h2>
                        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
           
-                       <Link to={'https://neosupremetech.com/'}>
+                      <Link to={'https://neosupremetech.com/'}>
                         <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
                           <figure>
                             <img className="h-48 w-full"
@@ -968,6 +1003,25 @@ const Home = () => {
                         </div>
                       </Link>
 
+          </div>
+
+          {/* Dynamic WordPress projects */}
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
+            {dbProjects.filter(p => p.category === 'WordPress').map((p, idx) => (
+              <Link key={p._id || idx} to={`/projects/${p._id}`}>
+                <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                  <figure>
+                    <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
+                  </figure>
+                  <div className="card-body  rounded-b-lg">
+                    <h2 className="card-title">
+                      {p.title}
+                    </h2>
+                    <p className="line-clamp-2">{p.description}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
 
      

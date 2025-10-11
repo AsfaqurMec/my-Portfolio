@@ -1,6 +1,7 @@
 import './navbar.css'
 import { Link} from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useAuth } from '../../contexts/AuthContext';
 import logo from '../../../public/images/Preview.png'
 
 
@@ -11,7 +12,7 @@ AOS.init();
 
 
 const Navbar = () => {
-
+    const { isAuthenticated } = useAuth();
 
     return (
         <div className="navbar backdrop-blur-sm fixed z-50">
@@ -29,7 +30,12 @@ const Navbar = () => {
         <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200"><Link className='hover:bg-none' to='/about'><a className="hover:text-red-500 font-mono bg-none transform hover:scale-125 transition duration-300 hover-underline text-slate-50 text-2xl font-bold mr-3">About</a></Link></li>
         <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400"> <Link to='/project'><a className="hover:text-sky-500 hover:bg-transparent font-mono text-slate-50 transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold  mr-3">Projects</a></Link></li>
         <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600"> <Link to='/skill'><a className="hover:text-sky-500 hover:bg-transparent text-slate-50 font-mono transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold  mr-3">Skills</a></Link></li>
-        <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800"> <Link to='/contact'><a className="hover:text-sky-500 hover:bg-transparent text-slate-50 font-mono transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold">Contact</a></Link></li>
+        <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800"> <Link to='/contact'><a className="hover:text-sky-500 hover:bg-transparent text-slate-50 font-mono transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold mr-3">Contact</a></Link></li>
+        {isAuthenticated ? (
+          <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000"> <Link to='/dashboard'><a className="hover:text-emerald-500 hover:bg-transparent text-slate-50 font-mono transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold">Dashboard</a></Link></li>
+        ) : (
+          <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000"> <Link to='/login'><a className="hover:text-emerald-500 hover:bg-transparent text-slate-50 font-mono transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold">Login</a></Link></li>
+        )}
           </ul>
           {/* <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -86,6 +92,11 @@ const Navbar = () => {
       <Link to='/project'>   <li ><a className="hover:text-sky-400 transform hover:scale-110 font-mono transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-sky-400">Projects</a></li></Link>
         <Link to='/skill'>   <li ><a className="hover:text-sky-400 transform hover:scale-110 font-mono transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-sky-400">Skills</a></li></Link>
         <Link to='/contact'> <li ><a className="hover:text-sky-400 transform hover:scale-110 font-mono transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-sky-400">Contact</a></li></Link>
+        {isAuthenticated ? (
+          <Link to='/dashboard'> <li ><a className="hover:text-emerald-400 transform hover:scale-110 font-mono transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-emerald-400">Dashboard</a></li></Link>
+        ) : (
+          <Link to='/login'> <li ><a className="hover:text-emerald-400 transform hover:scale-110 font-mono transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-emerald-400">Login</a></li></Link>
+        )}
     </ul>
   </div>
 </div>

@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { projectService } from '../../services/projectService';
 import img from '../../assets/Screenshot 2024-08-15 232322.png'
 import img1 from '../../../public/images/Screenshot 2024-08-31 143207.png'
 import img2 from '../../../public/images/Screenshot 2024-07-16 122933.png'
@@ -16,6 +18,19 @@ import CountUp from 'react-countup';
 import as from '../../../public/images/as.png';
 import launch from '../../../public/images/launch.png'
 const Project = () => {
+    const [dbProjects, setDbProjects] = useState([]);
+
+    useEffect(() => {
+      (async () => {
+        try {
+          const data = await projectService.getAllProjects();
+          setDbProjects(Array.isArray(data) ? data : []);
+        } catch (e) {
+          setDbProjects([]);
+        }
+      })();
+    }, []);
+
     return (
         <div className="bg-[#081506] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white">
              <h2 className="text-center text-5xl font-semibold">Projects</h2>
@@ -49,6 +64,27 @@ const Project = () => {
 
           <h2 className="text-center text-5xl font-semibold mb-5 mt-14">M E R N Stack!</h2>
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
+            {dbProjects.filter(p => p.category !== 'WordPress').map((p, idx) => (
+              <Link key={p._id || idx} to={`/projects/${p._id}`}>
+                <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                  <figure>
+                    <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
+                  </figure>
+                  <div className="card-body bg-[#00000020] rounded-b-lg">
+                    <h2 className="card-title">
+                      {p.title}
+                      <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">{p.category || 'Project'}</div>
+                    </h2>
+                    <p className="line-clamp-2">{p.description}</p>
+                    <div className="card-actions justify-end">
+                      {(p.technologies || []).slice(0,4).map((t,i) => (
+                        <div key={i} className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">{t}</div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
 
           <Link to={'https://launchmybiz.net/'}>
                         <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
@@ -340,6 +376,21 @@ const Project = () => {
               
              <h2 className="text-center text-5xl font-semibold mb-5 mt-24">WordPress</h2>
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
+            {dbProjects.filter(p => p.category === 'WordPress').map((p, idx) => (
+              <Link key={p._id || idx} to={`/projects/${p._id}`}>
+                <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                  <figure>
+                    <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
+                  </figure>
+                  <div className="card-body bg-[#232222] rounded-b-lg">
+                    <h2 className="card-title">
+                      {p.title}
+                    </h2>
+                    <p className="line-clamp-2">{p.description}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
 
              <Link to={'https://neosupremetech.com/'}>
               <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">

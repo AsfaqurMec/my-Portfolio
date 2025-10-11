@@ -6,6 +6,10 @@ import Skill from "../Components/Skill/Skill";
 import Contact from "../Components/Contact/Contact";
 import Project from "../Components/Project/Project";
 import About from "../Components/About/About";
+import Dashboard from "../Components/Dashboard/Dashboard";
+import ProtectedRoute from "../Components/Auth/ProtectedRoute";
+import Login from "../Components/Auth/Login";
+import ProjectDetail from "../Components/Project/ProjectDetail/ProjectDetail";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +41,20 @@ const router = createBrowserRouter([
                 path: '/about',
                 element: <About></About>, 
               
+            },
+            {
+                path: '/login',
+                element: <Login></Login>, 
+              
+            },
+            {
+                path: '/dashboard',
+                element: <ProtectedRoute><Dashboard></Dashboard></ProtectedRoute>, 
+              
+            },
+            {
+                path: '/projects/:id',
+                element: <ProjectDetail></ProjectDetail>,
             },
           ],
         },      
