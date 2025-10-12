@@ -73,7 +73,7 @@ const Project = () => {
                   <div className="card-body bg-[#00000020] rounded-b-lg">
                     <h2 className="card-title">
                       {p.title}
-                      <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">{p.category || 'Project'}</div>
+                      <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">{p.type}</div>
                     </h2>
                     <p className="line-clamp-2">{p.description}</p>
                     <div className="card-actions justify-end">

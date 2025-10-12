@@ -13,7 +13,9 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: '',
+    type: '',
     description: '',
+    features: '',
     link: '',
     technologies: '',
     category: 'Full Stack',
@@ -72,7 +74,9 @@ const Dashboard = () => {
       setEditingProject(null);
       setFormData({
         title: '',
+        type: '',
         description: '',
+        features: '',
         link: '',
         technologies: '',
         category: 'Full Stack',
@@ -93,7 +97,9 @@ const Dashboard = () => {
     setEditingProject(project);
     setFormData({
       title: project.title,
+      type: project.type,
       description: project.description,
+      features: project.features,
       link: project.link,
       technologies: project.technologies.join(', '),
       category: project.category,
@@ -119,7 +125,9 @@ const Dashboard = () => {
     setEditingProject(null);
     setFormData({
       title: '',
+      type: '',
       description: '',
+      features: '',
       link: '',
       technologies: '',
       category: 'Full Stack',
@@ -181,6 +189,18 @@ const Dashboard = () => {
                     className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
                   />
                 </div>
+                 
+                  <div>
+                  <label className="block text-sm font-medium mb-2">Type *</label>
+                  <input
+                    type="text"
+                    name="type"
+                    value={formData.type}
+                    onChange={handleInputChange}
+                    // required
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                  />
+                </div>
 
                 <div>
                   <label className="block text-sm font-medium mb-2">Description *</label>
@@ -189,6 +209,18 @@ const Dashboard = () => {
                     value={formData.description}
                     onChange={handleInputChange}
                     required
+                    rows="3"
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">Features *</label>
+                  <textarea
+                    name="features"
+                    value={formData.features}
+                    onChange={handleInputChange}
+                    // required
                     rows="3"
                     className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
                   />
@@ -228,8 +260,7 @@ const Dashboard = () => {
                   >
                     <option value="Full Stack">Full Stack</option>
                     <option value="WordPress">WordPress</option>
-                    <option value="Frontend">Frontend</option>
-                    <option value="Backend">Backend</option>
+                    <option value="Frontend">Next.js</option>
                   </select>
                 </div>
 
@@ -314,7 +345,10 @@ const Dashboard = () => {
                   ))}
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-400">{project.category}</span>
+                  <div className="flex gap-6">
+                  <span className="text-sm text-gray-400"> Type : {project.type}</span>
+                  <span className="text-sm text-gray-400"> Category : {project.category}</span>
+                </div>
                   <div className="flex gap-2">
                     <a
                       href={project.link}

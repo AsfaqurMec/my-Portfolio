@@ -21,6 +21,9 @@ const ProjectDetail = () => {
     })();
   }, [id]);
 
+ //console.log(project);
+  
+
   if (loading) {
     return (
       <div className="bg-[#081506] min-h-screen flex items-center justify-center text-white">
@@ -51,9 +54,9 @@ const ProjectDetail = () => {
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-3">{project.title}</h1>
             <div className="flex flex-wrap items-center gap-2">
-              {project.category && (
+              {project.type && (
                 <span className="bg-emerald-600 text-white px-3 py-1 rounded-full text-xs uppercase tracking-wider">
-                  {project.category}
+                  {project.type}
                 </span>
               )}
               {project.featured && (
@@ -84,13 +87,23 @@ const ProjectDetail = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left: Description and Gallery */}
           <div className="lg:col-span-2 space-y-8">
-            <div className="bg-[#0a2d149a] rounded-xl p-6">
+            <div className="bg-[#0a2d149a] rounded-xl p-6 shadow-md shadow-[#014047]">
               <h2 className="text-2xl font-semibold mb-3">Overview</h2>
               <p className="text-gray-200 leading-7 whitespace-pre-line">{project.description}</p>
             </div>
-
+           
+           { project.features != [] > 0 && (
+            <div className="bg-[#0a2d149a] rounded-xl p-6 shadow-md shadow-[#014047]">
+              <h2 className="text-2xl font-semibold mb-3">Features</h2>
+               <div className="flex flex-col gap-2">
+              {(project.features || []).map((t, i) => (
+                  <span key={i} className="text-white">.{t}</span>
+                ))}
+                </div>
+            </div>
+           )}
             {project.images && project.images.length > 0 && (
-              <div className="bg-[#0a2d149a] rounded-xl p-6">
+              <div className="bg-[#0a2d149a] rounded-xl p-6 shadow-md shadow-[#014047]">
                 <h2 className="text-2xl font-semibold mb-4">Gallery</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {project.images.map((img, idx) => (
@@ -103,7 +116,8 @@ const ProjectDetail = () => {
 
           {/* Right: Meta */}
           <div className="space-y-6">
-            <div className="bg-[#06230e9a] rounded-xl p-6">
+           {project.technologies != [] && ( 
+            <div className="bg-[#06230e9a] rounded-xl p-6 shadow-md shadow-[#014047]">
               <h3 className="text-xl font-semibold mb-3">Technologies</h3>
               <div className="flex flex-wrap gap-2">
                 {(project.technologies || []).map((t, i) => (
@@ -111,8 +125,9 @@ const ProjectDetail = () => {
                 ))}
               </div>
             </div>
+           )}
 
-            <div className="bg-[#06230e9a] rounded-xl p-6">
+            <div className="bg-[#06230e9a] rounded-xl p-6 shadow-md shadow-[#014047]">
               <h3 className="text-xl font-semibold mb-2">Links</h3>
               <div className="flex flex-col gap-2">
                 {project.link && (
@@ -123,7 +138,7 @@ const ProjectDetail = () => {
               </div>
             </div>
 
-            <div className="bg-[#06230e9a] rounded-xl p-6">
+            <div className="bg-[#06230e9a] rounded-xl p-6 shadow-md shadow-[#014047]">
               <h3 className="text-xl font-semibold mb-2">Actions</h3>
               <Link to="/project" className="inline-block px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded-md">Back to Projects</Link>
             </div>

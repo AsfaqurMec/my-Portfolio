@@ -34,7 +34,7 @@ const Navbar = () => {
         {isAuthenticated ? (
           <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000"> <Link to='/dashboard'><a className="hover:text-emerald-500 hover:bg-transparent text-slate-50 font-mono transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold">Dashboard</a></Link></li>
         ) : (
-          <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000"> <Link to='/login'><a className="hover:text-emerald-500 hover:bg-transparent text-slate-50 font-mono transform hover:scale-125 transition duration-300 hover-underline text-2xl font-bold">Login</a></Link></li>
+          ""
         )}
           </ul>
           {/* <div className="dropdown dropdown-end">
@@ -95,7 +95,7 @@ const Navbar = () => {
         {isAuthenticated ? (
           <Link to='/dashboard'> <li ><a className="hover:text-emerald-400 transform hover:scale-110 font-mono transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-emerald-400">Dashboard</a></li></Link>
         ) : (
-          <Link to='/login'> <li ><a className="hover:text-emerald-400 transform hover:scale-110 font-mono transition duration-300  text-slate-50 font-semibold text-xl border-b-2 hover:border-emerald-400">Login</a></li></Link>
+          ''
         )}
     </ul>
   </div>

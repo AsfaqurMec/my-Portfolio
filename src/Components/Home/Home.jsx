@@ -631,7 +631,7 @@ const Home = () => {
                 <div className="card-body bg-[#00000020] rounded-b-lg">
                   <h2 className="card-title">
                     {p.title}
-                    <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">{p.category || 'Project'}</div>
+                    <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">{p.type}</div>
                   </h2>
                   <p className="line-clamp-2">{p.description}</p>
                   <div className="card-actions justify-end">
@@ -934,7 +934,23 @@ const Home = () => {
                         
                        <h2 className="text-center text-5xl font-semibold mb-5 mt-24">WordPress</h2>
                        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
-          
+                        
+                        {dbProjects.filter(p => p.category == 'WordPress').map((p, idx) => (
+            <Link key={p._id || idx} to={`/projects/${p._id}`}>
+              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                <figure>
+                  <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
+                </figure>
+                <div className="card-body bg-[#00000020] rounded-b-lg">
+                  <h2 className="card-title">
+                    {p.title}
+                  </h2>
+                  <p className="line-clamp-2">{p.description}</p>
+                </div>
+              </div>
+            </Link>
+          ))}
+
                       <Link to={'https://neosupremetech.com/'}>
                         <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
                           <figure>
@@ -1005,8 +1021,8 @@ const Home = () => {
 
           </div>
 
-          {/* Dynamic WordPress projects */}
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
+          
+          {/* <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
             {dbProjects.filter(p => p.category === 'WordPress').map((p, idx) => (
               <Link key={p._id || idx} to={`/projects/${p._id}`}>
                 <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
@@ -1022,7 +1038,7 @@ const Home = () => {
                 </div>
               </Link>
             ))}
-          </div>
+          </div> */}
 
      
 
