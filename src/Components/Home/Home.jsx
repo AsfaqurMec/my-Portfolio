@@ -231,13 +231,13 @@ const Home = () => {
 
             <div>
               <div className="hero-content w-full flex-col p-0 justify-between gap-12 lg:flex-row-reverse text-slate-200">
-                <div className="bounce w-2/3 md:w-1/2 lg:w-1/3 mb-5 justify-center flex mt-28 lg:mt-0"><img src="images/IMG_E4927@1x_1.jpg" className=" rounded-full shadow-xl shadow-lime-800 mb-5" /></div>
+                <div className=" z-100 w-2/3 md:w-1/2 lg:w-1/3 mb-5 justify-center flex mt-0 md:mt-28 lg:mt-0"><img src="images/IMG_E4927@1x_1.jpg" className="w-full rounded-tr-[100px] rounded-bl-[100px] rounded-tl-sm rounded-br-sm shadow-xl shadow-lime-800 mb-5" /></div>
                 <div className="px-8 lg:px-0">
 
                   <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300" className="text-6xl font-mono font-bold pb-4">I'm <br className="block md:hidden" />  <span className="name text-[42px] md:text-6xl text-[#22f0ff] md:pl-4">{text}</span></h1>
-                  <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" className="text-3xl md:text-4xl font-bold font-mono">A <span>Jr. Full Stack Developer</span></h1>
-                  <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800" className="py-6 text-2xl">I am a developer & coder. I do it because i like to do it. Hope you like my works.</p>
-                  <a data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1000" href="https://docs.google.com/document/d/19gulR31q5tCQXaeCgdP0hzeqGq398_N773mQnJ37rME/edit?usp=sharing"><button className="btn bg-sky-400 hover:bg-amber-600 text-white text-xl lg:text-2xl border-none shadow-lg shadow-[#adadada0]">Download Resume</button></a>
+                  <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" className="text-3xl md:text-4xl font-bold font-mono">A <span className="italic">Jr. Full Stack Developer</span></h1>
+                  <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800" className="py-6 text-2xl pr-0 lg:pr-56">I am a developer & coder. I do it because i like to do it. Hope you like my works.</p>
+                  <a data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1000" href="https://drive.google.com/file/d/1E22L7jY3SJlENAqf63800QGGSjjHg_iF/view?usp=sharing" target="_blank"><button className="btn bg-sky-600 hover:bg-amber-600 text-white text-xl lg:text-2xl border-none shadow-md shadow-gray-500">Download Resume</button></a>
                   <div className="mt-8 flex flex-row justify-start gap-5">
                     <a data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="1000" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL"><FaFacebook className="h-10 text-orange-500 w-10" /></a>
                     <a data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1200" href="https://github.com/dashboard"><FaGithub className="h-10 text-orange-500 w-10" /></a>
@@ -371,29 +371,29 @@ const Home = () => {
             <div className="flex flex-col space-y-8 bg-[#06230e9a] glass rounded-md px-4 py-5 hover:scale-110">
               
                 <h2 data-aos="zoom-in-right" data-aos-duration="1000" className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3">Front End</h2>
-                <div className="flex flex-wrap px-5 md:px-1 gap-10">
+                <div className="flex flex-wrap px-1 md:px-5  gap-10">
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={html} alt="html" className="h-16 w-16"/>
+                    <img src={html} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Html</h1>
                   </div>
                 
                 <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={css} alt="html" className="h-16 w-16"/>
+                    <img src={css} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Css</h1>
                   </div>
 
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={JavaScriptl} alt="html" className="h-16 w-16"/>
+                    <img src={JavaScriptl} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">JavaScript</h1>
                   </div>
 
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={bootstrap} alt="html" className="h-16 w-16"/>
+                    <img src={bootstrap} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Bootstrap</h1>
                   </div>
 
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={react} alt="html" className="h-16 w-16"/>
+                    <img src={react} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">React</h1>
                   </div>
 
@@ -403,25 +403,25 @@ const Home = () => {
                   </div>
 
                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
-                    <img src={next} alt="html" className="h-16 w-16"/>
+                    <img src={next} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Next.js</h1>
                   </div>
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center gap-2 justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
-                    <img src={Typescript} alt="html" className="h-14 w-14"/>
+                    <img src={Typescript} alt="html" className="w-12 md:h-14 h-12 md:w-14"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">TypeScript</h1>
                   </div>
                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
-                    <img src={redux} alt="html" className="h-16 w-16"/>
+                    <img src={redux} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Redux</h1>
                   </div>
 
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
-                    <img src={daisy} alt="html" className="h-16 w-16"/>
+                    <img src={daisy} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">DaisyUI</h1>
                   </div>
 
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-28 pt-2">
-                    <img src={ant} alt="html" className="h-16 w-16"/>
+                    <img src={ant} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Ant Design</h1>
                   </div>
                
@@ -433,30 +433,30 @@ const Home = () => {
 
             <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
               <h2 className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Back End</h2>
-                <div className="flex flex-wrap gap-10 px-5">
+                <div className="flex flex-wrap gap-10 px-1 md:px-5">
                   
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={node} alt="html" className="h-16 w-16"/>
+                    <img src={node} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Node.js</h1>
                   </div>
 
                                     <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={express} alt="html" className="h-16 w-28"/>
+                    <img src={express} alt="html" className="h-12 md:h-16 w-20 md:w-28"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Express.js</h1>
                   </div>
 
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={fire} alt="html" className="h-16 w-28"/>
+                    <img src={fire} alt="html" className="h-12 md:h-16 w-20 md:w-28"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Firebase</h1>
                   </div>
 
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={jwt} alt="html" className="h-16 w-28"/>
+                    <img src={jwt} alt="html" className="h-12 md:h-16 w-20 md:w-28"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">JWT</h1>
                   </div>
 
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={zod} alt="html" className="h-16 w-28"/>
+                    <img src={zod} alt="html" className="h-12 md:h-16 w-20 md:w-28"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Zod</h1>
                   </div>
 
@@ -467,28 +467,28 @@ const Home = () => {
 
             <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
               <h2 className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">DataBase</h2>
-                <div className="flex flex-wrap gap-8 px-5">
+                <div className="flex flex-wrap gap-8 px-1 md:px-5">
                   
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={mongodb} alt="html" className="h-16 w-16"/>
+                    <img src={mongodb} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">MongoDB</h1>
                   </div>
 
                                     <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={mongoose} alt="html" className="h-16 w-[100px]"/>
+                    <img src={mongoose} alt="html" className="w-12 md:h-16 h-12 md:w-[100px]"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Mongoose</h1>
                   </div>
 
                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
-                    <img src={mysql} alt="html" className="h-16 w-[100px]"/>
+                    <img src={mysql} alt="html" className="w-12 md:h-16 h-12 md:w-[100px]"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">MySQL</h1>
                   </div>
                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
-                    <img src={postgre} alt="html" className="h-16 w-[100px]"/>
+                    <img src={postgre} alt="html" className="w-12 md:h-16 h-12 md:w-[100px]"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">PostgreSQL</h1>
                   </div>
                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
-                    <img src={prisma} alt="html" className="h-16 w-[100px]"/>
+                    <img src={prisma} alt="html" className="w-12 md:h-16 h-12 md:w-[100px]"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Prisma ORM</h1>
                   </div>
 
@@ -499,10 +499,10 @@ const Home = () => {
 
                <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
               <h2 className="text-3xl font-bold text-orange-500 pb-2 border-b-4 mb-3 text-center" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Tools</h2>
-                <div className="flex flex-wrap gap-10 px-5">
+                <div className="flex flex-wrap gap-10 px-1 md:px-5">
                   
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={git} alt="html" className="h-16 w-16"/>
+                    <img src={git} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
                       <h1  className="text-lg text-[#ffffff98] font-semibold">Git</h1>
                   </div>
 
@@ -533,7 +533,7 @@ const Home = () => {
 
                <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
               <h2 className="text-3xl font-bold text-orange-500 pb-2 border-b-4 mb-3 text-center" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Languages</h2>
-                <div className="flex flex-wrap gap-10 px-5">
+                <div className="flex flex-wrap gap-10 px-1 md:px-5">
                   
                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
                     <img src={c} alt="html" className="h-16 w-16"/>
@@ -598,22 +598,22 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 w-full md:w-[80%] mx-auto my-20">
 
             <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={12} duration={5} />+</h1>
+              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={15} duration={5} />+</h1>
               <h1 className="text-xl">Total Projects</h1>
             </div>
 
             <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={10} duration={5} />+</h1>
+              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={12} duration={5} />+</h1>
               <h1 className="text-xl">Full Stack</h1>
             </div>
 
             <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={5} duration={8} />+</h1>
+              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={7} duration={8} />+</h1>
               <h1 className="text-xl fon">Next Js</h1>
             </div>
              
             <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={2} duration={8} />+</h1>
+              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={4} duration={8} />+</h1>
               <h1 className="text-xl fon">WordPress</h1>
             </div>
 
