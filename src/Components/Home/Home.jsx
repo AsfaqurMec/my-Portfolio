@@ -63,8 +63,8 @@ import fire from '../../../public/images/firebase-icon-logo-png_seeklogo-615938-
 import daisy from '../../../public/images/daisyui-logo-png_seeklogo-554509-removebg-preview.png';
 import ant from '../../../public/images/ant-design-logo-png_seeklogo-380495.png'
 import { projectService } from '../../services/projectService';
-
-
+import video from '../../../public/images/bb3.mp4'
+import { useRef } from "react";
 const Home = () => { 
 
   const [dbProjects, setDbProjects] = useState([]);
@@ -122,7 +122,7 @@ const Home = () => {
 
   const [text] = useTypewriter({
     words: ['Asfaqur Rahman'],
-    loop: Infinity
+    loop: ''
   })
 
 
@@ -139,116 +139,89 @@ const Home = () => {
     await console.log(container);
   }, []);
 
+ 
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.7; // 0.5 = half speed
+    }
+  }, []);
 
 
   return (
     <>
       <div>
-        <section className="relative bg-[#081506]  h-[1300px] md:min-h-[90vh] lg:h-[130vh] lg:mb-0">
-          <div className="hero pt-8 pb-5 absolute bg-[#081506]  h-[1300px] md:min-h-[90vh] lg:h-[130vh]">
 
+      <section className="relative min-h-[92vh] flex items-center justify-center  overflow-hidden px-5 lg:px-0">
 
-            <Particles
-              id="tsparticles"
-              init={particlesInit}
-              loaded={particlesLoaded}
-              options={{
+{/* Background Video */}
+<video
+ ref={videoRef}
+ autoPlay
+ loop
+ muted
+ playsInline
+ preload="none"
+ 
+ className="absolute inset-0 w-full h-full object-cover"
+>
+  <source src={video} type="video/mp4" />
+</video>  
 
-                fpsLimit: 520,
+{/* Overlay */}
+<div className="absolute inset-0 bg-gradient-to-b from-slate-950/100 via-slate-950/85 to-slate-950/100"></div>
 
-                style: {
-                  position: 'absolute'
-                },
+{/* Content */}
+<div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
 
-                interactivity: {
+  <div className="w-full flex flex-col lg:flex-row-reverse justify-center items-center gap-14 lg:gap-40">
 
-                  events: {
-                    onClick: {
-                      enable: true,
-                      mode: "push",
-                    },
-                    onHover: {
-                      enable: true,
-                      mode: "repulse",
-                    },
-                    resize: true,
-                  },
+    <div className="w-full max-w-xs lg:max-w-sm flex-shrink-0">
+      <div className="card-light p-2 ">
+        <img
+          src="images/IMG_E4927@1x_1.jpg"
+          alt="Asfaqur Rahman"
+          className="w-full rounded-tr-[100px] rounded-bl-[100px] rounded-tl-[10px] rounded-br-[10px] object-cover"
+        />
+      </div>
+    </div>
+ 
 
-                  modes: {
-                    push: {
-                      quantity: 1,
-                    },
-                    repulse: {
-                      distance: 100,
-                      duration: 0.50,
-                    },
-                  },
-                },
-                particles: {
-                  color: {
-                    value: "#0d0d",
-                  },
-                  links: {
-                    color: "#ffffff",
-                    distance: 100,
-                    enable: true,
-                    opacity: 0.5,
-                    width: .8,
-                  },
-                  move: {
-                    direction: "none",
-                    enable: true,
-                    outModes: {
-                      default: "bounce",
-                    },
-                    random: false,
-                    speed: 3,
-                    straight: false,
-                  },
-                  number: {
-                    density: {
-                      enable: true,
-                      area: 1000,
-                    },
-                    value: 150,
-                  },
-                  opacity: {
-                    value: 0.5,
-                  },
-                  shape: {
-                    type: "circle",
-                  },
-                  size: {
-                    value: { min: .5, max: 5 },
-                  },
+    <div className="text-center lg:text-left">
+      <p className="text-sm font-medium tracking-wider uppercase mb-2 text-slate-300">
+        Hello, I'm
+      </p>
 
-                },
-                detectRetina: false,
+      <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-50 tracking-tight">
+        <span className="text-violet-300">Asfaqur Rahman</span>
+      </h1>
 
-              }}
-            />
+      <p className="text-xl font-semibold text-slate-200 mt-3">
+        Jr. Full Stack Developer
+      </p>
 
+      <p className="mt-4 text-slate-300 text-lg max-w-lg">
+        I am a developer & coder. I do it because i like to do it. Hope you like my works.
+      </p>
 
-            <div>
-              <div className="hero-content w-full flex-col p-0 justify-between gap-12 lg:flex-row-reverse text-slate-200">
-                <div className=" z-100 w-2/3 md:w-1/2 lg:w-1/3 mb-5 justify-center flex mt-0 md:mt-28 lg:mt-0"><img src="images/IMG_E4927@1x_1.jpg" className="w-full rounded-tr-[100px] rounded-bl-[100px] rounded-tl-sm rounded-br-sm shadow-xl shadow-lime-800 mb-5" /></div>
-                <div className="px-8 lg:px-0">
+      <a
+        href="https://drive.google.com/file/d/1E22L7jY3SJlENAqf63800QGGSjjHg_iF/view?usp=sharing"
+        target="_blank"
+        rel="noreferrer"
+        className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-xl font-medium transition-colors bg-violet-500/20 hover:bg-violet-500/30 text-violet-100 border border-white/10"
+      >
+        Download Resume
+      </a>
+      <div className="mt-8 flex justify-center lg:justify-start gap-5">
+                  <a data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors" aria-label="Facebook"><FaFacebook className="h-7 w-7" /></a>
+                  <a data-aos="fade-up" data-aos-duration="500" data-aos-delay="600" href="https://github.com/dashboard" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors" aria-label="GitHub"><FaGithub className="h-7 w-7" /></a>
+                  <a data-aos="fade-up" data-aos-duration="500" data-aos-delay="700" href="https://www.linkedin.com/in/asfaqur-rahman-hamim" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors" aria-label="LinkedIn"><FaLinkedin className="h-7 w-7" /></a>
+       </div>
+    </div>
 
-                  <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300" className="text-6xl font-mono font-bold pb-4">I'm <br className="block md:hidden" />  <span className="name text-[42px] md:text-6xl text-[#22f0ff] md:pl-4">{text}</span></h1>
-                  <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" className="text-3xl md:text-4xl font-bold font-mono">A <span className="italic">Jr. Full Stack Developer</span></h1>
-                  <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800" className="py-6 text-2xl pr-0 lg:pr-56">I am a developer & coder. I do it because i like to do it. Hope you like my works.</p>
-                  <a data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1000" href="https://drive.google.com/file/d/1E22L7jY3SJlENAqf63800QGGSjjHg_iF/view?usp=sharing" target="_blank"><button className="btn bg-sky-600 hover:bg-amber-600 text-white text-xl lg:text-2xl border-none shadow-md shadow-gray-500">Download Resume</button></a>
-                  <div className="mt-8 flex flex-row justify-start gap-5">
-                    <a data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="1000" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL"><FaFacebook className="h-10 text-orange-500 w-10" /></a>
-                    <a data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1200" href="https://github.com/dashboard"><FaGithub className="h-10 text-orange-500 w-10" /></a>
-                    <a data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="1400" href="https://www.linkedin.com/in/asfaqur-rahman-hamim"><FaLinkedin className="h-10 text-orange-500 w-10" /></a>
-
-                  </div>
-                </div>
-              </div>
-
-
-              <div className="wrapper ">
+  </div>
+  <div className="wrapper mt-12 lg:mt-16">
                 <div className="item item1">
                   <img src={html} alt="" />
                 </div>
@@ -285,50 +258,35 @@ const Home = () => {
                 <div className="item item12">
                 <img src={Typescript} alt="" />
                 </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
+              </div> 
+</div>
+</section>
+       
       </div>
 
 
 
 
 
-
-
-      <section>
-
-        <div className="bg-[#081506] min-h-screen mt-0 pt-28 px-10 pb-10 text-white">
-          <h2 className="text-5xl mb-10 font-bold text-teal-200 pb-5 border-b-4 border-dotted text-center" data-aos="zoom-in-up" data-aos-duration="1000">About Me</h2>
-          <div className="flex flex-col lg:flex-row gap-8">
-            <div className="w-full lg:w-1/2 flex flex-col items-start space-y-5">
-
-              <img src="images/IMG_E4927@1x_1.jpg" className="w-[25%] rounded-full shadow-2xl object-cover " data-aos-duration="1000" data-aos="flip-left" />
-
-              <h2 className="text-2xl font-semibold">Jr. Full Stack Developer</h2>
-              <h3 data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="border-b-4 border-dotted w-full text-3xl font-semibold text-orange-600 pb-2">Skills :</h3>
-              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400" className="text-xl font-semibold ">Next.js | TypeScript | Redux | React | Node Js | <br /> Express js | Mongoose |  MongoDB |  JavaScript | BootStrap | Css | Html
-              </p>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100" className="w-full">
-                <h3 className="border-b-4 border-dotted w-full text-3xl font-semibold text-orange-600 mb-5 pb-2">Education :</h3>
-
-                <p className="text-xl font-medium">Mymensingh Engineering College,Mymensingh</p>
-                <p className="text-xl font-medium">BSc in Computer Science and Engineering</p>
-                <p className="text-xl font-medium">November, 2022 - current</p>
+      <section className="pt-16 lg:pt-20 bg-slate-950/10 px-5 lg:px-0">
+        <div className="section-container">
+          <h2 className="section-title text-center mb-12 pb-6 border-b-2 border-indigo-200" data-aos="fade-up" data-aos-duration="600">About Me</h2>
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+            <div className="w-full lg:w-1/2 flex flex-col items-start space-y-6">
+              <img src="images/IMG_E4927@1x_1.jpg" alt="" className="w-24 h-24 rounded-full object-cover ring-2 ring-stone-200 shadow-xl" data-aos="zoom-in-up" data-aos-duration="600" />
+              <h2 className="text-xl font-semibold text-stone-200">Jr. Full Stack Developer</h2>
+              <h3 data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="100" className="text-lg font-heading font-semibold text-stone-300 pb-2 border-b-2 border-indigo-200 w-full">Skills</h3>
+              <p data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="200" className="text-stone-400">Next.js | TypeScript | Redux | React | Node Js | <br /> Express js | Mongoose |  MongoDB |  JavaScript | BootStrap | Css | Html</p>
+              <div data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300" className="w-full">
+                <h3 className="text-lg font-heading font-semibold text-stone-300 pb-2 border-b-2 border-indigo-200 w-full mb-4">Education</h3>
+                <p className="text-stone-400">Mymensingh Engineering College,Mymensingh</p>
+                <p className="text-stone-400">BSc in Computer Science and Engineering</p>
+                <p className="text-stone-400">November, 2022 - current</p>
               </div>
-
-
-
             </div>
-
-
-            <div className="w-full lg:w-1/2 flex flex-col items-start space-y-5">
-
-              <p data-aos-duration="2000" data-aos-delay="200" data-aos="flip-left" className="text-3xl text-orange-600 font-semibold">Jr. Full Stack Developer</p>
-
-              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="text-lg font-medium">I'm Asfaqur Rahman, a Jr. Full Stack developer
+            <div className="w-full lg:w-1/2 flex flex-col items-start space-y-6">
+              <p data-aos="zoom-in-up" data-aos-duration="600" className="text-xl font-semibold text-indigo-500">Jr. Full Stack Developer</p>
+              <p data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="100" className="text-stone-400 leading-relaxed">I'm Asfaqur Rahman, a Jr. Full Stack developer
                 proficient in HTML, CSS, JavaScript, React, Node.js, Next.js, Express.js, MongoDB, Mongoose, TypeScript, Redux
                 and Tailwind CSS. With a passion for crafting
                 engaging digital experiences, I specialize in
@@ -337,92 +295,72 @@ const Home = () => {
                 solutions. Collaborative by nature, I enjoy
                 working closely with designers and
                 stakeholders to bring ideas to life.</p>
-
-              <h3 className="border-b-4 border-dotted w-full text-2xl font-semibold text-orange-600 pb-2" data-aos-duration="2000" data-aos-delay="400" data-aos="flip-left">Experience :</h3>
-
-              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="text-xl font-semibold"><a href="https://flexsoftr.com/our-team/" className="text-sky-400 hover:text-indigo-500 text-3xl font-bold underline">FlexSoftr</a> , Dhaka — MERN Stack Developer</p>
-              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="text-xl font-semibold">As a MERN Stack developer, I'll build UIs, manage state,
+              <h3 className="text-lg font-heading font-semibold text-stone-400 pb-2 border-b-2 border-indigo-200 w-full" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="200">Experience</h3>
+              <p data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300" className="text-stone-400"><a href="https://flexsoftr.com/our-team/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:text-indigo-700 font-semibold underline underline-offset-2">FlexSoftr</a> , Dhaka — MERN Stack Developer</p>
+              <p data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300" className="text-stone-400">As a MERN Stack developer, I'll build UIs, manage state,
                 optimize performance, integrate APIs, collaborate with
                 teams, and ensure code quality.</p>
-              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500" className="text-xl font-semibold">May 2024 - PRESENT</p>
-
-              <div className="flex flex-row justify-start gap-5">
-                <a data-aos="zoom-in-right" data-aos-duration="600" data-aos-delay="1000" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL"><FaFacebook className="h-10 text-orange-500 w-10" /></a>
-                <a data-aos="zoom-in-up" data-aos-duration="700" data-aos-delay="1200" href="https://github.com/dashboard"><FaGithub className="h-10 text-orange-500 w-10" /></a>
-                <a data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="1400" href="https://www.linkedin.com/in/asfaqur-rahman-hamim"><FaLinkedin className="h-10 text-orange-500 w-10" /></a>
-
+              <p data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300" className="text-stone-400 text-sm">May 2024 - PRESENT</p>
+              <div className="flex gap-4">
+                <a data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="400" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="text-indigo-500 hover:text-indigo-600 transition-colors"><FaFacebook className="h-8 w-8" /></a>
+                <a data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="500" href="https://github.com/dashboard" target="_blank" rel="noreferrer" className="text-indigo-500 hover:text-indigo-600 transition-colors"><FaGithub className="h-8 w-8" /></a>
+                <a data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="600" href="https://www.linkedin.com/in/asfaqur-rahman-hamim" target="_blank" rel="noreferrer" className="text-indigo-500 hover:text-indigo-600 transition-colors"><FaLinkedin className="h-8 w-8" /></a>
               </div>
-
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
-      <section className="bg-[#081506]">
-        <div className="bg-[#081506]  pt-28 px-10 pb-10">
-          <h2 data-aos="zoom-in-up" data-aos-duration="1000" className="text-5xl font-bold text-teal-200 pb-5 border-b-4 border-dotted text-center">My Skills</h2>
-
-          <div className=" mt-16 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-36 lg:gap-10">
-
-            <div className="flex flex-col space-y-8 bg-[#06230e9a] glass rounded-md px-4 py-5 hover:scale-110">
-              
-                <h2 data-aos="zoom-in-right" data-aos-duration="1000" className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3">Front End</h2>
-                <div className="flex flex-wrap px-1 md:px-5  gap-10">
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={html} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Html</h1>
+      <section className="py-16 lg:py-24 px-5 lg:px-0">
+        <div className="section-container">
+          <h2 data-aos="fade-up" data-aos-duration="600" className="text-3xl sm:text-4xl font-bold text-slate-100 text-center pb-4 border-b-2 border-indigo-200 mb-12">My Skills</h2>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="card-light flex flex-col space-y-6 p-6">
+                <h2 data-aos="fade-up" data-aos-duration="600" className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center">Front End</h2>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={html} alt="HTML" className="w-10 h-10 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">Html</span>
                   </div>
-                
-                <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={css} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Css</h1>
+                <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={css} alt="css" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Css</span>
                   </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={JavaScriptl} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">JavaScript</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={JavaScriptl} alt="JavaScript" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">JavaScript</span>
                   </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={bootstrap} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Bootstrap</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={bootstrap} alt="Bootstrap" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Bootstrap</span>
                   </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={react} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">React</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={react} alt="React" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">React</span>
                   </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center gap-2 justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black pt-2">
-                    <img src={Tailwind} alt="html" className="h-14 w-14"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Tailwind Css</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={Tailwind} alt="Tailwind" className="h-10 w-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Tailwind Css</span>
                   </div>
-
-                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
-                    <img src={next} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Next.js</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={next} alt="Next.js" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Next.js</span>
                   </div>
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center gap-2 justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
-                    <img src={Typescript} alt="html" className="w-12 md:h-14 h-12 md:w-14"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">TypeScript</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={Typescript} alt="TypeScript" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">TypeScript</span>
                   </div>
-                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
-                    <img src={redux} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Redux</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={redux} alt="Redux" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Redux</span>
                   </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
-                    <img src={daisy} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">DaisyUI</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={daisy} alt="DaisyUI" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">DaisyUI</span>
                   </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-28 pt-2">
-                    <img src={ant} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Ant Design</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={ant} alt="Ant Design" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Ant Design</span>
                   </div>
                
                   
@@ -431,132 +369,105 @@ const Home = () => {
 
             </div>
 
-            <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
-              <h2 className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Back End</h2>
-                <div className="flex flex-wrap gap-10 px-1 md:px-5">
-                  
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={node} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Node.js</h1>
+            <div className="card-light flex flex-col space-y-6 p-6">
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">Back End</h2>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={node} alt="Node.js" className="w-10 h-10 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">Node.js</span>
                   </div>
-
-                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={express} alt="html" className="h-12 md:h-16 w-20 md:w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Express.js</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={express} alt="Express.js" className="h-10 w-14 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">Express.js</span>
                   </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={fire} alt="html" className="h-12 md:h-16 w-20 md:w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Firebase</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={fire} alt="Firebase" className="h-10 w-10 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">Firebase</span>
                   </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={jwt} alt="html" className="h-12 md:h-16 w-20 md:w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">JWT</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={jwt} alt="JWT" className="h-10 w-10 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">JWT</span>
                   </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={zod} alt="html" className="h-12 md:h-16 w-20 md:w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Zod</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={zod} alt="Zod" className="h-10 w-10 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">Zod</span>
                   </div>
+                 </div>
+            </div>
 
+            <div className="card-light flex flex-col space-y-6 p-6">
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">DataBase</h2>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={mongodb} alt="MongoDB" className="w-10 h-10 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">MongoDB</span>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={mongoose} alt="Mongoose" className="w-10 h-10 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">Mongoose</span>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={mysql} alt="MySQL" className="w-10 h-10 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">MySQL</span>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={postgre} alt="PostgreSQL" className="w-10 h-10 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">PostgreSQL</span>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={prisma} alt="Prisma" className="w-10 h-10 object-contain"/>
+                    <span className="text-sm text-stone-500 font-medium mt-1">Prisma ORM</span>
+                  </div>
+                 </div>
+            </div>
+
+            <div className="card-light flex flex-col space-y-6 p-6">
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">Tools</h2>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={git} alt="Git" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Git</span>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={rest} alt="REST API" className="h-10 w-14 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Restful API</span>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={postman} alt="Postman" className="h-10 w-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Postman</span>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={cloudinary} alt="Cloudinary" className="h-10 w-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Cloudinary</span>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={nodemailer} alt="Nodemailer" className="h-10 w-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Nodemailer</span>
+                  </div>
                  </div>
                
 
             </div>
 
-            <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
-              <h2 className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">DataBase</h2>
-                <div className="flex flex-wrap gap-8 px-1 md:px-5">
-                  
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={mongodb} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">MongoDB</h1>
+            <div className="card-light flex flex-col space-y-6 p-6">
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">Languages</h2>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={c} alt="C" className="h-10 w-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">C</span>
                   </div>
-
-                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={mongoose} alt="html" className="w-12 md:h-16 h-12 md:w-[100px]"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Mongoose</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={JavaScriptl} alt="JavaScript" className="h-10 w-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">JavaScript</span>
                   </div>
-
-                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
-                    <img src={mysql} alt="html" className="w-12 md:h-16 h-12 md:w-[100px]"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">MySQL</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={java} alt="Java" className="h-10 w-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Java</span>
                   </div>
-                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
-                    <img src={postgre} alt="html" className="w-12 md:h-16 h-12 md:w-[100px]"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">PostgreSQL</h1>
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={Typescript} alt="TypeScript" className="h-10 w-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Typescript</span>
                   </div>
-                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
-                    <img src={prisma} alt="html" className="w-12 md:h-16 h-12 md:w-[100px]"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Prisma ORM</h1>
-                  </div>
-
-                 </div>
-              
-
-            </div>
-
-               <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
-              <h2 className="text-3xl font-bold text-orange-500 pb-2 border-b-4 mb-3 text-center" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Tools</h2>
-                <div className="flex flex-wrap gap-10 px-1 md:px-5">
-                  
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={git} alt="html" className="w-12 md:h-16 h-12 md:w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Git</h1>
-                  </div>
-
-                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={rest} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Restful API</h1>
-                  </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={postman} alt="html" className="h-16 w-24"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Postman</h1>
-                  </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={cloudinary} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Cloudinary</h1>
-                  </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={nodemailer} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Nodemailer</h1>
-                  </div>
-
-                 </div>
-               
-
-            </div>
-
-               <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
-              <h2 className="text-3xl font-bold text-orange-500 pb-2 border-b-4 mb-3 text-center" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Languages</h2>
-                <div className="flex flex-wrap gap-10 px-1 md:px-5">
-                  
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={c} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">C</h1>
-                  </div>
-
-                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={JavaScriptl} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">JavaScript</h1>
-                  </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={java} alt="html" className="h-16 w-24"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Java</h1>
-                  </div>
-
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={Typescript} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Typescript</h1>
-                  </div>
-
-                  
-
                  </div>
                
 
@@ -565,78 +476,61 @@ const Home = () => {
 
           </div>
 
-        
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-slate-100 text-center pb-4 border-b-2 border-indigo-200">CMS</h2>
+            <div className="flex justify-center mt-6" data-aos="fade-up" data-aos-duration="600">
+              <div className="card-light flex flex-col items-center justify-center p-6 w-full max-w-xs">
+                <img src={WordPress} alt="WordPress" className="h-14 w-auto object-contain"/>
+                <span className="text-stone-500 font-medium mt-3">WordPress</span>
+              </div>
+            </div>
+          </div>
         </div>
-
-     <div>
-<h1 className="text-center text-6xl font-semibold text-white mt-10 border-b-4 border-dotted pb-5 mx-10">CMS</h1>
-
- <div className="flex flex-col gap-2 w-[250px] md:w-[450px] mx-10 mt-5 " data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">
-{/* <h1 className="text-xl text-white font-semibold">WordPress</h1> */}
-<div className="flex flex-col space-y-8 bg-[#06230e9a] glass rounded-md px-4 py-5 hover:scale-110">
- <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={WordPress} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">WordPress</h1>
-                  </div>
-</div>
-                
-              </div> 
-
-     </div>
-
-
-
       </section>
 
 
-      <section>
-        <div className="bg-[#081506] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white w-full">
-          <h2 data-aos="zoom-in-up" data-aos-duration="1000" className="text-center text-5xl font-semibold">Projects</h2>
-          <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100" className="text-center mt-7 font-semibold text-lg">Below are the projects on <span className="text-orange-700 text-2xl ml-2"> M E R N Stack!</span> & <span className="text-blue-700 text-2xl ml-2"> W o r d P r e s s</span></p>
+      <section className="py-16 lg:py-24 px-5 lg:px-0">
+        <div className="section-container">
+          <h2 data-aos="fade-up" data-aos-duration="600" className="text-3xl sm:text-4xl font-bold text-slate-100 text-center pb-4 border-b-2 border-indigo-200">Projects</h2>
+          <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" className="text-center mt-4 text-stone-500">Below are the projects on <span className="text-indigo-600 font-medium">MERN Stack!</span> & <span className="text-stone-600 font-medium">WordPress</span></p>
 
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 w-full md:w-[80%] mx-auto my-20">
-
-            <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={15} duration={5} />+</h1>
-              <h1 className="text-xl">Total Projects</h1>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto my-12">
+            <div className="card-light flex flex-col justify-center items-center gap-2 p-6">
+              <span className="text-3xl font-bold text-indigo-600"><CountUp enableScrollSpy end={15} duration={5} />+</span>
+              <span className="text-sm font-medium text-stone-500">Total Projects</span>
             </div>
-
-            <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={12} duration={5} />+</h1>
-              <h1 className="text-xl">Full Stack</h1>
+            <div className="card-light flex flex-col justify-center items-center gap-2 p-6">
+              <span className="text-3xl font-bold text-indigo-600"><CountUp enableScrollSpy end={12} duration={5} />+</span>
+              <span className="text-sm font-medium text-stone-500">Full Stack</span>
             </div>
-
-            <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={7} duration={8} />+</h1>
-              <h1 className="text-xl fon">Next Js</h1>
+            <div className="card-light flex flex-col justify-center items-center gap-2 p-6">
+              <span className="text-3xl font-bold text-indigo-600"><CountUp enableScrollSpy end={7} duration={8} />+</span>
+              <span className="text-sm font-medium text-stone-500">Next Js</span>
             </div>
-             
-            <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={4} duration={8} />+</h1>
-              <h1 className="text-xl fon">WordPress</h1>
+            <div className="card-light flex flex-col justify-center items-center gap-2 p-6">
+              <span className="text-3xl font-bold text-indigo-600"><CountUp enableScrollSpy end={4} duration={8} />+</span>
+              <span className="text-sm font-medium text-stone-500">WordPress</span>
             </div>
-
           </div>
 
-          <h2 data-aos="zoom-in-up" data-aos-duration="1000" className="text-center text-3xl font-semibold mt-40 mb-10">M E R N STACK!!!</h2>
+          <h2 data-aos="fade-up" data-aos-duration="600" className="text-center text-4xl font-semibold mb-5 mt-24 mb-16">M E R N STACK</h2>
 
-          <div className="flex flex-wrap gap-16 md:gap-10 justify-evenly mt-20 mx-auto w-full">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {dbProjects.filter(p => p.category !== 'WordPress').map((p, idx) => (
             <Link key={p._id || idx} to={`/projects/${p._id}`}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                <figure>
-                  <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
-                </figure>
-                <div className="card-body bg-[#00000020] rounded-b-lg">
-                  <h2 className="card-title">
-                    {p.title}
-                    <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">{p.type}</div>
-                  </h2>
-                  <p className="line-clamp-2">{p.description}</p>
-                  <div className="card-actions justify-end">
+              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+                <div className="aspect-video overflow-hidden">
+                  <img className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300" src={p.thumbnail} alt={p.title} />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="font-semibold text-slate-100">{p.title}</h3>
+                    <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">{p.type}</span>
+                  </div>
+                  <p className="line-clamp-2 text-sm text-stone-500 mt-1">{p.description}</p>
+                  <div className="flex flex-wrap gap-1 mt-3">
                     {(p.technologies || []).slice(0,4).map((t,i) => (
-                      <div key={i} className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">{t}</div>
+                      <span key={i} className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">{t}</span>
                     ))}
                   </div>
                 </div>
@@ -645,93 +539,96 @@ const Home = () => {
           ))}
           
           <Link to={'https://launchmybiz.net/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                          <figure>
-                            <img className="h-48 w-full"
+                        <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+                          <div className="aspect-video overflow-hidden">
+                            <img className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
                               src={launch}
-                              alt="Shoes" />
-                          </figure>
-                          <div className="card-body bg-[#00000020] rounded-b-lg">
-                            <h2 className="card-title">
-                              Launch
-                              <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">Business Formation</div>
-          
-                            </h2>
-                            <p>LaunchMyBiz: Complete Business Formation Platform.</p>
-                            <div className="card-actions justify-end">
-                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">React</div>
-                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">Node Js</div>
-                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">TypeScript</div>
-                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">MongoDB</div>
+                              alt="Launch" />
+                          </div>
+                          <div className="p-4">
+                          <div className="flex items-start justify-between gap-2">
+                            <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">Launch</h3>
+                            <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Business Formation</span>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-stone-500 mt-1">LaunchMyBiz: Complete Business Formation Platform.</p>
+                            <div className="card-actions justify-start mt-3">
+                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Node Js</div>
+                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">TypeScript</div>
+                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
                             </div>
                           </div>
                         </div>
                       </Link>
 
            <Link to={'https://as-global.vercel.app/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                          <figure>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                          <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={as}
                               alt="Shoes" />
-                          </figure>
-                          <div className="card-body bg-[#00000020] rounded-b-lg">
-                            <h2 className="card-title">
+                          </div>
+                          <div className="p-4">
+                            <div className="flex items-start justify-between gap-2">
+                            <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
                               AS Global Styles
-                              <div className="badge badge-warning shadow-sm shadow-[#ffffff]">Garment</div>
-          
-                            </h2>
-                            <p>A garment Website using Next.js, React, MongoDB.</p>
-                            <div className="card-actions justify-end">
-                              <div className="badge bg-amber-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">React</div>
-                              <div className="badge bg-amber-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">Next Js</div>
-                              <div className="badge bg-amber-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">MongoDB</div>
+                              
+                            </h3>
+                            <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Garment</span>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-stone-500 mt-1">A garment Website using Next.js, React, MongoDB.</p>
+                            <div className="card-actions justify-start mt-3">
+                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Next Js</div>
+                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
                             </div>
                           </div>
                         </div>
                       </Link>
           
                       <Link to={'https://schedular-asl.vercel.app/'}>
-                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                                      <figure>
+                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                                      <div className="aspect-video overflow-hidden">
                                         <img className="h-48 w-full"
                                           src={asl}
                                           alt="Shoes" />
-                                      </figure>
-                                      <div className="card-body bg-[#00000020] rounded-b-lg">
-                                        <h2 className="card-title">
+                                      </div>
+                                      <div className="p-4">
+                                        <div className="flex items-start justify-between gap-2">
+                                        <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
                                           Smart Class Scheduler ASL
-                                          <div className="badge badge-info shadow-sm shadow-[#ffffff]">Schedular</div>
-                      
-                                        </h2>
-                                        <p>A smart class scheduling Website using Next.js, React, MongoDB.</p>
-                                        <div className="card-actions justify-end">
-                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">React</div>
-                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">Next Js</div>
-                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">MongoDB</div>
+                                        </h3>
+                                        <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Schedular</span>
+                                        </div>
+                                        <p className="line-clamp-2 text-sm text-stone-500 mt-1">A smart class scheduling Website using Next.js, React, MongoDB.</p>
+                                        <div className="card-actions justify-start mt-3">
+                                          <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                                          <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Next Js</div>
+                                          <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
                                         </div>
                                       </div>
                                     </div>
                                   </Link>
                       
                                   <Link to={'https://exponential-du.vercel.app/'}>
-                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                                      <figure>
+                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                                      <div className="aspect-video overflow-hidden">
                                         <img className="h-48 w-full"
                                           src={exponential}
                                           alt="Shoes" />
-                                      </figure>
-                                      <div className="card-body bg-[#00000020] rounded-b-lg">
-                                        <h2 className="card-title">
+                                      </div>
+                                      <div className="p-4">
+                                        <div className="flex items-start justify-between gap-2">
+                                        <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
                                           Exponential DU
-                                          <div className="badge badge-info shadow-sm shadow-[#ffffff]">Online Course</div>
-                      
-                                        </h2>
-                                        <p>A online course Website using Next.js, React, MongoDB.</p>
-                                        <div className="card-actions justify-end">
-                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">React</div>
-                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">Next Js</div>
-                                          <div className="badge bg-sky-600 pb-[2px]  badge-outline shadow-sm shadow-[#ffffff]">MongoDB</div>
+                                        </h3>
+                                        <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Online Course</span>
+                                        </div>
+                                        <p className="line-clamp-2 text-sm text-stone-500 mt-1">A online course Website using Next.js, React, MongoDB.</p>
+                                        <div className="card-actions justify-start mt-3">
+                                          <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                                          <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Next Js</div>
+                                          <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
                                         </div>
                                       </div>
                                     </div>
@@ -740,23 +637,24 @@ const Home = () => {
           
           
                        <Link to={'https://www.masuafoundation.org/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                          <figure>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                          <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img6}
                               alt="Shoes" />
-                          </figure>
-                          <div className="card-body bg-[#00000020] rounded-b-lg">
-                            <h2 className="card-title">
+                          </div>
+                          <div className="p-4">
+                            <div className="flex items-start justify-between gap-2">
+                            <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
                               Masua Foundation
-                              <div className="badge badge-info shadow-sm shadow-[#ffffff]">Foundation</div>
-          
-                            </h2>
-                            <p>A responsive Website using Next.js, React, MongoDB.</p>
-                            <div className="card-actions justify-end">
-                              <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">React</div>
-                              <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">Next Js</div>
-                              <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">MongoDB</div>
+                            </h3>
+                            <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Foundation</span>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-stone-500 mt-1">A responsive Website using Next.js, React, MongoDB.</p>
+                            <div className="card-actions justify-start mt-3">
+                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Next Js</div>
+                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
                             </div>
                           </div>
                         </div>
@@ -764,46 +662,48 @@ const Home = () => {
           
           
                        <Link to={'https://electro-brown.vercel.app/'}>
-          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-            <figure>
+          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+            <div className="aspect-video overflow-hidden">
               <img className="h-48 w-full"
                 src={img5}
                 alt="Shoes" />
-            </figure>
-            <div className="card-body bg-[#00000020] rounded-b-lg">
-              <h2 className="card-title">
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2">
+              <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
               Electro
-              <div className="badge badge-info shadow-sm shadow-[#ffffff]">E-Commerce</div>
-                
-              </h2>
-              <p>A responsive E-commerce Website using Next.js, React, MongoDB.</p>
-              <div className="card-actions justify-end">
-                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">React</div>
-                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">Next Js</div>
-                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">MongoDB</div>
+              </h3>
+              <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">E-Commerce</span>
+              </div>
+              <p className="line-clamp-2 text-sm text-stone-500 mt-1">A responsive E-commerce Website using Next.js, React, MongoDB.</p>
+              <div className="card-actions justify-start mt-3">
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Next Js</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
               </div>
             </div>
           </div>
           </Link>
           
                        <Link to={'https://hospital-mu-six.vercel.app'}>
-          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-            <figure>
+          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+            <div className="aspect-video overflow-hidden">
               <img className="h-48 w-full"
                 src={img1}
                 alt="Shoes" />
-            </figure>
-            <div className="card-body bg-[#00000020] rounded-b-lg">
-              <h2 className="card-title">
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2">
+              <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
               MediPro
-                <div className="badge badge-success text-white shadow-sm shadow-[#ffffff]">Hospital</div>
-                
-              </h2>
-              <p>A responsive Medical Hospital Website using Next.js, React, MongoDB.</p>
-              <div className="card-actions justify-end">
-                <div className="badge bg-green-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">React</div>
-                <div className="badge bg-green-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">Next Js</div>
-                <div className="badge bg-green-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">MongoDB</div>
+              </h3>
+              <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Hospital</span>
+              </div>
+              <p className="line-clamp-2 text-sm text-stone-500 mt-1">A responsive Medical Hospital Website using Next.js, React, MongoDB.</p>
+              <div className="card-actions justify-start mt-3">
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Next Js</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
               </div>
             </div>
           </div>
@@ -813,23 +713,24 @@ const Home = () => {
           
           
                        <Link to={'https://trendy-threads-clothing.web.app'}>
-          <div className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-            <figure>
+          <div className="card-light overflow-hidden group">
+            <div className="aspect-video overflow-hidden">
               <img className="h-48 w-full"
                 src={img}
                 alt="Shoes" />
-            </figure>
-            <div className="card-body bg-[#00000020] rounded-b-lg">
-              <h2 className="card-title">
-                Bostro
-                <div className="badge badge-info shadow-sm shadow-[#ffffff]">E-Commerce</div>
-                
-              </h2>
-              <p>A e-commerce clothing website for cloths. User easily wishlist, cart & purchase cloths.</p>
-              <div className="card-actions justify-end">
-                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">React</div>
-                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">Stripe</div>
-                <div className="badge bg-sky-600 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">MongoDB</div>
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2">
+              <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
+              Bostro
+              </h3>
+              <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">E-Commerce</span>
+              </div>
+              <p className="line-clamp-2 text-sm text-stone-500 mt-1">A e-commerce clothing website for cloths. User easily wishlist, cart & purchase cloths.</p>
+              <div className="card-actions justify-start mt-3">
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Stripe</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
               </div>
             </div>
           </div>
@@ -839,47 +740,50 @@ const Home = () => {
           
           
                        <Link to={'https://blood-donation-1ed49.web.app'}>
-          <div className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-            <figure>
+          <div className="card-light overflow-hidden group">
+            <div className="aspect-video overflow-hidden">
               <img className="h-48 w-full"
                 src={img2}
                 alt="Shoes" />
-            </figure>
-            <div className="card-body bg-[#00000020] rounded-b-lg">
-              <h2 className="card-title">
-                OneBlood!
-                <div className="badge badge-secondary shadow-sm shadow-[#ffffff]">Blood Donation</div>
-                
-              </h2>
-              <p>A blood donation website for searching doner and donate blood & money.</p>
-              <div className="card-actions justify-end">
-                <div className="badge bg-orange-800 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">React</div>
-                <div className="badge bg-orange-800 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">Stripe</div>
-                <div className="badge bg-orange-800 pb-[2px] shadow-sm shadow-[#ffffff] badge-outline">MongoDB</div>
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2">
+              <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
+              OneBlood!
+              </h3>
+              <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Blood Donation</span>
+              </div>
+              <p className="line-clamp-2 text-sm text-stone-500 mt-1">A blood donation website for searching doner and donate blood & money.</p>
+              <div className="card-actions justify-start mt-3">
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Stripe</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
               </div>
             </div>
           </div>
           </Link>
           
           <Link to={'https://resturant-7f83a.web.app'}>
-          <div className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-            <figure>
+          <div className="card-light overflow-hidden group">
+            <div className="aspect-video overflow-hidden">
               <img className="h-48 w-full"
                 src={img3}
                 alt="Shoes" />
-            </figure>
-            <div className="card-body bg-[#00000020] rounded-b-lg">
-              <h2 className="card-title">
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2">
+              <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
               DineEase!
-                <div className="badge badge-primary shadow-sm shadow-[#ffffff]">Resturant</div>
-              </h2>
-              <p>A resturant website using MongoDB and React.
+              </h3>
+              <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Resturant</span>
+              </div>
+              <p className="line-clamp-2 text-sm text-stone-500 mt-1">A resturant website using MongoDB and React.
           
               </p>
-              <div className="card-actions justify-end">
-                <div className="badge bg-fuchsia-800 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">React</div>
-                <div className="badge bg-fuchsia-800 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">Node.js</div>
-                <div className="badge bg-fuchsia-800 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">MongoDB</div>
+              <div className="card-actions justify-start mt-3">
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Node.js</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
               </div>
             </div>
           </div>
@@ -887,44 +791,48 @@ const Home = () => {
           
           <Link to={'https://tourism-41ddf.web.app'}>
           
-          <div className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-            <figure>
+          <div className="card-light overflow-hidden group">
+            <div className="aspect-video overflow-hidden">
               <img className="h-48 w-full"
                 src={img4}
                 alt="Shoes" />
-            </figure>
-            <div className="card-body bg-[#00000020] rounded-b-lg">
-              <h2 className="card-title">
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2">
+              <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
               ExploreEpic
-                <div className="badge badge-accent shadow-sm shadow-[#ffffff]">Travel</div>
-              </h2>
-              <p>A tours & travels website where user can easily find his destination.</p>
-              <div className="card-actions justify-end">
-              <div className="badge   bg-sky-700 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">React</div>
-                <div className="badge bg-sky-700 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">Node.js</div>
-                <div className="badge bg-sky-700 pb-[2px] badge-outline shadow-sm shadow-[#ffffff]">MongoDB</div>
+              </h3>
+              <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Travel</span>
+              </div>
+              <p className="line-clamp-2 text-sm text-stone-500 mt-1">A tours & travels website where user can easily find his destination.</p>
+              <div className="card-actions justify-start mt-3">
+              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Node.js</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
               </div>
             </div>
           </div>
           </Link>
           
           <Link to={'https://review-book-site.netlify.app'}>
-          <div className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-            <figure>
+          <div className="card-light overflow-hidden group">
+            <div className="aspect-video overflow-hidden">
               <img className="h-48 w-full "
                 src="https://i.ibb.co/NsWgZGz/Screenshot-2024-07-16-123448.png"
                 alt="Shoes" />
-            </figure>
-            <div className="card-body bg-[#00000020] rounded-b-lg">
-              <h2 className="card-title">
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2">
+              <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
               Book Vibe
-                <div className="badge badge-info">Book Review</div>
-              </h2>
-              <p>A book website. Here user can read books easily & save them for later.</p>
-              <div className="card-actions justify-end">
-              <div className="badge   bg-lime-700 pb-[2px] badge-outline">React</div>
-                <div className="badge bg-lime-700 pb-[2px] badge-outline">Node.js</div>
-                <div className="badge bg-lime-700 pb-[2px] badge-outline">MongoDB</div>
+              </h3>
+              <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Book Review</span>
+              </div>
+              <p className="line-clamp-2 text-sm text-stone-500 mt-1">A book website. Here user can read books easily & save them for later.</p>
+              <div className="card-actions justify-start mt-3">
+              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Node.js</div>
+                <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
               </div>
             </div>
           </div>
@@ -937,11 +845,11 @@ const Home = () => {
                         
                         {dbProjects.filter(p => p.category == 'WordPress').map((p, idx) => (
             <Link key={p._id || idx} to={`/projects/${p._id}`}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                <figure>
+              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+                <div className="aspect-video overflow-hidden">
                   <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
-                </figure>
-                <div className="card-body bg-[#00000020] rounded-b-lg">
+                </div>
+                <div className="p-4">
                   <h2 className="card-title">
                     {p.title}
                   </h2>
@@ -952,13 +860,13 @@ const Home = () => {
           ))}
 
                       <Link to={'https://neosupremetech.com/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                          <figure>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                          <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img7}
                               alt="Shoes" />
-                          </figure>
-                          <div className="card-body bg-[#00000020] rounded-b-lg">
+                          </div>
+                          <div className="p-4">
                             <h2 className="card-title">
                               Neo Superme Tech
                             </h2>
@@ -969,13 +877,13 @@ const Home = () => {
                       </Link>
           
                       <Link to={'https://platinumamenity.com/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                          <figure>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                          <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img8}
                               alt="Shoes" />
-                          </figure>
-                          <div className="card-body  rounded-b-lg">
+                          </div>
+                          <div className="p-4">
                             <h2 className="card-title">
                             Platinum Amenity
                             </h2>
@@ -986,13 +894,13 @@ const Home = () => {
                       </Link>
           
                       <Link to={'https://goldenresolution.com/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                          <figure>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                          <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img9}
                               alt="Shoes" />
-                          </figure>
-                          <div className="card-body  rounded-b-lg">
+                          </div>
+                          <div className="p-4">
                             <h2 className="card-title">
                             Golden Resolution
                             </h2>
@@ -1003,13 +911,13 @@ const Home = () => {
                       </Link>
 
                        <Link to={'https://deshiohandicraft.com/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                          <figure>
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                          <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img10}
                               alt="Shoes" />
-                          </figure>
-                          <div className="card-body  rounded-b-lg">
+                          </div>
+                          <div className="p-4">
                             <h2 className="card-title">
                             Deshio HandiCraft
                             </h2>
@@ -1025,11 +933,11 @@ const Home = () => {
           {/* <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
             {dbProjects.filter(p => p.category === 'WordPress').map((p, idx) => (
               <Link key={p._id || idx} to={`/projects/${p._id}`}>
-                <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
-                  <figure>
+                <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                  <div className="aspect-video overflow-hidden">
                     <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
-                  </figure>
-                  <div className="card-body  rounded-b-lg">
+                  </div>
+                  <div className="p-4">
                     <h2 className="card-title">
                       {p.title}
                     </h2>
@@ -1048,36 +956,31 @@ const Home = () => {
       </section>
 
 
-      <section>
-        <div className="bg-[#081506] h-auto lg:h-screen pt-28 px-10 pb-10 text-white">
-          <h2 data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="000" className="text-center text-5xl font-semibold">Contact Me</h2>
-          <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="text-center mt-7 font-semibold text-lg">Below are the details to reach out to me!</p>
+      <section className="py-16 lg:py-14 px-5 lg:px-0">
+        <div className="section-container">
+          <h2 data-aos="fade-up" data-aos-duration="600" className="text-3xl sm:text-4xl font-bold text-slate-100 text-center pb-4 border-b-2 border-indigo-200">Contact Me</h2>
+          <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" className="text-center mt-4 text-stone-500">Below are the details to reach out to me!</p>
 
-          <div className="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center">
-
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" className="flex flex-col items-center gap-5 border border-black rounded-md p-10 shadow-lg shadow-[#2f5b32]">
-              <FaRegAddressCard className="h-14 w-14 text-orange-600" />
-              <h3 className="text-center">Address</h3>
-              <p className="text-center mt-5">Rahamatpur, Mymensingh</p>
+          <div className="mt-12 grid sm:grid-cols-1 md:grid-cols-3 gap-6">
+            <div data-aos="fade-up" data-aos-duration="600" className="card-light flex flex-col items-center gap-4 p-8 text-center">
+              <FaRegAddressCard className="h-12 w-12 text-indigo-600" />
+              <h3 className="font-semibold text-stone-500">Address</h3>
+              <p className="text-stone-400">Rahamatpur, Mymensingh</p>
             </div>
-
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" className="flex flex-col items-center gap-5 border border-black rounded-md p-10 shadow-lg shadow-[#2f5b32]">
-              <FaPhoneAlt className="h-14 w-14 text-orange-600" />
-              <h3 className="text-center">Contact Number</h3>
-              <p className="text-center mt-5">01956230265</p>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" className="card-light flex flex-col items-center gap-4 p-8 text-center">
+              <FaPhoneAlt className="h-12 w-12 text-indigo-600" />
+              <h3 className="font-semibold text-stone-500">Contact Number</h3>
+              <p className="text-stone-400">01956230265</p>
+              <p className="text-stone-400">01572908354</p>
             </div>
-
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600" className="flex flex-col items-center gap-5 border border-black rounded-md p-10 shadow-lg shadow-[#2f5b32]">
-              <MdEmail className="h-14 w-14 text-orange-600" />
-              <h3 className="text-center">Email</h3>
-              <p className="text-center mt-5">asfaqurrahman055@gmail.com</p>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" className="card-light flex flex-col items-center gap-4 p-8 text-center">
+              <MdEmail className="h-12 w-12 text-indigo-600" />
+              <h3 className="font-semibold text-stone-500">Email</h3>
+              <p className="text-stone-400 break-all">asfaqurrahman055@gmail.com</p>
             </div>
-
-
-
           </div>
 
-          <h2 className="text-center mt-10  text-xl">Have a question ? <button className="btn bg-amber-700 border-none hover:bg-yellow-600 text-white text-xl">Click here</button></h2>
+          <p className="text-center mt-10 text-stone-500">Have a question? <Link to="/contact" className="inline-block mt-2 px-5 py-2.5 bg-indigo-900 hover:bg-sky-600 text-white font-medium rounded-xl transition-colors ml-5">Click here</Link></p>
         </div>
       </section>
 

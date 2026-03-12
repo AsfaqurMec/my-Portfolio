@@ -39,67 +39,64 @@ import prisma from '../../../public/images/prisma-icon-size_256.png';
 const Skill = () => {
     return (
         <>
-             <section className="bg-[#081506]">
-        <div className="bg-[#081506]  pt-28 px-10 pb-10">
-          <h2 data-aos="zoom-in-up" data-aos-duration="1000" className="text-5xl font-bold text-teal-200 pb-5 border-b-4 border-dotted text-center">My Skills</h2>
-
-          <div className=" mt-16 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-36 lg:gap-10">
-
-            <div className="flex flex-col space-y-8 bg-[#06230e9a] glass rounded-md px-4 py-5 hover:scale-110">
-              
-                <h2 data-aos="zoom-in-right" data-aos-duration="1000" className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3">Front End</h2>
-                <div className="flex flex-wrap px-5 md:px-1 gap-10">
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
-                    <img src={html} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Html</h1>
+             <section className="py-10 lg:py-10 section-container">
+        <div className="section-container">
+          <h2 data-aos="fade-up" data-aos-duration="600" className="text-3xl sm:text-4xl font-bold text-stone-400 text-center pb-4 border-b-2 border-sky-500/40 mb-12">My Skills</h2>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="card-light flex flex-col space-y-6 p-6">
+                <h2 data-aos="fade-up" data-aos-duration="600" className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center">Front End</h2>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
+                    <img src={html} alt="HTML" className="w-10 h-10 object-contain"/>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Html</span>
                   </div>
                 
-                <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
                     <img src={css} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Css</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Css</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
                     <img src={JavaScriptl} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">JavaScript</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">JavaScript</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
                     <img src={bootstrap} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Bootstrap</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Bootstrap</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
                     <img src={react} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">React</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">React</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center gap-2 justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black pt-2">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center gap-2 justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black pt-2">
                     <img src={Tailwind} alt="html" className="h-14 w-14"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Tailwind Css</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Tailwind Css</span>
                   </div>
 
-                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
+                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black w-24 pt-2">
                     <img src={next} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Next.js</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Next.js</span>
                   </div>
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center gap-2 justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center gap-2 justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black w-24 pt-2">
                     <img src={Typescript} alt="html" className="h-14 w-14"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">TypeScript</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">TypeScript</span>
                   </div>
-                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
+                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black w-24 pt-2">
                     <img src={redux} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Redux</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Redux</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24 pt-2">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black w-24 pt-2">
                     <img src={daisy} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">DaisyUI</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">DaisyUI</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-28 pt-2">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black w-28 pt-2">
                     <img src={ant} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Ant Design</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Ant Design</span>
                   </div>
                
                   
@@ -108,33 +105,33 @@ const Skill = () => {
 
             </div>
 
-            <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
-              <h2 className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Back End</h2>
+            <div className="card-light flex flex-col space-y-6 p-6">
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Back End</h2>
                 <div className="flex flex-wrap gap-10 px-5">
                   
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
                     <img src={node} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Node.js</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Node.js</span>
                   </div>
 
-                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                                    <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={express} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Express.js</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Express.js</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={fire} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Firebase</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Firebase</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={jwt} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">JWT</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">JWT</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={zod} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Zod</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Zod</span>
                   </div>
 
                  </div>
@@ -142,31 +139,31 @@ const Skill = () => {
 
             </div>
 
-            <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
-              <h2 className="text-3xl text-center font-bold text-orange-500 pb-2 border-b-4 mb-3" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">DataBase</h2>
+            <div className="card-light flex flex-col space-y-6 p-6">
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">DataBase</h2>
                 <div className="flex flex-wrap gap-8 px-5">
                   
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
                     <img src={mongodb} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">MongoDB</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">MongoDB</span>
                   </div>
 
-                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                                    <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
                     <img src={mongoose} alt="html" className="h-16 w-[100px]"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Mongoose</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Mongoose</span>
                   </div>
 
-                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
+                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black w-[110px]">
                     <img src={mysql} alt="html" className="h-16 w-[100px]"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">MySQL</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">MySQL</span>
                   </div>
-                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
+                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black w-[110px]">
                     <img src={postgre} alt="html" className="h-16 w-[100px]"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">PostgreSQL</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">PostgreSQL</span>
                   </div>
-                   <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-[110px]">
+                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black w-[110px]">
                     <img src={prisma} alt="html" className="h-16 w-[100px]"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Prisma ORM</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Prisma ORM</span>
                   </div>
 
                  </div>
@@ -174,33 +171,33 @@ const Skill = () => {
 
             </div>
 
-               <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
-              <h2 className="text-3xl font-bold text-orange-500 pb-2 border-b-4 mb-3 text-center" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Tools</h2>
+               <div className="card-light flex flex-col space-y-6 p-6">
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Tools</h2>
                 <div className="flex flex-wrap gap-10 px-5">
                   
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
                     <img src={git} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Git</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Git</span>
                   </div>
 
-                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                                    <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={rest} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Restful API</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Restful API</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={postman} alt="html" className="h-16 w-24"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Postman</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Postman</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={cloudinary} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Cloudinary</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Cloudinary</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={nodemailer} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Nodemailer</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Nodemailer</span>
                   </div>
 
                  </div>
@@ -208,28 +205,28 @@ const Skill = () => {
 
             </div>
 
-               <div className="flex flex-col space-y-10 bg-[#0a2d149a] glass rounded-md px-4 py-5 hover:scale-110">
-              <h2 className="text-3xl font-bold text-orange-500 pb-2 border-b-4 mb-3 text-center" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">Languages</h2>
+               <div className="card-light flex flex-col space-y-6 p-6">
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Languages</h2>
                 <div className="flex flex-wrap gap-10 px-5">
                   
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black w-24">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
                     <img src={c} alt="html" className="h-16 w-16"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">C</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">C</span>
                   </div>
 
-                                    <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                                    <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={JavaScriptl} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">JavaScript</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">JavaScript</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={java} alt="html" className="h-16 w-24"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Java</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Java</span>
                   </div>
 
-                  <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
+                  <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-1 bg-stone-100 rounded-md shadow-md shadow-black">
                     <img src={Typescript} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">Typescript</h1>
+                      <span className="text-sm text-stone-500 font-medium mt-1">Typescript</span>
                   </div>
 
                   
@@ -238,31 +235,17 @@ const Skill = () => {
                
 
             </div>
-
 
           </div>
 
-        
+          <h2 className="text-3xl sm:text-4xl font-bold text-stone-300 text-center pb-4 border-b-2 border-sky-500/40 mt-12">CMS</h2>
+          <div className="flex justify-center mt-6" data-aos="fade-up" data-aos-duration="600">
+            <div className="card-light flex flex-col items-center justify-center p-6 w-full max-w-xs">
+              <img src={WordPress} alt="WordPress" className="h-14 w-auto object-contain"/>
+              <span className="text-stone-500 font-medium mt-3">WordPress</span>
+            </div>
+          </div>
         </div>
-
-     <div>
-<h1 className="text-center text-6xl font-semibold text-white mt-10 border-b-4 border-dotted pb-5 mx-10">CMS</h1>
-
- <div className="flex flex-col gap-2 w-[250px] md:w-[450px] mx-10 mt-5 " data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">
-{/* <h1 className="text-xl text-white font-semibold">WordPress</h1> */}
-<div className="flex flex-col space-y-8 bg-[#06230e9a] glass rounded-md px-4 py-5 hover:scale-110">
- <div data-aos="zoom-in-right" data-aos-duration="1000" className="flex flex-col items-center justify-center p-1 bg-[#0723064e] rounded-md shadow-md shadow-black">
-                    <img src={WordPress} alt="html" className="h-16 w-28"/>
-                      <h1  className="text-lg text-[#ffffff98] font-semibold">WordPress</h1>
-                  </div>
-</div>
-                
-              </div> 
-
-     </div>
-
-
-
       </section>
      </>
     );

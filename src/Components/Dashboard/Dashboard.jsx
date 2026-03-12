@@ -138,14 +138,14 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="bg-[#081506] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold text-white">Project Dashboard</h1>
+    <div className="min-h-screen pt-24 section-container pb-10">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+          <h1 className="text-3xl font-bold text-stone-100">Project Dashboard</h1>
           <div className="flex gap-3">
             <button
               onClick={() => setShowForm(true)}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-colors"
+              className="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2.5 rounded-xl flex items-center gap-2 font-medium transition-colors"
             >
               <FaPlus /> Add New Project
             </button>
@@ -154,24 +154,23 @@ const Dashboard = () => {
                 logout();
                 navigate('/login');
               }}
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-colors"
+              className="bg-stone-700 hover:bg-stone-600 text-stone-200 px-5 py-2.5 rounded-xl flex items-center gap-2 font-medium transition-colors"
             >
               <FaSignOutAlt /> Logout
             </button>
           </div>
         </div>
 
-        {/* Project Form Modal */}
         {showForm && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-[#1a1a1a] rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+          <div className="fixed inset-0 bg-stone-950/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+            <div className="card-light p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">
+                <h2 className="text-xl font-bold text-stone-100">
                   {editingProject ? 'Edit Project' : 'Add New Project'}
                 </h2>
                 <button
                   onClick={resetForm}
-                  className="text-gray-400 hover:text-white text-2xl"
+                  className="text-stone-400 hover:text-stone-100 text-2xl leading-none"
                 >
                   ×
                 </button>
@@ -179,84 +178,82 @@ const Dashboard = () => {
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Title *</label>
+                  <label className="block text-sm font-medium text-stone-300 mb-2">Title *</label>
                   <input
                     type="text"
                     name="title"
                     value={formData.title}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3 py-2.5 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-sky-500 text-stone-100"
                   />
                 </div>
-                 
-                  <div>
-                  <label className="block text-sm font-medium mb-2">Type *</label>
+                <div>
+                  <label className="block text-sm font-medium text-stone-300 mb-2">Type *</label>
                   <input
                     type="text"
                     name="type"
                     value={formData.type}
                     onChange={handleInputChange}
-                    // required
-                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3 py-2.5 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-sky-500 text-stone-100"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Description *</label>
+                  <label className="block text-sm font-medium text-stone-300 mb-2">Description *</label>
                   <textarea
                     name="description"
                     value={formData.description}
                     onChange={handleInputChange}
                     required
                     rows="3"
-                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3 py-2.5 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-sky-500 text-stone-100"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Features *</label>
+                  <label className="block text-sm font-medium text-stone-300 mb-2">Features *</label>
                   <textarea
                     name="features"
                     value={formData.features}
                     onChange={handleInputChange}
                     // required
                     rows="3"
-                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3 py-2.5 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-sky-500 text-stone-100"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Project Link *</label>
+                  <label className="block text-sm font-medium text-stone-300 mb-2">Project Link *</label>
                   <input
                     type="url"
                     name="link"
                     value={formData.link}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3 py-2.5 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-sky-500 text-stone-100"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Technologies (comma separated)</label>
+                  <label className="block text-sm font-medium text-stone-300 mb-2">Technologies (comma separated)</label>
                   <input
                     type="text"
                     name="technologies"
                     value={formData.technologies}
                     onChange={handleInputChange}
                     placeholder="React, Node.js, MongoDB"
-                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3 py-2.5 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-sky-500 text-stone-100"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Category</label>
+                  <label className="block text-sm font-medium text-stone-300 mb-2">Category</label>
                   <select
                     name="category"
                     value={formData.category}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3 py-2.5 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-sky-500 text-stone-100"
                   >
                     <option value="Full Stack">Full Stack</option>
                     <option value="WordPress">WordPress</option>
@@ -265,24 +262,24 @@ const Dashboard = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Thumbnail Image *</label>
+                  <label className="block text-sm font-medium text-stone-300 mb-2">Thumbnail Image *</label>
                   <input
                     type="file"
                     accept="image/*"
                     onChange={handleThumbnailChange}
                     required={!editingProject}
-                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3 py-2.5 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-sky-500 text-stone-100"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Project Images (multiple)</label>
+                  <label className="block text-sm font-medium text-stone-300 mb-2">Project Images (multiple)</label>
                   <input
                     type="file"
                     accept="image/*"
                     multiple
                     onChange={handleImagesChange}
-                    className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3 py-2.5 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-sky-500 text-stone-100"
                   />
                 </div>
 
@@ -294,21 +291,21 @@ const Dashboard = () => {
                     onChange={handleInputChange}
                     className="mr-2"
                   />
-                  <label className="text-sm font-medium">Featured Project</label>
+                  <label className="text-sm font-medium text-stone-300">Featured Project</label>
                 </div>
 
                 <div className="flex gap-4 pt-4">
                   <button
                     type="submit"
                     disabled={loading}
-                    className="flex-1 bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-600 text-white py-3 rounded-lg transition-colors"
+                    className="flex-1 bg-sky-500 hover:bg-sky-600 disabled:bg-stone-600 text-white py-3 rounded-xl font-medium transition-colors"
                   >
                     {loading ? 'Saving...' : (editingProject ? 'Update Project' : 'Add Project')}
                   </button>
                   <button
                     type="button"
                     onClick={resetForm}
-                    className="flex-1 bg-gray-600 hover:bg-gray-700 text-white py-3 rounded-lg transition-colors"
+                    className="flex-1 bg-stone-700 hover:bg-stone-600 text-stone-200 py-3 rounded-xl font-medium transition-colors"
                   >
                     Cancel
                   </button>
@@ -321,7 +318,7 @@ const Dashboard = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-            <div key={project._id} className="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg">
+            <div key={project._id} className="card-light overflow-hidden">
               <div className="relative">
                 <img
                   src={project.thumbnail}
@@ -339,7 +336,7 @@ const Dashboard = () => {
                 <p className="text-gray-300 text-sm mb-3 line-clamp-2">{project.description}</p>
                 <div className="flex flex-wrap gap-1 mb-3">
                   {project.technologies.map((tech, index) => (
-                    <span key={index} className="bg-emerald-600 text-white px-2 py-1 rounded text-xs">
+                    <span key={index} className="bg-sky-500/20 text-sky-400 px-2 py-1 rounded-lg text-xs">
                       {tech}
                     </span>
                   ))}

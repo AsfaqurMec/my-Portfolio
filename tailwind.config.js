@@ -6,20 +6,31 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['Outfit', 'system-ui', 'sans-serif'],
+        body: ['DM Sans', 'system-ui', 'sans-serif'],
+        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        accent: {
+          DEFAULT: '#4f46e5',
+          hover: '#6366f1',
+          light: '#e0e7ff',
+        },
+      },
       keyframes: {
-        bounce: {
-          '0%, 100%': {
-            transform: 'translateY(-25%)',
-            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
-          },
-          '50%': {
-            transform: 'none',
-            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
-          },
+        'fade-up': {
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'scale-in': {
+          '0%': { opacity: '0', transform: 'scale(0.98)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
         },
       },
       animation: {
-        bounce: 'bounce 1s infinite',
+        'fade-up': 'fade-up 0.5s ease-out forwards',
+        'scale-in': 'scale-in 0.4s ease-out forwards',
       },
     },
   },
@@ -27,4 +38,3 @@ export default {
     require('daisyui'),
   ],
 }
-

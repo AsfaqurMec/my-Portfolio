@@ -1,39 +1,35 @@
 import { FaRegAddressCard } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+
 const Contact = () => {
-    return (
-        <div  className="bg-[#081506] h-auto lg:h-screen pt-28 px-10 pb-10 text-white">
-            <h2 className="text-center text-5xl font-semibold">Contact Me</h2>
-            <p className="text-center mt-7 font-semibold text-lg">Below are the details to reach out to me!</p>
+  return (
+    <div className="min-h-screen pt-24 section-container">
+      <h2 className="section-title text-center pb-6 border-b-2 border-indigo-200">Contact Me</h2>
+      <p className="text-center mt-4 text-stone-500">Below are the details to reach out to me!</p>
 
-            <div className="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center">
-
-        <div className="flex flex-col items-center gap-5 border border-black rounded-md p-10 shadow-lg shadow-[#2f5b32]">
-        <FaRegAddressCard className="h-14 w-14 text-orange-600" />
-        <h3 className="text-center">Address</h3>
-            <p className="text-center mt-5">Rahamatpur, Mymensingh</p>
+      <div className="mt-12 grid sm:grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="card-light flex flex-col items-center gap-4 p-8 text-center">
+          <FaRegAddressCard className="h-12 w-12 text-indigo-600" />
+          <h3 className="font-semibold text-stone-400">Address</h3>
+          <p className="text-stone-500">Rahamatpur, Mymensingh</p>
         </div>
-
-        <div className="flex flex-col items-center gap-5 border border-black rounded-md p-10 shadow-lg shadow-[#2f5b32]">
-        <FaPhoneAlt className="h-14 w-14 text-orange-600" />
-        <h3 className="text-center">Contact Number</h3>
-            <p className="text-center mt-5">01956230265</p>
+        <div className="card-light flex flex-col items-center gap-4 p-8 text-center">
+          <FaPhoneAlt className="h-12 w-12 text-indigo-600" />
+          <h3 className="font-semibold text-stone-400">Contact Number</h3>
+          <p className="text-stone-500">01956230265</p>
+          <p className="text-stone-500">01572908354</p>
         </div>
-
-        <div className="flex flex-col items-center gap-5 border border-black rounded-md p-10 shadow-lg shadow-[#2f5b32]">
-        <MdEmail className="h-14 w-14 text-orange-600" />
-        <h3 className="text-center">Email</h3>
-            <p className="text-center mt-5">asfaqurrahman055@gmail.com</p>
+        <div className="card-light flex flex-col items-center gap-4 p-8 text-center">
+          <MdEmail className="h-12 w-12 text-indigo-600" />
+          <h3 className="font-semibold text-stone-400">Email</h3>
+          <p className="text-stone-500 break-all">asfaqurrahman055@gmail.com</p>
         </div>
+      </div>
 
-
-
-            </div>
-
-            <h2 className="text-center mt-10  text-xl">Have a question ? <button className="btn bg-amber-700 border-none hover:bg-yellow-600 text-white text-xl">Click here</button></h2>
-        </div>
-    );
+      <p className="text-center mt-10 text-stone-500">Have a question? <span className="text-indigo-600 font-medium">Reach out via email or phone above.</span></p>
+    </div>
+  );
 };
 
 export default Contact;

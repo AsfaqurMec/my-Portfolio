@@ -223,12 +223,12 @@ filter: blur(2px);
   }
   
   .item {
-    width: 180px;
-    height: 150px;
+    width: 80px;
+    height: 60px;
     background-color: rgba(198, 20, 20, 0);
     border-radius: 6px;
     position: absolute;
-    left: max(calc(200px * 8), 100%);
+    left: max(calc(100px * 8), 100%);
     animation-name: scrollLeft;
     animation-duration: 30s;
     animation-timing-function: linear;
@@ -236,8 +236,8 @@ filter: blur(2px);
   }
   
   .item img {
-    width: 150px;
-    height: 100px;
+    width: 80px;
+    height: 60px;
   } 
 /*
   .item1 {

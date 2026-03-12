@@ -32,45 +32,38 @@ const Project = () => {
     }, []);
 
     return (
-        <div className="bg-[#081506] min-h-screen pt-28 px-5 md:px-10 pb-10 text-white">
-             <h2 className="text-center text-5xl font-semibold">Projects</h2>
-             <p className="text-center mt-7 font-semibold text-lg">Below are the projects on <span className="text-orange-600 font-bold"> Full Stack! </span> & <span className="text-sky-600 font-bold"> WordPress</span></p>
+        <div className="min-h-screen pt-24 section-container">
+             <h2 className="section-title text-center pb-4 border-b border-white/10">Projects</h2>
+             <p className="text-center mt-4 text-slate-300">Below are the projects on <span className="text-violet-200 font-medium">Full Stack!</span> & <span className="text-slate-200 font-medium">WordPress</span></p>
 
-
-             
-             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 w-full md:w-[80%] mx-auto my-20">
-
-            <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={12} duration={5} />+</h1>
-              <h1 className="text-xl">Total Projects</h1>
+             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto my-12">
+            <div className="card-light flex flex-col justify-center items-center gap-2 p-6">
+              <span className="text-3xl font-bold text-violet-200"><CountUp enableScrollSpy end={12} duration={5} />+</span>
+              <span className="text-sm font-medium text-slate-300">Total Projects</span>
             </div>
-
-            <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={10} duration={5} />+</h1>
-              <h1 className="text-xl">Full Stack</h1>
+            <div className="card-light flex flex-col justify-center items-center gap-2 p-6">
+              <span className="text-3xl font-bold text-violet-200"><CountUp enableScrollSpy end={10} duration={5} />+</span>
+              <span className="text-sm font-medium text-slate-300">Full Stack</span>
             </div>
-
-            <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={5} duration={8} />+</h1>
-              <h1 className="text-xl fon">Next Js</h1>
+            <div className="card-light flex flex-col justify-center items-center gap-2 p-6">
+              <span className="text-3xl font-bold text-violet-200"><CountUp enableScrollSpy end={5} duration={8} />+</span>
+              <span className="text-sm font-medium text-slate-300">Next Js</span>
             </div>
-             
-            <div className="flex flex-col justify-center items-center gap-3 w-full shadow-lg rounded-badge shadow-emerald-800 border-[1px] border-[#2c421869]  pb-2 pt-1">
-              <h1 className="text-5xl text-emerald-600"><CountUp className="text-orange-500 font-medium" enableScrollSpy={true} end={2} duration={8} />+</h1>
-              <h1 className="text-xl fon">WordPress</h1>
+            <div className="card-light flex flex-col justify-center items-center gap-2 p-6">
+              <span className="text-3xl font-bold text-violet-200"><CountUp enableScrollSpy end={2} duration={8} />+</span>
+              <span className="text-sm font-medium text-slate-300">WordPress</span>
             </div>
-
           </div>
 
-          <h2 className="text-center text-5xl font-semibold mb-5 mt-14">M E R N Stack!</h2>
+          <h2 className="text-2xl font-semibold text-slate-100 text-center mt-16 mb-8">M E R N Stack!</h2>
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
             {dbProjects.filter(p => p.category !== 'WordPress').map((p, idx) => (
               <Link key={p._id || idx} to={`/projects/${p._id}`}>
-                <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                   <figure>
                     <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
                   </figure>
-                  <div className="card-body bg-[#00000020] rounded-b-lg">
+                  <div className="p-4">
                     <h2 className="card-title">
                       {p.title}
                       <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">{p.type}</div>
@@ -87,13 +80,13 @@ const Project = () => {
             ))}
 
           <Link to={'https://launchmybiz.net/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                        <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                           <figure>
                             <img className="h-48 w-full"
                               src={launch}
                               alt="Shoes" />
                           </figure>
-                          <div className="card-body bg-[#00000020] rounded-b-lg">
+                          <div className="p-4">
                             <h2 className="card-title">
                               Launch
                               <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">Business Formation</div>
@@ -111,13 +104,13 @@ const Project = () => {
                       </Link>            
 
            <Link to={'https://as-global.vercel.app/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                 <figure>
                   <img className="h-48 w-full"
                     src={as}
                     alt="Shoes" />
                 </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
+                <div className="p-4">
                   <h2 className="card-title">
                     AS Global Styles
                     <div className="badge badge-warning">Garment</div>
@@ -134,13 +127,13 @@ const Project = () => {
             </Link>
 
             <Link to={'https://schedular-asl.vercel.app/'}>
-                          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                          <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                             <figure>
                               <img className="h-48 w-full"
                                 src={asl}
                                 alt="Shoes" />
                             </figure>
-                            <div className="card-body bg-[#232222] rounded-b-lg">
+                            <div className="p-4">
                               <h2 className="card-title">
                                 Smart Class Scheduler ASL
                                 <div className="badge badge-info">Schedular</div>
@@ -157,13 +150,13 @@ const Project = () => {
                         </Link>
             
                         <Link to={'https://exponential-du.vercel.app/'}>
-                          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                          <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                             <figure>
                               <img className="h-48 w-full"
                                 src={exponential}
                                 alt="Shoes" />
                             </figure>
-                            <div className="card-body bg-[#232222] rounded-b-lg">
+                            <div className="p-4">
                               <h2 className="card-title">
                                 Exponential DU
                                 <div className="badge badge-info">Online Course</div>
@@ -182,13 +175,13 @@ const Project = () => {
 
 
              <Link to={'https://www.masuafoundation.org/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                 <figure>
                   <img className="h-48 w-full"
                     src={img6}
                     alt="Shoes" />
                 </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
+                <div className="p-4">
                   <h2 className="card-title">
                     Masua Foundation
                     <div className="badge badge-info">Foundation</div>
@@ -206,13 +199,13 @@ const Project = () => {
 
 
              <Link to={'https://electro-brown.vercel.app/'}>
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+<div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
   <figure>
     <img className="h-48 w-full"
       src={img5}
       alt="Shoes" />
   </figure>
-  <div className="card-body bg-[#232222] rounded-b-lg">
+  <div className="p-4">
     <h2 className="card-title">
     Electro
     <div className="badge badge-info">E-Commerce</div>
@@ -229,13 +222,13 @@ const Project = () => {
 </Link>
 
              <Link to={'https://hospital-mu-six.vercel.app'}>
-<div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+<div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
   <figure>
     <img className="h-48 w-full"
       src={img1}
       alt="Shoes" />
   </figure>
-  <div className="card-body bg-[#232222] rounded-b-lg">
+  <div className="p-4">
     <h2 className="card-title">
     MediPro
       <div className="badge badge-success text-white">Hospital</div>
@@ -255,13 +248,13 @@ const Project = () => {
 
 
              <Link to={'https://trendy-threads-clothing.web.app'}>
-<div className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+<div className="card-light overflow-hidden group">
   <figure>
     <img className="h-48 w-full"
       src={img}
       alt="Shoes" />
   </figure>
-  <div className="card-body bg-[#232222] rounded-b-lg">
+  <div className="p-4">
     <h2 className="card-title">
       Bostro
       <div className="badge badge-info">E-Commerce</div>
@@ -281,13 +274,13 @@ const Project = () => {
 
 
              <Link to={'https://blood-donation-1ed49.web.app'}>
-<div className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+<div className="card-light overflow-hidden group">
   <figure>
     <img className="h-48 w-full"
       src={img2}
       alt="Shoes" />
   </figure>
-  <div className="card-body bg-[#232222] rounded-b-lg">
+  <div className="p-4">
     <h2 className="card-title">
       OneBlood!
       <div className="badge badge-secondary">Blood Donation</div>
@@ -304,13 +297,13 @@ const Project = () => {
 </Link>
 
 <Link to={'https://resturant-7f83a.web.app'}>
-<div className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+<div className="card-light overflow-hidden group">
   <figure>
     <img className="h-48 w-full"
       src={img3}
       alt="Shoes" />
   </figure>
-  <div className="card-body bg-[#232222] rounded-b-lg">
+  <div className="p-4">
     <h2 className="card-title">
     DineEase!
       <div className="badge badge-primary">Resturant</div>
@@ -329,13 +322,13 @@ const Project = () => {
 
 <Link to={'https://tourism-41ddf.web.app'}>
 
-<div className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+<div className="card-light overflow-hidden group">
   <figure>
     <img className="h-48 w-full"
       src={img4}
       alt="Shoes" />
   </figure>
-  <div className="card-body bg-[#232222] rounded-b-lg">
+  <div className="p-4">
     <h2 className="card-title">
     ExploreEpic
       <div className="badge badge-accent">Travel</div>
@@ -351,13 +344,13 @@ const Project = () => {
 </Link>
 
 <Link to={'https://review-book-site.netlify.app'}>
-<div className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+<div className="card-light overflow-hidden group">
   <figure>
     <img className="h-48 w-full "
       src="https://i.ibb.co/NsWgZGz/Screenshot-2024-07-16-123448.png"
       alt="Shoes" />
   </figure>
-  <div className="card-body bg-[#232222] rounded-b-lg">
+  <div className="p-4">
     <h2 className="card-title">
     Book Vibe
       <div className="badge badge-info">Book Review</div>
@@ -374,15 +367,15 @@ const Project = () => {
 
              </div>
               
-             <h2 className="text-center text-5xl font-semibold mb-5 mt-24">WordPress</h2>
-             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
+             <h2 className="text-2xl font-semibold text-stone-800 text-center mt-24 mb-8">WordPress</h2>
+             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {dbProjects.filter(p => p.category === 'WordPress').map((p, idx) => (
               <Link key={p._id || idx} to={`/projects/${p._id}`}>
-                <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                   <figure>
                     <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
                   </figure>
-                  <div className="card-body bg-[#232222] rounded-b-lg">
+                  <div className="p-4">
                     <h2 className="card-title">
                       {p.title}
                     </h2>
@@ -393,13 +386,13 @@ const Project = () => {
             ))}
 
              <Link to={'https://neosupremetech.com/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                 <figure>
                   <img className="h-48 w-full"
                     src={img7}
                     alt="Shoes" />
                 </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
+                <div className="p-4">
                   <h2 className="card-title">
                     Neo Superme Tech
                   </h2>
@@ -410,13 +403,13 @@ const Project = () => {
             </Link>
 
             <Link to={'https://platinumamenity.com/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                 <figure>
                   <img className="h-48 w-full"
                     src={img8}
                     alt="Shoes" />
                 </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
+                <div className="p-4">
                   <h2 className="card-title">
                   Platinum Amenity
                   </h2>
@@ -427,13 +420,13 @@ const Project = () => {
             </Link>
 
             <Link to={'https://goldenresolution.com/'}>
-              <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card  w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                 <figure>
                   <img className="h-48 w-full"
                     src={img9}
                     alt="Shoes" />
                 </figure>
-                <div className="card-body bg-[#232222] rounded-b-lg">
+                <div className="p-4">
                   <h2 className="card-title">
                   Golden Resolution
                   </h2>
@@ -444,13 +437,13 @@ const Project = () => {
             </Link>
 
              <Link to={'https://deshiohandicraft.com/'}>
-                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card glass w-full md:w-[420px] shadow-lg shadow-[#233d20] rounded-lg mx-auto hover:scale-110">
+                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
                                       <figure>
                                         <img className="h-48 w-full"
                                           src={img10}
                                           alt="Shoes" />
                                       </figure>
-                                      <div className="card-body  rounded-b-lg">
+                                      <div className="p-4">
                                         <h2 className="card-title">
                                         Deshio HandiCraft
                                         </h2>

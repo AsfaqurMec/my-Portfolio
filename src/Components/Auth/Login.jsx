@@ -46,36 +46,29 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-[#081506] min-h-screen flex items-center justify-center px-4">
-      <div className="max-w-md w-full">
-        {/* Login Card */}
-        <div className="bg-[#1a1a1a] rounded-2xl shadow-2xl p-8 border border-gray-800">
-          {/* Header */}
+    <div className="min-h-screen flex items-center justify-center px-4 py-24">
+      <div className="max-w-md w-full relative">
+        <div className="card-light p-8">
           <div className="text-center mb-8">
-            <div className="mx-auto w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center mb-4">
-              <FaLock className="text-2xl text-white" />
+            <div className="mx-auto w-14 h-14 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-4">
+              <FaLock className="text-xl text-indigo-400" />
             </div>
-            <h1 className="text-3xl font-bold text-white mb-2">Dashboard Login</h1>
-            <p className="text-gray-400">Enter your credentials to access the admin panel</p>
+            <h1 className="text-2xl font-bold text-stone-900 mb-2">Dashboard Login</h1>
+            <p className="text-stone-400 text-sm">Enter your credentials to access the admin panel</p>
           </div>
 
-          {/* Error Message */}
           {error && (
-            <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded-lg mb-6">
+            <div className="bg-red-500/10 border border-red-500/50 text-red-300 px-4 py-3 rounded-xl mb-6 text-sm">
               {error}
             </div>
           )}
 
-          {/* Login Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Email Field */}
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
-                Email Address
-              </label>
+              <label className="block text-sm font-medium text-stone-300 mb-2">Email Address</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FaEnvelope className="h-5 w-5 text-gray-400" />
+                  <FaEnvelope className="h-5 w-5 text-stone-500" />
                 </div>
                 <input
                   type="email"
@@ -83,20 +76,17 @@ const Login = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 text-white placeholder-gray-400"
+                  className="w-full pl-10 pr-4 py-3 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 text-stone-900 placeholder-stone-500"
                   placeholder="Enter your email"
                 />
               </div>
             </div>
 
-            {/* Password Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
-                Password
-              </label>
+              <label className="block text-sm font-medium text-stone-300 mb-2">Password</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FaLock className="h-5 w-5 text-gray-400" />
+                  <FaLock className="h-5 w-5 text-stone-500" />
                 </div>
                 <input
                   type={showPassword ? 'text' : 'password'}
@@ -104,32 +94,27 @@ const Login = () => {
                   value={formData.password}
                   onChange={handleInputChange}
                   required
-                  className="w-full pl-10 pr-12 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 text-white placeholder-gray-400"
+                  className="w-full pl-10 pr-12 py-3 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 text-stone-900 placeholder-stone-500"
                   placeholder="Enter your password"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-stone-500 hover:text-stone-400"
                 >
-                  {showPassword ? (
-                    <FaEyeSlash className="h-5 w-5 text-gray-400 hover:text-gray-300" />
-                  ) : (
-                    <FaEye className="h-5 w-5 text-gray-400 hover:text-gray-300" />
-                  )}
+                  {showPassword ? <FaEyeSlash className="h-5 w-5" /> : <FaEye className="h-5 w-5" />}
                 </button>
               </div>
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center"
+              className="w-full bg-indigo-500 hover:bg-indigo-600 disabled:bg-stone-600 text-white font-semibold py-3 px-4 rounded-xl transition-colors flex items-center justify-center"
             >
               {loading ? (
                 <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                  <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent mr-2"></div>
                   Signing In...
                 </>
               ) : (
@@ -138,18 +123,9 @@ const Login = () => {
             </button>
           </form>
 
-          {/* Footer */}
-          <div className="mt-8 text-center">
-            <p className="text-sm text-gray-500">
-              Secure access to portfolio management dashboard
-            </p>
-          </div>
-        </div>
-
-        {/* Background Pattern */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <p className="mt-6 text-center text-sm text-stone-500">
+            Secure access to portfolio management dashboard
+          </p>
         </div>
       </div>
     </div>
