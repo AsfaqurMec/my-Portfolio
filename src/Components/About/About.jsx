@@ -38,7 +38,7 @@ const About = () => {
           <p className="text-slate-400">May 2024 - PRESENT</p>
           <div className="flex gap-4">
             <a href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors"><FaFacebook className="h-8 w-8" /></a>
-            <a href="https://github.com/dashboard" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors"><FaGithub className="h-8 w-8" /></a>
+            <a href="https://github.com/AsfaqurMec" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors"><FaGithub className="h-8 w-8" /></a>
             <a href="https://www.linkedin.com/in/asfaqur-rahman-hamim" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors"><FaLinkedin className="h-8 w-8" /></a>
           </div>
         </div>

@@ -106,7 +106,7 @@ const Skill = () => {
             </div>
 
             <div className="card-light flex flex-col space-y-6 p-6">
-              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Back End</h2>
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">Back End</h2>
                 <div className="flex flex-wrap gap-10 px-5">
                   
                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
@@ -140,7 +140,7 @@ const Skill = () => {
             </div>
 
             <div className="card-light flex flex-col space-y-6 p-6">
-              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">DataBase</h2>
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">DataBase</h2>
                 <div className="flex flex-wrap gap-8 px-5">
                   
                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
@@ -172,7 +172,7 @@ const Skill = () => {
             </div>
 
                <div className="card-light flex flex-col space-y-6 p-6">
-              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Tools</h2>
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">Tools</h2>
                 <div className="flex flex-wrap gap-10 px-5">
                   
                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
@@ -206,7 +206,7 @@ const Skill = () => {
             </div>
 
                <div className="card-light flex flex-col space-y-6 p-6">
-              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Languages</h2>
+              <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">Languages</h2>
                 <div className="flex flex-wrap gap-10 px-5">
                   
                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">

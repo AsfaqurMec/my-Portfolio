@@ -1,16 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FaPlus, FaEdit, FaTrash, FaEye, FaUpload, FaSignOutAlt } from 'react-icons/fa';
+import { FaPlus, FaEdit, FaTrash, FaEye, FaUpload } from 'react-icons/fa';
 import { projectService } from '../../services/projectService';
-import { useAuth } from '../../contexts/AuthContext';
 
 const Dashboard = () => {
   const [projects, setProjects] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [editingProject, setEditingProject] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { logout } = useAuth();
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: '',
     type: '',
@@ -138,27 +134,19 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24 section-container pb-10">
-      <div className="max-w-6xl mx-auto">
+    <div>
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-          <h1 className="text-3xl font-bold text-stone-100">Project Dashboard</h1>
-          <div className="flex gap-3">
-            <button
-              onClick={() => setShowForm(true)}
-              className="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2.5 rounded-xl flex items-center gap-2 font-medium transition-colors"
-            >
-              <FaPlus /> Add New Project
-            </button>
-            <button
-              onClick={() => {
-                logout();
-                navigate('/login');
-              }}
-              className="bg-stone-700 hover:bg-stone-600 text-stone-200 px-5 py-2.5 rounded-xl flex items-center gap-2 font-medium transition-colors"
-            >
-              <FaSignOutAlt /> Logout
-            </button>
+          <div>
+            <h2 className="text-2xl font-bold text-stone-100">Projects</h2>
+            <p className="text-stone-500 text-sm mt-1">Add, edit, or remove portfolio projects</p>
           </div>
+          <button
+            type="button"
+            onClick={() => setShowForm(true)}
+            className="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2.5 rounded-xl flex items-center gap-2 font-medium transition-colors"
+          >
+            <FaPlus /> Add New Project
+          </button>
         </div>
 
         {showForm && (
@@ -381,7 +369,6 @@ const Dashboard = () => {
             <p className="text-gray-500">Add your first project to get started!</p>
           </div>
         )}
-      </div>
     </div>
   );
 };

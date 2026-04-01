@@ -27,11 +27,8 @@ import asl from '../../../public/images/asl.png'
 import as from '../../../public/images/as.png'
 import launch from '../../../public/images/launch.png'
 import exponential from '../../../public/images/exponential.png'
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
 import CountUp from 'react-countup';
 // ..
-AOS.init();
 
 import html from '../../../public/images/html.png'
 import css from '../../../public/images/css.png'
@@ -214,9 +211,9 @@ const Home = () => {
         Download Resume
       </a>
       <div className="mt-8 flex justify-center lg:justify-start gap-5">
-                  <a data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors" aria-label="Facebook"><FaFacebook className="h-7 w-7" /></a>
-                  <a data-aos="fade-up" data-aos-duration="500" data-aos-delay="600" href="https://github.com/dashboard" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors" aria-label="GitHub"><FaGithub className="h-7 w-7" /></a>
-                  <a data-aos="fade-up" data-aos-duration="500" data-aos-delay="700" href="https://www.linkedin.com/in/asfaqur-rahman-hamim" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors" aria-label="LinkedIn"><FaLinkedin className="h-7 w-7" /></a>
+                  <a data-aos="fade-up" data-aos-delay="80" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors" aria-label="Facebook"><FaFacebook className="h-7 w-7" /></a>
+                  <a data-aos="fade-up" data-aos-delay="140" href="https://github.com/AsfaqurMec" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors" aria-label="GitHub"><FaGithub className="h-7 w-7" /></a>
+                  <a data-aos="fade-up" data-aos-delay="200" href="https://www.linkedin.com/in/asfaqur-rahman-hamim" target="_blank" rel="noreferrer" className="text-slate-300 hover:text-violet-200 transition-colors" aria-label="LinkedIn"><FaLinkedin className="h-7 w-7" /></a>
        </div>
     </div>
 
@@ -270,14 +267,14 @@ const Home = () => {
 
       <section className="pt-16 lg:pt-20 bg-slate-950/10 px-5 lg:px-0">
         <div className="section-container">
-          <h2 className="section-title text-center mb-12 pb-6 border-b-2 border-indigo-200" data-aos="fade-up" data-aos-duration="600">About Me</h2>
+          <h2 className="section-title text-center mb-12 pb-6 border-b-2 border-indigo-200" data-aos="fade-up">About Me</h2>
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             <div className="w-full lg:w-1/2 flex flex-col items-start space-y-6">
-              <img src="images/IMG_E4927@1x_1.jpg" alt="" className="w-24 h-24 rounded-full object-cover ring-2 ring-stone-200 shadow-xl" data-aos="zoom-in-up" data-aos-duration="600" />
+              <img src="images/IMG_E4927@1x_1.jpg" alt="" className="w-24 h-24 rounded-full object-cover ring-2 ring-stone-200 shadow-xl" data-aos="fade-up" />
               <h2 className="text-xl font-semibold text-stone-200">Jr. Full Stack Developer</h2>
-              <h3 data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="100" className="text-lg font-heading font-semibold text-stone-300 pb-2 border-b-2 border-indigo-200 w-full">Skills</h3>
-              <p data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="200" className="text-stone-400">Next.js | TypeScript | Redux | React | Node Js | <br /> Express js | Mongoose |  MongoDB |  JavaScript | BootStrap | Css | Html</p>
-              <div data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300" className="w-full">
+              <h3 data-aos="fade-up" data-aos-delay="80" className="text-lg font-heading font-semibold text-stone-300 pb-2 border-b-2 border-indigo-200 w-full">Skills</h3>
+              <p data-aos="fade-up" data-aos-delay="140" className="text-stone-400">Next.js | TypeScript | Redux | React | Node Js | <br /> Express js | Mongoose |  MongoDB |  JavaScript | BootStrap | Css | Html</p>
+              <div data-aos="fade-up" data-aos-delay="200" className="w-full">
                 <h3 className="text-lg font-heading font-semibold text-stone-300 pb-2 border-b-2 border-indigo-200 w-full mb-4">Education</h3>
                 <p className="text-stone-400">Mymensingh Engineering College,Mymensingh</p>
                 <p className="text-stone-400">BSc in Computer Science and Engineering</p>
@@ -285,8 +282,8 @@ const Home = () => {
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex flex-col items-start space-y-6">
-              <p data-aos="zoom-in-up" data-aos-duration="600" className="text-xl font-semibold text-indigo-500">Jr. Full Stack Developer</p>
-              <p data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="100" className="text-stone-400 leading-relaxed">I'm Asfaqur Rahman, a Jr. Full Stack developer
+              <p data-aos="fade-up" className="text-xl font-semibold text-indigo-500">Jr. Full Stack Developer</p>
+              <p data-aos="fade-up" data-aos-delay="80" className="text-stone-400 leading-relaxed">I'm Asfaqur Rahman, a Jr. Full Stack developer
                 proficient in HTML, CSS, JavaScript, React, Node.js, Next.js, Express.js, MongoDB, Mongoose, TypeScript, Redux
                 and Tailwind CSS. With a passion for crafting
                 engaging digital experiences, I specialize in
@@ -295,16 +292,16 @@ const Home = () => {
                 solutions. Collaborative by nature, I enjoy
                 working closely with designers and
                 stakeholders to bring ideas to life.</p>
-              <h3 className="text-lg font-heading font-semibold text-stone-400 pb-2 border-b-2 border-indigo-200 w-full" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="200">Experience</h3>
-              <p data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300" className="text-stone-400"><a href="https://flexsoftr.com/our-team/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:text-indigo-700 font-semibold underline underline-offset-2">FlexSoftr</a> , Dhaka — MERN Stack Developer</p>
-              <p data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300" className="text-stone-400">As a MERN Stack developer, I'll build UIs, manage state,
+              <h3 className="text-lg font-heading font-semibold text-stone-400 pb-2 border-b-2 border-indigo-200 w-full" data-aos="fade-up" data-aos-delay="140">Experience</h3>
+              <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400"><a href="https://flexsoftr.com/our-team/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:text-indigo-700 font-semibold underline underline-offset-2">FlexSoftr</a> , Dhaka — MERN Stack Developer</p>
+              <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400">As a MERN Stack developer, I'll build UIs, manage state,
                 optimize performance, integrate APIs, collaborate with
                 teams, and ensure code quality.</p>
-              <p data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300" className="text-stone-400 text-sm">May 2024 - PRESENT</p>
+              <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400 text-sm">May 2024 - PRESENT</p>
               <div className="flex gap-4">
-                <a data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="400" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="text-indigo-500 hover:text-indigo-600 transition-colors"><FaFacebook className="h-8 w-8" /></a>
-                <a data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="500" href="https://github.com/dashboard" target="_blank" rel="noreferrer" className="text-indigo-500 hover:text-indigo-600 transition-colors"><FaGithub className="h-8 w-8" /></a>
-                <a data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="600" href="https://www.linkedin.com/in/asfaqur-rahman-hamim" target="_blank" rel="noreferrer" className="text-indigo-500 hover:text-indigo-600 transition-colors"><FaLinkedin className="h-8 w-8" /></a>
+                <a data-aos="fade-up" data-aos-delay="80" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="text-indigo-500 hover:text-indigo-600 transition-colors"><FaFacebook className="h-8 w-8" /></a>
+                <a data-aos="fade-up" data-aos-delay="140" href="https://github.com/AsfaqurMec" target="_blank" rel="noreferrer" className="text-indigo-500 hover:text-indigo-600 transition-colors"><FaGithub className="h-8 w-8" /></a>
+                <a data-aos="fade-up" data-aos-delay="200" href="https://www.linkedin.com/in/asfaqur-rahman-hamim" target="_blank" rel="noreferrer" className="text-indigo-500 hover:text-indigo-600 transition-colors"><FaLinkedin className="h-8 w-8" /></a>
               </div>
             </div>
           </div>
@@ -562,7 +559,7 @@ const Home = () => {
                       </Link>
 
            <Link to={'https://as-global.vercel.app/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                        <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                           <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={as}
@@ -587,7 +584,7 @@ const Home = () => {
                       </Link>
           
                       <Link to={'https://schedular-asl.vercel.app/'}>
-                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                                    <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                                       <div className="aspect-video overflow-hidden">
                                         <img className="h-48 w-full"
                                           src={asl}
@@ -611,7 +608,7 @@ const Home = () => {
                                   </Link>
                       
                                   <Link to={'https://exponential-du.vercel.app/'}>
-                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                                    <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                                       <div className="aspect-video overflow-hidden">
                                         <img className="h-48 w-full"
                                           src={exponential}
@@ -637,7 +634,7 @@ const Home = () => {
           
           
                        <Link to={'https://www.masuafoundation.org/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                        <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                           <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img6}
@@ -662,7 +659,7 @@ const Home = () => {
           
           
                        <Link to={'https://electro-brown.vercel.app/'}>
-          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+          <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
             <div className="aspect-video overflow-hidden">
               <img className="h-48 w-full"
                 src={img5}
@@ -686,7 +683,7 @@ const Home = () => {
           </Link>
           
                        <Link to={'https://hospital-mu-six.vercel.app'}>
-          <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+          <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
             <div className="aspect-video overflow-hidden">
               <img className="h-48 w-full"
                 src={img1}
@@ -860,7 +857,7 @@ const Home = () => {
           ))}
 
                       <Link to={'https://neosupremetech.com/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                        <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                           <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img7}
@@ -877,7 +874,7 @@ const Home = () => {
                       </Link>
           
                       <Link to={'https://platinumamenity.com/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                        <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                           <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img8}
@@ -894,7 +891,7 @@ const Home = () => {
                       </Link>
           
                       <Link to={'https://goldenresolution.com/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                        <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                           <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img9}
@@ -911,7 +908,7 @@ const Home = () => {
                       </Link>
 
                        <Link to={'https://deshiohandicraft.com/'}>
-                        <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                        <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                           <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img10}
@@ -933,7 +930,7 @@ const Home = () => {
           {/* <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
             {dbProjects.filter(p => p.category === 'WordPress').map((p, idx) => (
               <Link key={p._id || idx} to={`/projects/${p._id}`}>
-                <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                        <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                   <div className="aspect-video overflow-hidden">
                     <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
                   </div>

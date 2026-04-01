@@ -1,44 +1,3 @@
-// import { Link } from 'react-router-dom';
-// import logo from '../../../public/images/Preview.png';
-
-// const Footer = () => {
-//   return (
-//     <footer className="border-t border-white/10 bg-slate-950/30 backdrop-blur-md">
-//       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-//         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-//           <div className="flex items-center gap-2">
-//             <img className="h-9 w-auto rounded-md object-contain" src={logo} alt="Logo" />
-//           </div>
-//           <nav className="flex flex-wrap justify-center md:justify-end gap-8">
-//             <div>
-//               <h6 className="text-sm font-semibold text-indigo-600 uppercase tracking-wider mb-2">Contacts</h6>
-//               <div className="flex flex-col gap-1 text-sm text-slate-300">
-//                 <a href="mailto:asfaqurrahman055@gmail.com" className="hover:text-violet-200 transition-colors">asfaqurrahman055@gmail.com</a>
-//                 <a href="mailto:hamimhamim044@gmail.com" className="hover:text-violet-200 transition-colors">hamimhamim044@gmail.com</a>
-//                 <a href="tel:01956230265" className="hover:text-violet-200 transition-colors">01956230265</a>
-//                 <a href="tel:01572908354" className="hover:text-violet-200 transition-colors">01572908354</a>
-//               </div>
-//             </div>
-//             <div>
-//               <h6 className="text-sm font-semibold text-violet-200 uppercase tracking-wider mb-2">Links</h6>
-//               <div className="flex flex-col gap-1 text-sm text-slate-300">
-//                 <Link to="/about" className="hover:text-violet-200 transition-colors">About Me</Link>
-//                 <Link to="/project" className="hover:text-violet-200 transition-colors">Projects</Link>
-//                 <Link to="/skill" className="hover:text-violet-200 transition-colors">Skills</Link>
-//                 <Link to="/contact" className="hover:text-violet-200 transition-colors">Contact</Link>
-//               </div>
-//             </div>
-//           </nav>
-//         </div>
-//         <div className="mt-8 pt-8 border-t border-white/10 text-center text-sm text-slate-400">
-//           © {new Date().getFullYear()} Portfolio. All rights reserved.
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
 
 import { Link } from "react-router-dom";
 import logo from "../../../public/images/Preview.png";
@@ -56,7 +15,7 @@ const Footer = () => {
               <img
                 src={logo}
                 alt="Logo"
-                className="h-10 w-auto rounded-md object-contain"
+                className="h-14 w-auto rounded-md object-contain"
               />
               <h2 className="text-lg font-semibold text-white">
                 Asfaqur Rahman
@@ -72,21 +31,21 @@ const Footer = () => {
             {/* Social */}
             <div className="flex gap-4 mt-4 text-slate-400">
               <a
-                href="https://github.com"
+                href="https://github.com/AsfaqurMec"
                 className="hover:text-white transition"
               >
                 <FaGithub size={18} />
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/asfaqur-rahman-hamim"
                 className="hover:text-white transition"
               >
                 <FaLinkedin size={18} />
               </a>
 
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL"
                 className="hover:text-white transition"
               >
                 <FaFacebook size={18} />
@@ -139,6 +98,12 @@ const Footer = () => {
               >
                 +880 1956 230265
               </a>
+              <a
+                href="tel:01572908354"
+                className="hover:text-white transition"
+              >
+                +880 1572 908354
+              </a>
 
               <span>Dhaka, Bangladesh</span>
             </div>
@@ -146,14 +111,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-center items-center text-sm text-slate-500">
           <p>
             © {new Date().getFullYear()} Asfaqur Rahman. All rights reserved.
           </p>
 
-          <p className="mt-2 md:mt-0">
-            Built with React & Tailwind CSS
-          </p>
+         
         </div>
       </div>
     </footer>

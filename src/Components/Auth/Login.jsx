@@ -94,7 +94,7 @@ const Login = () => {
                   value={formData.password}
                   onChange={handleInputChange}
                   required
-                  className="w-full pl-10 pr-12 py-3 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 text-stone-900 placeholder-stone-500"
+                  className="w-full pl-10 pr-12 py-3 bg-stone-800/60 border border-stone-600 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30 text-white placeholder-stone-500"
                   placeholder="Enter your password"
                 />
                 <button

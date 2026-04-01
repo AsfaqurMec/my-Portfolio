@@ -59,7 +59,7 @@ const Project = () => {
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
             {dbProjects.filter(p => p.category !== 'WordPress').map((p, idx) => (
               <Link key={p._id || idx} to={`/projects/${p._id}`}>
-                <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+                <div data-aos="fade-up" className="card-light overflow-hidden group">
                   <figure>
                     <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
                   </figure>
@@ -80,7 +80,7 @@ const Project = () => {
             ))}
 
           <Link to={'https://launchmybiz.net/'}>
-                        <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+                        <div data-aos="fade-up" className="card-light overflow-hidden group">
                           <figure>
                             <img className="h-48 w-full"
                               src={launch}
@@ -104,7 +104,7 @@ const Project = () => {
                       </Link>            
 
            <Link to={'https://as-global.vercel.app/'}>
-              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+              <div data-aos="fade-up" className="card-light overflow-hidden group">
                 <figure>
                   <img className="h-48 w-full"
                     src={as}
@@ -127,7 +127,7 @@ const Project = () => {
             </Link>
 
             <Link to={'https://schedular-asl.vercel.app/'}>
-                          <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+                          <div data-aos="fade-up" className="card-light overflow-hidden group">
                             <figure>
                               <img className="h-48 w-full"
                                 src={asl}
@@ -150,7 +150,7 @@ const Project = () => {
                         </Link>
             
                         <Link to={'https://exponential-du.vercel.app/'}>
-                          <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+                          <div data-aos="fade-up" className="card-light overflow-hidden group">
                             <figure>
                               <img className="h-48 w-full"
                                 src={exponential}
@@ -175,7 +175,7 @@ const Project = () => {
 
 
              <Link to={'https://www.masuafoundation.org/'}>
-              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+              <div data-aos="fade-up" className="card-light overflow-hidden group">
                 <figure>
                   <img className="h-48 w-full"
                     src={img6}
@@ -199,7 +199,7 @@ const Project = () => {
 
 
              <Link to={'https://electro-brown.vercel.app/'}>
-<div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+<div data-aos="fade-up" className="card-light overflow-hidden group">
   <figure>
     <img className="h-48 w-full"
       src={img5}
@@ -222,7 +222,7 @@ const Project = () => {
 </Link>
 
              <Link to={'https://hospital-mu-six.vercel.app'}>
-<div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+<div data-aos="fade-up" className="card-light overflow-hidden group">
   <figure>
     <img className="h-48 w-full"
       src={img1}
@@ -371,7 +371,7 @@ const Project = () => {
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {dbProjects.filter(p => p.category === 'WordPress').map((p, idx) => (
               <Link key={p._id || idx} to={`/projects/${p._id}`}>
-                <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+                <div data-aos="fade-up" className="card-light overflow-hidden group">
                   <figure>
                     <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
                   </figure>
@@ -386,7 +386,7 @@ const Project = () => {
             ))}
 
              <Link to={'https://neosupremetech.com/'}>
-              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+              <div data-aos="fade-up" className="card-light overflow-hidden group">
                 <figure>
                   <img className="h-48 w-full"
                     src={img7}
@@ -403,7 +403,7 @@ const Project = () => {
             </Link>
 
             <Link to={'https://platinumamenity.com/'}>
-              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+              <div data-aos="fade-up" className="card-light overflow-hidden group">
                 <figure>
                   <img className="h-48 w-full"
                     src={img8}
@@ -420,7 +420,7 @@ const Project = () => {
             </Link>
 
             <Link to={'https://goldenresolution.com/'}>
-              <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
+              <div data-aos="fade-up" className="card-light overflow-hidden group">
                 <figure>
                   <img className="h-48 w-full"
                     src={img9}
@@ -437,7 +437,7 @@ const Project = () => {
             </Link>
 
              <Link to={'https://deshiohandicraft.com/'}>
-                                    <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300" className="card-light overflow-hidden group">
+                                    <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                                       <figure>
                                         <img className="h-48 w-full"
                                           src={img10}

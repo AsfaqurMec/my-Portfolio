@@ -7,6 +7,8 @@ import Contact from "../Components/Contact/Contact";
 import Project from "../Components/Project/Project";
 import About from "../Components/About/About";
 import Dashboard from "../Components/Dashboard/Dashboard";
+import DashboardLayout from "../Components/Dashboard/DashboardLayout";
+import DashboardContacts from "../Components/Dashboard/DashboardContacts";
 import ProtectedRoute from "../Components/Auth/ProtectedRoute";
 import Login from "../Components/Auth/Login";
 import ProjectDetail from "../Components/Project/ProjectDetail/ProjectDetail";
@@ -49,8 +51,15 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard',
-                element: <ProtectedRoute><Dashboard></Dashboard></ProtectedRoute>, 
-              
+                element: (
+                  <ProtectedRoute>
+                    <DashboardLayout />
+                  </ProtectedRoute>
+                ),
+                children: [
+                  { index: true, element: <Dashboard /> },
+                  { path: 'contacts', element: <DashboardContacts /> },
+                ],
             },
             {
                 path: '/projects/:id',

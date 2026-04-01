@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Local contact form submissions (do not commit PII)
+server/data/contacts.json
