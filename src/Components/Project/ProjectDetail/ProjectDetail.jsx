@@ -1,6 +1,33 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa';
 import { projectService } from '../../../services/projectService';
+import ProjectImageSlider from './ProjectImageSlider';
+
+const buildSlideImages = (project) => {
+  if (!project) return [];
+  const urls = [];
+  if (project.thumbnail) urls.push(project.thumbnail);
+  for (const img of project.images || []) {
+    if (img && !urls.includes(img)) urls.push(img);
+  }
+  return urls;
+};
+
+/** Drops blank lines / empty entries so list markers do not render alone. */
+const normalizeFeatures = (features) => {
+  if (features == null || features === '') return [];
+  if (Array.isArray(features)) {
+    return features.map((f) => String(f).trim()).filter((f) => f.length > 0);
+  }
+  if (typeof features === 'string') {
+    return features
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0);
+  }
+  return [];
+};
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -21,15 +48,21 @@ const ProjectDetail = () => {
     })();
   }, [id]);
 
- //console.log(project);
-  
+  const slideImages = useMemo(() => buildSlideImages(project), [project]);
+
+  const displayFeatures = useMemo(() => normalizeFeatures(project?.features), [project?.features]);
+  const hasFeatures = displayFeatures.length > 0;
+  const hasTechnologies = (project?.technologies || []).length > 0;
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center pt-24">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-2 border-indigo-500 border-t-transparent mx-auto mb-4"></div>
-          <p className="text-stone-500">Loading project...</p>
+          <div
+            className="animate-spin rounded-full h-12 w-12 border-2 border-violet-400 border-t-transparent mx-auto mb-4"
+            aria-hidden
+          />
+          <p className="text-slate-400">Loading project...</p>
         </div>
       </div>
     );
@@ -37,106 +70,149 @@ const ProjectDetail = () => {
 
   if (error || !project) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-4">
-        <div className="text-center">
-          <p className="text-stone-600 mb-6">{error || 'Project not found'}</p>
-          <Link to="/project" className="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-xl transition-colors">Back to Projects</Link>
+      <div className="min-h-screen flex items-center justify-center px-4 pt-24">
+        <div className="text-center card-light p-10 max-w-md">
+          <p className="text-slate-300 mb-6">{error || 'Project not found'}</p>
+          <Link
+            to="/project"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 hover:bg-violet-500 text-white font-medium rounded-xl transition-colors"
+          >
+            <FaArrowLeft className="w-3.5 h-3.5" />
+            Back to Projects
+          </Link>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen pt-24 section-container pb-14">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-          <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-stone-900 mb-3">{project.title}</h1>
+    <div className="min-h-screen pt-24 pb-16 section-container">
+      <div className="max-w-5xl mx-auto">
+        <nav className="mb-8 text-sm text-slate-400" aria-label="Breadcrumb">
+          <ol className="flex flex-wrap items-center gap-2">
+            <li>
+              <Link to="/project" className="hover:text-violet-300 transition-colors">
+                Projects
+              </Link>
+            </li>
+            <li aria-hidden className="text-slate-600">
+              /
+            </li>
+            <li className="text-slate-200 font-medium truncate max-w-[min(100%,280px)]">{project.title}</li>
+          </ol>
+        </nav>
+
+        <header className="mb-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <div className="space-y-4">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-slate-50 tracking-tight">
+              {project.title}
+            </h1>
             <div className="flex flex-wrap items-center gap-2">
               {project.type && (
-                <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider">
-                  {project.type}
-                </span>
+                <span className="badge-pill border border-violet-400/25">{project.type}</span>
               )}
               {project.featured && (
-                <span className="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider">Featured</span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider bg-amber-500/15 text-amber-200 border border-amber-400/25">
+                  Featured
+                </span>
+              )}
+              {project.category && (
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-slate-300 bg-white/5 border border-white/10">
+                  {project.category}
+                </span>
               )}
             </div>
           </div>
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-xl transition-colors"
+          <div className="flex flex-wrap gap-3 shrink-0">
+            <Link
+              to="/project"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-medium text-slate-200 bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
             >
-              Visit Project
-            </a>
-          )}
-        </div>
+              <FaArrowLeft className="w-3.5 h-3.5" />
+              All projects
+            </Link>
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-medium text-white bg-violet-600 hover:bg-violet-500 shadow-lg shadow-violet-900/30 transition-colors"
+              >
+                Visit live
+                <FaExternalLinkAlt className="w-3.5 h-3.5 opacity-90" />
+              </a>
+            )}
+          </div>
+        </header>
 
-        {project.thumbnail && (
-          <div className="mb-10 rounded-2xl overflow-hidden border border-stone-200">
-            <img src={project.thumbnail} alt={project.title} className="w-full h-64 md:h-96 object-cover" />
+        {slideImages.length > 0 ? (
+          <div className="mb-12 animate-fade-up">
+            <ProjectImageSlider images={slideImages} title={project.title} />
+          </div>
+        ) : (
+          <div className="mb-12 rounded-2xl border border-dashed border-white/15 bg-white/[0.03] aspect-[21/9] max-h-64 flex items-center justify-center text-slate-500 text-sm">
+            No preview images for this project
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            <div className="card-light p-6">
-              <h2 className="text-xl font-semibold text-stone-900 mb-3">Overview</h2>
-              <p className="text-stone-500 leading-7 whitespace-pre-line">{project.description}</p>
-            </div>
-           { project.features != [] > 0 && (
-            <div className="card-light p-6">
-              <h2 className="text-xl font-semibold text-stone-900 mb-3">Features</h2>
-               <div className="flex flex-col gap-2">
-              {(project.features || []).map((t, i) => (
-                  <span key={i} className="text-stone-500">.{t}</span>
-                ))}
-                </div>
-            </div>
-           )}
-            {project.images && project.images.length > 0 && (
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+          <div className="lg:col-span-8 space-y-8">
+            <section className="card-light p-6 sm:p-8">
+              <h2 className="font-heading text-xl sm:text-2xl font-semibold text-slate-50 mb-4">Overview</h2>
+              <p className="text-slate-300/95 leading-relaxed whitespace-pre-line text-[15px] sm:text-base">
+                {project.description}
+              </p>
+            </section>
+
+            {hasFeatures && (
+              <section className="card-light p-6 sm:p-8">
+                <h2 className="font-heading text-xl sm:text-2xl font-semibold text-slate-50 mb-5">Features</h2>
+                <ul className="space-y-3">
+                  {displayFeatures.map((t, i) => (
+                    <li key={i} className="flex gap-3 text-slate-300">
+                      <span
+                        className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400 shadow-[0_0_8px_rgba(167,139,250,0.6)]"
+                        aria-hidden
+                      />
+                      <span className="leading-relaxed">{t}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+          </div>
+
+          <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+            {hasTechnologies && (
               <div className="card-light p-6">
-                <h2 className="text-xl font-semibold text-stone-900 mb-4">Gallery</h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {project.images.map((img, idx) => (
-                    <img key={idx} src={img} alt={`screenshot-${idx}`} className="h-32 md:h-40 w-full object-cover rounded-lg" />
+                <h3 className="font-heading text-lg font-semibold text-slate-50 mb-4">Tech stack</h3>
+                <div className="flex flex-wrap gap-2">
+                  {(project.technologies || []).map((t, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1.5 rounded-lg text-sm bg-violet-500/15 text-violet-200 border border-violet-400/20"
+                    >
+                      {t}
+                    </span>
                   ))}
                 </div>
               </div>
             )}
-          </div>
 
-          <div className="space-y-6">
-           {project.technologies != [] && ( 
-            <div className="card-light p-6">
-              <h3 className="text-lg font-semibold text-stone-900 mb-3">Technologies</h3>
-              <div className="flex flex-wrap gap-2">
-                {(project.technologies || []).map((t, i) => (
-                  <span key={i} className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-lg text-sm">{t}</span>
-                ))}
+            {project.link && (
+              <div className="card-light p-6">
+                <h3 className="font-heading text-lg font-semibold text-slate-50 mb-3">Project link</h3>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm text-violet-300 hover:text-violet-200 break-all underline-offset-2 hover:underline transition-colors"
+                >
+                  {project.link}
+                </a>
               </div>
-            </div>
-           )}
-
-            <div className="card-light p-6">
-              <h3 className="text-lg font-semibold text-stone-900 mb-2">Links</h3>
-              <div className="flex flex-col gap-2">
-                {project.link && (
-                  <a href={project.link} target="_blank" rel="noreferrer" className="text-indigo-600 hover:text-indigo-700 break-all text-sm">
-                    {project.link}
-                  </a>
-                )}
-              </div>
-            </div>
-
-            <div className="card-light p-6">
-              <h3 className="text-lg font-semibold text-stone-900 mb-2">Actions</h3>
-              <Link to="/project" className="inline-block px-4 py-2 bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium rounded-xl transition-colors">Back to Projects</Link>
-            </div>
-          </div>
+            )}
+          </aside>
         </div>
       </div>
     </div>
@@ -144,8 +220,3 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
-
-
-
-
-
