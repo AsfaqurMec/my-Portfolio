@@ -17,8 +17,187 @@ import exponential from '../../../public/images/exponential.png'
 import CountUp from 'react-countup';
 import as from '../../../public/images/as.png';
 import launch from '../../../public/images/launch.png'
+
+const MAX_TECHNOLOGIES_TO_SHOW = 4;
+
+const ProjectCard = ({ title, type, description, thumbnail, technologies = [] }) => (
+  <div data-aos="fade-up" className="card-light overflow-hidden group">
+    <div className="aspect-video overflow-hidden">
+      <img
+        className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
+        src={thumbnail}
+        alt={title}
+      />
+    </div>
+    <div className="p-4">
+      <div className="flex items-start justify-between gap-2">
+        <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">{title}</h3>
+        {type ? (
+          <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">
+            {type}
+          </span>
+        ) : null}
+      </div>
+      <p className="line-clamp-2 text-sm text-stone-500 mt-1">{description}</p>
+      {technologies.length > 0 ? (
+        <div className="flex flex-wrap gap-1 mt-3">
+          {technologies.slice(0, MAX_TECHNOLOGIES_TO_SHOW).map((tech, index) => (
+            <span key={`${tech}-${index}`} className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">
+              {tech}
+            </span>
+          ))}
+          {technologies.length > MAX_TECHNOLOGIES_TO_SHOW ? (
+            <span className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">
+              ... more
+            </span>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
+  </div>
+);
+
+const ProjectCardLink = ({ to, children }) => {
+  const isExternal = /^https?:\/\//.test(to);
+
+  if (isExternal) {
+    return (
+      <a href={to} target="_blank" rel="noreferrer">
+        {children}
+      </a>
+    );
+  }
+
+  return <Link to={to}>{children}</Link>;
+};
+
 const Project = () => {
     const [dbProjects, setDbProjects] = useState([]);
+    const mernStaticProjects = [
+      {
+        to: 'https://launchmybiz.net/',
+        title: 'Launch',
+        type: 'Business Formation',
+        description: 'LaunchMyBiz: Complete Business Formation Platform.',
+        thumbnail: launch,
+        technologies: ['React', 'Node Js', 'TypeScript', 'MongoDB'],
+      },
+      {
+        to: 'https://as-global.vercel.app/',
+        title: 'AS Global Styles',
+        type: 'Garment',
+        description: 'A garment Website using Next.js, React, MongoDB.',
+        thumbnail: as,
+        technologies: ['React', 'Next Js', 'MongoDB'],
+      },
+      {
+        to: 'https://schedular-asl.vercel.app/',
+        title: 'Smart Class Scheduler ASL',
+        type: 'Schedular',
+        description: 'A smart class scheduling Website using Next.js, React, MongoDB.',
+        thumbnail: asl,
+        technologies: ['React', 'Next Js', 'MongoDB'],
+      },
+      {
+        to: 'https://exponential-du.vercel.app/',
+        title: 'Exponential DU',
+        type: 'Online Course',
+        description: 'A online course Website using Next.js, React, MongoDB.',
+        thumbnail: exponential,
+        technologies: ['React', 'Next Js', 'MongoDB'],
+      },
+      {
+        to: 'https://www.masuafoundation.org/',
+        title: 'Masua Foundation',
+        type: 'Foundation',
+        description: 'A responsive Website using Next.js, React, MongoDB.',
+        thumbnail: img6,
+        technologies: ['React', 'Next Js', 'MongoDB'],
+      },
+      {
+        to: 'https://electro-brown.vercel.app/',
+        title: 'Electro',
+        type: 'E-Commerce',
+        description: 'A responsive E-commerce Website using Next.js, React, MongoDB.',
+        thumbnail: img5,
+        technologies: ['React', 'Next Js', 'MongoDB'],
+      },
+      {
+        to: 'https://hospital-mu-six.vercel.app',
+        title: 'MediPro',
+        type: 'Hospital',
+        description: 'A responsive Medical Hospital Website using Next.js, React, MongoDB.',
+        thumbnail: img1,
+        technologies: ['React', 'Next Js', 'MongoDB'],
+      },
+      {
+        to: 'https://trendy-threads-clothing.web.app',
+        title: 'Bostro',
+        type: 'E-Commerce',
+        description: 'A e-commerce clothing website for cloths. User easily wishlist, cart & purchase cloths.',
+        thumbnail: img,
+        technologies: ['React', 'Stripe', 'MongoDB'],
+      },
+      {
+        to: 'https://blood-donation-1ed49.web.app',
+        title: 'OneBlood!',
+        type: 'Blood Donation',
+        description: 'A blood donation website for searching doner and donate blood & money.',
+        thumbnail: img2,
+        technologies: ['React', 'Stripe', 'MongoDB'],
+      },
+      {
+        to: 'https://resturant-7f83a.web.app',
+        title: 'DineEase!',
+        type: 'Resturant',
+        description: 'A resturant website using MongoDB and React.',
+        thumbnail: img3,
+        technologies: ['React', 'Node.js', 'MongoDB'],
+      },
+      {
+        to: 'https://tourism-41ddf.web.app',
+        title: 'ExploreEpic',
+        type: 'Travel',
+        description: 'A tours & travels website where user can easily find his destination.',
+        thumbnail: img4,
+        technologies: ['React', 'Node.js', 'MongoDB'],
+      },
+      {
+        to: 'https://review-book-site.netlify.app',
+        title: 'Book Vibe',
+        type: 'Book Review',
+        description: 'A book website. Here user can read books easily & save them for later.',
+        thumbnail: 'https://i.ibb.co/NsWgZGz/Screenshot-2024-07-16-123448.png',
+        technologies: ['React', 'Node.js', 'MongoDB'],
+      },
+    ];
+
+    const wordpressStaticProjects = [
+      // {
+      //   to: 'https://neosupremetech.com/',
+      //   title: 'Neo Superme Tech',
+      //   description: 'A responsive Website using WordPress.',
+      //   thumbnail: img7,
+      // },
+      // {
+      //   to: 'https://platinumamenity.com/',
+      //   title: 'Platinum Amenity',
+      //   description: 'A responsive Website using WordPress.',
+      //   thumbnail: img8,
+      // },
+      // {
+      //   to: 'https://goldenresolution.com/',
+      //   title: 'Golden Resolution',
+      //   description: 'A responsive Website using WordPress.',
+      //   thumbnail: img9,
+      // },
+      {
+        to: 'https://deshiohandicraft.com/',
+        title: 'Deshio HandiCraft',
+        description: 'A responsive Website using WordPress.',
+        thumbnail: img10,
+      },
+    ];
 
     useEffect(() => {
       (async () => {
@@ -55,403 +234,55 @@ const Project = () => {
             </div>
           </div>
 
-          <h2 className="text-2xl font-semibold text-slate-100 text-center mt-16 mb-8">M E R N Stack!</h2>
-             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
+          <h2 className="text-3xl font-semibold text-slate-100 text-center mt-16 mb-8">M E R N Stack!</h2>
+             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 mx-auto w-full">
             {dbProjects.filter(p => p.category !== 'WordPress').map((p, idx) => (
-              <Link key={p._id || idx} to={`/projects/${p._id}`}>
-                <div data-aos="fade-up" className="card-light overflow-hidden group">
-                  <figure>
-                    <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
-                  </figure>
-                  <div className="p-4">
-                    <h2 className="card-title">
-                      {p.title}
-                      <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">{p.type}</div>
-                    </h2>
-                    <p className="line-clamp-2">{p.description}</p>
-                    <div className="card-actions justify-end">
-                      {(p.technologies || []).slice(0,4).map((t,i) => (
-                        <div key={i} className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">{t}</div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              <ProjectCardLink key={p._id || idx} to={`/projects/${p._id}`}>
+                <ProjectCard
+                  title={p.title}
+                  type={p.type}
+                  description={p.description}
+                  thumbnail={p.thumbnail}
+                  technologies={p.technologies || []}
+                />
+              </ProjectCardLink>
             ))}
 
-          <Link to={'https://launchmybiz.net/'}>
-                        <div data-aos="fade-up" className="card-light overflow-hidden group">
-                          <figure>
-                            <img className="h-48 w-full"
-                              src={launch}
-                              alt="Shoes" />
-                          </figure>
-                          <div className="p-4">
-                            <h2 className="card-title">
-                              Launch
-                              <div className="badge badge-error text-white shadow-sm shadow-[#000000] pb-1">Business Formation</div>
-          
-                            </h2>
-                            <p>LaunchMyBiz: Complete Business Formation Platform.</p>
-                            <div className="card-actions justify-end">
-                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">React</div>
-                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">Node Js</div>
-                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">TypeScript</div>
-                              <div className="badge bg-red-600 pb-[2px]  badge-outline shadow-sm shadow-[#000000]">MongoDB</div>
-                            </div>
-                          </div>
-                        </div>
-                      </Link>            
-
-           <Link to={'https://as-global.vercel.app/'}>
-              <div data-aos="fade-up" className="card-light overflow-hidden group">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={as}
-                    alt="Shoes" />
-                </figure>
-                <div className="p-4">
-                  <h2 className="card-title">
-                    AS Global Styles
-                    <div className="badge badge-warning">Garment</div>
-
-                  </h2>
-                  <p>A garment Website using Next.js, React, MongoDB.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">React</div>
-                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">Next Js</div>
-                    <div className="badge bg-amber-600 pb-[2px]  badge-outline">MongoDB</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link to={'https://schedular-asl.vercel.app/'}>
-                          <div data-aos="fade-up" className="card-light overflow-hidden group">
-                            <figure>
-                              <img className="h-48 w-full"
-                                src={asl}
-                                alt="Shoes" />
-                            </figure>
-                            <div className="p-4">
-                              <h2 className="card-title">
-                                Smart Class Scheduler ASL
-                                <div className="badge badge-info">Schedular</div>
-            
-                              </h2>
-                              <p>A smart class scheduling Website using Next.js, React, MongoDB.</p>
-                              <div className="card-actions justify-end">
-                                <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-                                <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
-                                <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
-                              </div>
-                            </div>
-                          </div>
-                        </Link>
-            
-                        <Link to={'https://exponential-du.vercel.app/'}>
-                          <div data-aos="fade-up" className="card-light overflow-hidden group">
-                            <figure>
-                              <img className="h-48 w-full"
-                                src={exponential}
-                                alt="Shoes" />
-                            </figure>
-                            <div className="p-4">
-                              <h2 className="card-title">
-                                Exponential DU
-                                <div className="badge badge-info">Online Course</div>
-            
-                              </h2>
-                              <p>A online course Website using Next.js, React, MongoDB.</p>
-                              <div className="card-actions justify-end">
-                                <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-                                <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
-                                <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
-                              </div>
-                            </div>
-                          </div>
-                        </Link>
-            
-
-
-             <Link to={'https://www.masuafoundation.org/'}>
-              <div data-aos="fade-up" className="card-light overflow-hidden group">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img6}
-                    alt="Shoes" />
-                </figure>
-                <div className="p-4">
-                  <h2 className="card-title">
-                    Masua Foundation
-                    <div className="badge badge-info">Foundation</div>
-
-                  </h2>
-                  <p>A responsive Website using Next.js, React, MongoDB.</p>
-                  <div className="card-actions justify-end">
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
-                    <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-
-             <Link to={'https://electro-brown.vercel.app/'}>
-<div data-aos="fade-up" className="card-light overflow-hidden group">
-  <figure>
-    <img className="h-48 w-full"
-      src={img5}
-      alt="Shoes" />
-  </figure>
-  <div className="p-4">
-    <h2 className="card-title">
-    Electro
-    <div className="badge badge-info">E-Commerce</div>
-      
-    </h2>
-    <p>A responsive E-commerce Website using Next.js, React, MongoDB.</p>
-    <div className="card-actions justify-end">
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">Next Js</div>
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
-    </div>
-  </div>
-</div>
-</Link>
-
-             <Link to={'https://hospital-mu-six.vercel.app'}>
-<div data-aos="fade-up" className="card-light overflow-hidden group">
-  <figure>
-    <img className="h-48 w-full"
-      src={img1}
-      alt="Shoes" />
-  </figure>
-  <div className="p-4">
-    <h2 className="card-title">
-    MediPro
-      <div className="badge badge-success text-white">Hospital</div>
-      
-    </h2>
-    <p>A responsive Medical Hospital Website using Next.js, React, MongoDB.</p>
-    <div className="card-actions justify-end">
-      <div className="badge bg-green-600 pb-[2px]  badge-outline">React</div>
-      <div className="badge bg-green-600 pb-[2px]  badge-outline">Next Js</div>
-      <div className="badge bg-green-600 pb-[2px]  badge-outline">MongoDB</div>
-    </div>
-  </div>
-</div>
-</Link>
-
-
-
-
-             <Link to={'https://trendy-threads-clothing.web.app'}>
-<div className="card-light overflow-hidden group">
-  <figure>
-    <img className="h-48 w-full"
-      src={img}
-      alt="Shoes" />
-  </figure>
-  <div className="p-4">
-    <h2 className="card-title">
-      Bostro
-      <div className="badge badge-info">E-Commerce</div>
-      
-    </h2>
-    <p>A e-commerce clothing website for cloths. User easily wishlist, cart & purchase cloths.</p>
-    <div className="card-actions justify-end">
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">React</div>
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">Stripe</div>
-      <div className="badge bg-sky-600 pb-[2px]  badge-outline">MongoDB</div>
-    </div>
-  </div>
-</div>
-</Link>
-
-
-
-
-             <Link to={'https://blood-donation-1ed49.web.app'}>
-<div className="card-light overflow-hidden group">
-  <figure>
-    <img className="h-48 w-full"
-      src={img2}
-      alt="Shoes" />
-  </figure>
-  <div className="p-4">
-    <h2 className="card-title">
-      OneBlood!
-      <div className="badge badge-secondary">Blood Donation</div>
-      
-    </h2>
-    <p>A blood donation website for searching doner and donate blood & money.</p>
-    <div className="card-actions justify-end">
-      <div className="badge bg-orange-800 pb-[2px]  badge-outline">React</div>
-      <div className="badge bg-orange-800 pb-[2px]  badge-outline">Stripe</div>
-      <div className="badge bg-orange-800 pb-[2px]  badge-outline">MongoDB</div>
-    </div>
-  </div>
-</div>
-</Link>
-
-<Link to={'https://resturant-7f83a.web.app'}>
-<div className="card-light overflow-hidden group">
-  <figure>
-    <img className="h-48 w-full"
-      src={img3}
-      alt="Shoes" />
-  </figure>
-  <div className="p-4">
-    <h2 className="card-title">
-    DineEase!
-      <div className="badge badge-primary">Resturant</div>
-    </h2>
-    <p>A resturant website using MongoDB and React.
-
-    </p>
-    <div className="card-actions justify-end">
-      <div className="badge bg-fuchsia-800 pb-[2px] badge-outline">React</div>
-      <div className="badge bg-fuchsia-800 pb-[2px] badge-outline">Node.js</div>
-      <div className="badge bg-fuchsia-800 pb-[2px] badge-outline">MongoDB</div>
-    </div>
-  </div>
-</div>
-</Link>
-
-<Link to={'https://tourism-41ddf.web.app'}>
-
-<div className="card-light overflow-hidden group">
-  <figure>
-    <img className="h-48 w-full"
-      src={img4}
-      alt="Shoes" />
-  </figure>
-  <div className="p-4">
-    <h2 className="card-title">
-    ExploreEpic
-      <div className="badge badge-accent">Travel</div>
-    </h2>
-    <p>A tours & travels website where user can easily find his destination.</p>
-    <div className="card-actions justify-end">
-    <div className="badge   bg-sky-700 pb-[2px] badge-outline">React</div>
-      <div className="badge bg-sky-700 pb-[2px] badge-outline">Node.js</div>
-      <div className="badge bg-sky-700 pb-[2px] badge-outline">MongoDB</div>
-    </div>
-  </div>
-</div>
-</Link>
-
-<Link to={'https://review-book-site.netlify.app'}>
-<div className="card-light overflow-hidden group">
-  <figure>
-    <img className="h-48 w-full "
-      src="https://i.ibb.co/NsWgZGz/Screenshot-2024-07-16-123448.png"
-      alt="Shoes" />
-  </figure>
-  <div className="p-4">
-    <h2 className="card-title">
-    Book Vibe
-      <div className="badge badge-info">Book Review</div>
-    </h2>
-    <p>A book website. Here user can read books easily & save them for later.</p>
-    <div className="card-actions justify-end">
-    <div className="badge   bg-lime-700 pb-[2px] badge-outline">React</div>
-      <div className="badge bg-lime-700 pb-[2px] badge-outline">Node.js</div>
-      <div className="badge bg-lime-700 pb-[2px] badge-outline">MongoDB</div>
-    </div>
-  </div>
-</div>
-</Link>
+          {mernStaticProjects.map((project) => (
+            <ProjectCardLink key={project.to} to={project.to}>
+              <ProjectCard
+                title={project.title}
+                type={project.type}
+                description={project.description}
+                thumbnail={project.thumbnail}
+                technologies={project.technologies}
+              />
+            </ProjectCardLink>
+          ))}
 
              </div>
               
-             <h2 className="text-2xl font-semibold text-stone-800 text-center mt-24 mb-8">WordPress</h2>
+             <h2 className="text-3xl font-semibold text-stone-200 text-center mt-24 mb-8 ">WordPress</h2>
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {dbProjects.filter(p => p.category === 'WordPress').map((p, idx) => (
-              <Link key={p._id || idx} to={`/projects/${p._id}`}>
-                <div data-aos="fade-up" className="card-light overflow-hidden group">
-                  <figure>
-                    <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
-                  </figure>
-                  <div className="p-4">
-                    <h2 className="card-title">
-                      {p.title}
-                    </h2>
-                    <p className="line-clamp-2">{p.description}</p>
-                  </div>
-                </div>
-              </Link>
+              <ProjectCardLink key={p._id || idx} to={`/projects/${p._id}`}>
+                <ProjectCard
+                  title={p.title}
+                  description={p.description}
+                  thumbnail={p.thumbnail}
+                />
+              </ProjectCardLink>
             ))}
 
-             <Link to={'https://neosupremetech.com/'}>
-              <div data-aos="fade-up" className="card-light overflow-hidden group">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img7}
-                    alt="Shoes" />
-                </figure>
-                <div className="p-4">
-                  <h2 className="card-title">
-                    Neo Superme Tech
-                  </h2>
-                  <p>A responsive Website using WordPress.</p>
-                  
-                </div>
-              </div>
-            </Link>
-
-            <Link to={'https://platinumamenity.com/'}>
-              <div data-aos="fade-up" className="card-light overflow-hidden group">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img8}
-                    alt="Shoes" />
-                </figure>
-                <div className="p-4">
-                  <h2 className="card-title">
-                  Platinum Amenity
-                  </h2>
-                  <p>A responsive Website using WordPress.</p>
-                  
-                </div>
-              </div>
-            </Link>
-
-            <Link to={'https://goldenresolution.com/'}>
-              <div data-aos="fade-up" className="card-light overflow-hidden group">
-                <figure>
-                  <img className="h-48 w-full"
-                    src={img9}
-                    alt="Shoes" />
-                </figure>
-                <div className="p-4">
-                  <h2 className="card-title">
-                  Golden Resolution
-                  </h2>
-                  <p>A responsive Website using WordPress.</p>
-                  
-                </div>
-              </div>
-            </Link>
-
-             <Link to={'https://deshiohandicraft.com/'}>
-                                    <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
-                                      <figure>
-                                        <img className="h-48 w-full"
-                                          src={img10}
-                                          alt="Shoes" />
-                                      </figure>
-                                      <div className="p-4">
-                                        <h2 className="card-title">
-                                        Deshio HandiCraft
-                                        </h2>
-                                        <p>A responsive Website using WordPress.</p>
-                                        
-                                      </div>
-                                    </div>
-                                  </Link>
+             {wordpressStaticProjects.map((project) => (
+              <ProjectCardLink key={project.to} to={project.to}>
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  thumbnail={project.thumbnail}
+                />
+              </ProjectCardLink>
+             ))}
 
             </div>
         </div>

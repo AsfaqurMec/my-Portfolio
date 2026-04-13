@@ -54,8 +54,20 @@ const Dashboard = () => {
     setLoading(true);
 
     try {
+      const technologies = formData.technologies
+        .split(',')
+        .map((tech) => tech.trim())
+        .filter(Boolean);
+
+      const features = formData.features
+        .split(/\r?\n/)
+        .map((feature) => feature.trim())
+        .filter(Boolean);
+
       const projectData = {
         ...formData,
+        technologies,
+        features,
         thumbnail: thumbnail,
         images: images
       };
@@ -82,22 +94,30 @@ const Dashboard = () => {
       setImages([]);
       fetchProjects();
     } catch (error) {
-      // console.error('Error saving project:', error);
-      alert('Error saving project. Please try again.');
+      const serverMessage = error?.response?.data?.message || error?.response?.data?.error;
+      alert(serverMessage || 'Error saving project. Please try again.');
     } finally {
       setLoading(false);
     }
   };
 
   const handleEdit = (project) => {
+    const normalizedTechnologies = Array.isArray(project.technologies)
+      ? project.technologies.join(', ')
+      : (project.technologies || '');
+
+    const normalizedFeatures = Array.isArray(project.features)
+      ? project.features.join('\n')
+      : (project.features || '');
+
     setEditingProject(project);
     setFormData({
       title: project.title,
       type: project.type,
       description: project.description,
-      features: project.features,
+      features: normalizedFeatures,
       link: project.link,
-      technologies: project.technologies.join(', '),
+      technologies: normalizedTechnologies,
       category: project.category,
       featured: project.featured
     });

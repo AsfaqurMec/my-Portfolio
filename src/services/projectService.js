@@ -1,5 +1,21 @@
 import api from './api';
 
+const appendFormDataFields = (formData, projectData) => {
+  Object.keys(projectData).forEach((key) => {
+    if (key === 'thumbnail' || key === 'images') return;
+
+    const value = projectData[key];
+    if (value === undefined || value === null) return;
+
+    if (Array.isArray(value) || typeof value === 'object') {
+      formData.append(key, JSON.stringify(value));
+      return;
+    }
+
+    formData.append(key, String(value));
+  });
+};
+
 export const projectService = {
   // Get all projects
   getAllProjects: async () => {
@@ -16,13 +32,7 @@ export const projectService = {
   // Create new project
   createProject: async (projectData) => {
     const formData = new FormData();
-    
-    // Append text fields
-    Object.keys(projectData).forEach(key => {
-      if (key !== 'thumbnail' && key !== 'images') {
-        formData.append(key, projectData[key]);
-      }
-    });
+    appendFormDataFields(formData, projectData);
 
     // Append files
     if (projectData.thumbnail) {
@@ -35,24 +45,14 @@ export const projectService = {
       });
     }
 
-    const response = await api.post('/projects', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    });
+    const response = await api.post('/projects', formData);
     return response.data;
   },
 
   // Update project
   updateProject: async (id, projectData) => {
     const formData = new FormData();
-    
-    // Append text fields
-    Object.keys(projectData).forEach(key => {
-      if (key !== 'thumbnail' && key !== 'images') {
-        formData.append(key, projectData[key]);
-      }
-    });
+    appendFormDataFields(formData, projectData);
 
     // Append files
     if (projectData.thumbnail) {
@@ -65,11 +65,7 @@ export const projectService = {
       });
     }
 
-    const response = await api.put(`/projects/${id}`, formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    });
+    const response = await api.put(`/projects/${id}`, formData);
     return response.data;
   },
 

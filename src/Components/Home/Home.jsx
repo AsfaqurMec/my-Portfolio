@@ -29,6 +29,7 @@ import launch from '../../../public/images/launch.png'
 import exponential from '../../../public/images/exponential.png'
 import CountUp from 'react-countup';
 // ..
+const MAX_TECHNOLOGIES_TO_SHOW = 4;
 
 import html from '../../../public/images/html.png'
 import css from '../../../public/images/css.png'
@@ -522,13 +523,16 @@ const Home = () => {
                 <div className="p-4">
                   <div className="flex items-start justify-between gap-2">
                     <h3 className="font-semibold text-slate-100">{p.title}</h3>
-                    <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">{p.type}</span>
+                    <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-500">{p.type}</span>
                   </div>
                   <p className="line-clamp-2 text-sm text-stone-500 mt-1">{p.description}</p>
                   <div className="flex flex-wrap gap-1 mt-3">
-                    {(p.technologies || []).slice(0,4).map((t,i) => (
+                    {(p.technologies || []).slice(0, MAX_TECHNOLOGIES_TO_SHOW).map((t,i) => (
                       <span key={i} className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">{t}</span>
                     ))}
+                    {(p.technologies || []).length > MAX_TECHNOLOGIES_TO_SHOW ? (
+                      <span className="text-xs px-2 py-0.5 rounded text-blue-700 font-medium bg-sky-800/10 ml-2">... more</span>
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -634,7 +638,7 @@ const Home = () => {
           
           
                        <Link to={'https://www.masuafoundation.org/'}>
-                        <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
+                        <div className="card-light overflow-hidden group">
                           <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
                               src={img6}
@@ -847,16 +851,16 @@ const Home = () => {
                   <img className="h-48 w-full" src={p.thumbnail} alt={p.title} />
                 </div>
                 <div className="p-4">
-                  <h2 className="card-title">
+                  <h2 className="font-semibold text-slate-100">
                     {p.title}
                   </h2>
-                  <p className="line-clamp-2">{p.description}</p>
+                  <p className="line-clamp-2 text-sm text-stone-500 mt-1">{p.description}</p>
                 </div>
               </div>
             </Link>
           ))}
 
-                      <Link to={'https://neosupremetech.com/'}>
+                      {/* <Link to={'https://neosupremetech.com/'}>
                         <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                           <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
@@ -871,9 +875,9 @@ const Home = () => {
                             
                           </div>
                         </div>
-                      </Link>
+                      </Link> */}
           
-                      <Link to={'https://platinumamenity.com/'}>
+                      {/* <Link to={'https://platinumamenity.com/'}>
                         <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                           <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
@@ -888,9 +892,9 @@ const Home = () => {
                             
                           </div>
                         </div>
-                      </Link>
+                      </Link> */}
           
-                      <Link to={'https://goldenresolution.com/'}>
+                      {/* <Link to={'https://goldenresolution.com/'}>
                         <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
                           <div className="aspect-video overflow-hidden">
                             <img className="h-48 w-full"
@@ -905,7 +909,7 @@ const Home = () => {
                             
                           </div>
                         </div>
-                      </Link>
+                      </Link> */}
 
                        <Link to={'https://deshiohandicraft.com/'}>
                         <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
@@ -915,10 +919,10 @@ const Home = () => {
                               alt="Shoes" />
                           </div>
                           <div className="p-4">
-                            <h2 className="card-title">
+                            <h2 className="font-semibold text-slate-100">
                             Deshio HandiCraft
                             </h2>
-                            <p>A responsive Website using WordPress.</p>
+                            <p className="line-clamp-2 text-sm text-stone-500 mt-1">A responsive Website using WordPress.</p>
                             
                           </div>
                         </div>
