@@ -24,7 +24,7 @@ const ProjectCard = ({ title, type, description, thumbnail, technologies = [] })
   <div data-aos="fade-up" className="card-light overflow-hidden group">
     <div className="aspect-video overflow-hidden">
       <img
-        className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
+        className="h-48 w-full object-auto group-hover:scale-105 transition-transform duration-300"
         src={thumbnail}
         alt={title}
       />
@@ -74,22 +74,22 @@ const ProjectCardLink = ({ to, children }) => {
 const Project = () => {
     const [dbProjects, setDbProjects] = useState([]);
     const mernStaticProjects = [
-      {
-        to: 'https://launchmybiz.net/',
-        title: 'Launch',
-        type: 'Business Formation',
-        description: 'LaunchMyBiz: Complete Business Formation Platform.',
-        thumbnail: launch,
-        technologies: ['React', 'Node Js', 'TypeScript', 'MongoDB'],
-      },
-      {
-        to: 'https://as-global.vercel.app/',
-        title: 'AS Global Styles',
-        type: 'Garment',
-        description: 'A garment Website using Next.js, React, MongoDB.',
-        thumbnail: as,
-        technologies: ['React', 'Next Js', 'MongoDB'],
-      },
+      // {
+      //   to: 'https://launchmybiz.net/',
+      //   title: 'Launch',
+      //   type: 'Business Formation',
+      //   description: 'LaunchMyBiz: Complete Business Formation Platform.',
+      //   thumbnail: launch,
+      //   technologies: ['React', 'Node Js', 'TypeScript', 'MongoDB'],
+      // },
+      // {
+      //   to: 'https://as-global.vercel.app/',
+      //   title: 'AS Global Styles',
+      //   type: 'Garment',
+      //   description: 'A garment Website using Next.js, React, MongoDB.',
+      //   thumbnail: as,
+      //   technologies: ['React', 'Next Js', 'MongoDB'],
+      // },
       {
         to: 'https://schedular-asl.vercel.app/',
         title: 'Smart Class Scheduler ASL',
@@ -236,7 +236,7 @@ const Project = () => {
 
           <h2 className="text-3xl font-semibold text-slate-100 text-center mt-16 mb-8">M E R N Stack!</h2>
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 mx-auto w-full">
-            {dbProjects.filter(p => p.category !== 'WordPress').map((p, idx) => (
+            {/* {dbProjects.filter(p => p.category !== 'WordPress').map((p, idx) => (
               <ProjectCardLink key={p._id || idx} to={`/projects/${p._id}`}>
                 <ProjectCard
                   title={p.title}
@@ -246,7 +246,21 @@ const Project = () => {
                   technologies={p.technologies || []}
                 />
               </ProjectCardLink>
-            ))}
+            ))} */}
+            {dbProjects
+  .filter((p) => p.category !== "WordPress")
+  .sort((a, b) => a.sort - b.sort) // ascending
+  .map((p, idx) => (
+    <ProjectCardLink key={p._id || idx} to={`/projects/${p._id}`}>
+      <ProjectCard
+        title={p.title}
+        type={p.type}
+        description={p.description}
+        thumbnail={p.thumbnail}
+        technologies={p.technologies || []}
+      />
+    </ProjectCardLink>
+  ))}
 
           {mernStaticProjects.map((project) => (
             <ProjectCardLink key={project.to} to={project.to}>

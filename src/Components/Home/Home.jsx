@@ -63,7 +63,90 @@ import ant from '../../../public/images/ant-design-logo-png_seeklogo-380495.png'
 import { projectService } from '../../services/projectService';
 import video from '../../../public/images/bb3.mp4'
 import { useRef } from "react";
+import { contactService } from "../../services/contactService";
+
+
 const Home = () => { 
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    description: "",
+  });
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  const validate = () => {
+    const nextErrors = {};
+
+    if (!formData.name.trim()) nextErrors.name = "Name is required.";
+    if (!formData.email.trim()) {
+      nextErrors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      nextErrors.email = "Please enter a valid email address.";
+    }
+
+    if (!formData.mobile.trim()) {
+      nextErrors.mobile = "Mobile number is required.";
+    } else if (!/^[0-9+()\-\s]{8,20}$/.test(formData.mobile)) {
+      nextErrors.mobile = "Please enter a valid mobile number.";
+    }
+
+    if (!formData.description.trim()) {
+      nextErrors.description = "Description is required.";
+    } else if (formData.description.trim().length < 50) {
+      nextErrors.description = "Description must be at least 50 characters.";
+    }
+
+    return nextErrors;
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitError("");
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) return;
+
+    try {
+      setIsSubmitting(true);
+      await contactService.sendMessage({
+        ...formData,
+        to: "asfaqurrahman055@gmail.com",
+      });
+
+      setIsModalOpen(false);
+      setFormData({
+        name: "",
+        email: "",
+        mobile: "",
+        description: "",
+      });
+      setShowSuccessModal(true);
+    } catch (error) {
+      setSubmitError(error?.message || "Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
 
   const [dbProjects, setDbProjects] = useState([]);
 
@@ -171,7 +254,7 @@ const Home = () => {
 <div className="absolute inset-0 bg-gradient-to-b from-slate-950/100 via-slate-950/85 to-slate-950/100"></div>
 
 {/* Content */}
-<div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+<div className="relative z-10 w-full px-4 sm:px-6 lg:px-6 py-24 lg:py-32">
 
   <div className="w-full flex flex-col lg:flex-row-reverse justify-center items-center gap-14 lg:gap-40">
 
@@ -200,7 +283,7 @@ const Home = () => {
       </p>
 
       <p className="mt-4 text-slate-300 text-lg max-w-lg">
-        I am a developer & coder. I do it because i like to do it. Hope you like my works.
+      Passionate about building modern, scalable, and user-friendly web applications. I create responsive front-end experiences and robust back-end solutions that bring ideas to life.
       </p>
 
       <a
@@ -274,30 +357,29 @@ const Home = () => {
               <img src="images/IMG_E4927@1x_1.jpg" alt="" className="w-24 h-24 rounded-full object-cover ring-2 ring-stone-200 shadow-xl" data-aos="fade-up" />
               <h2 className="text-xl font-semibold text-stone-200">Jr. Full Stack Developer</h2>
               <h3 data-aos="fade-up" data-aos-delay="80" className="text-lg font-heading font-semibold text-stone-300 pb-2 border-b-2 border-indigo-200 w-full">Skills</h3>
-              <p data-aos="fade-up" data-aos-delay="140" className="text-stone-400">Next.js | TypeScript | Redux | React | Node Js | <br /> Express js | Mongoose |  MongoDB |  JavaScript | BootStrap | Css | Html</p>
+              <p data-aos="fade-up" data-aos-delay="140" className="text-stone-400">Next.js | TypeScript | JavaScript | Redux | React | Node Js |  Express js | <br /> Mongoose |  MongoDB |  PostgreSQl | Prisma ORM | Docker | CI/CD</p>
               <div data-aos="fade-up" data-aos-delay="200" className="w-full">
                 <h3 className="text-lg font-heading font-semibold text-stone-300 pb-2 border-b-2 border-indigo-200 w-full mb-4">Education</h3>
-                <p className="text-stone-400">Mymensingh Engineering College,Mymensingh</p>
+                <p className="text-stone-400">Mymensingh Engineering College, Mymensingh</p>
                 <p className="text-stone-400">BSc in Computer Science and Engineering</p>
                 <p className="text-stone-400">November, 2022 - current</p>
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex flex-col items-start space-y-6">
-              <p data-aos="fade-up" className="text-xl font-semibold text-indigo-500">Jr. Full Stack Developer</p>
-              <p data-aos="fade-up" data-aos-delay="80" className="text-stone-400 leading-relaxed">I'm Asfaqur Rahman, a Jr. Full Stack developer
-                proficient in HTML, CSS, JavaScript, React, Node.js, Next.js, Express.js, MongoDB, Mongoose, TypeScript, Redux
-                and Tailwind CSS. With a passion for crafting
-                engaging digital experiences, I specialize in
-                translating designs into seamless, responsive
-                code. I'm dedicated to delivering top-notch
-                solutions. Collaborative by nature, I enjoy
-                working closely with designers and
-                stakeholders to bring ideas to life.</p>
+              <p data-aos="fade-up" className="text-xl font-semibold text-indigo-500"></p>
+              <p data-aos="fade-up" data-aos-delay="80" className="text-stone-400 leading-relaxed">Full Stack Developer with 2+ years of professional experience building scalable web applications 
+                using Next.js, React, TypeScript, Node.js, Express.js, MongoDB, PostgreSQL, and Prisma ORM. Experienced in developing enterprise-grade SaaS platforms, 
+                e-commerce systems, real-time applications, and content management systems. Skilled in REST API development, authentication & authorization, database 
+                design, performance optimization, and modern software architecture. Passionate about building secure, maintainable, and high-performance web applications. </p>
               <h3 className="text-lg font-heading font-semibold text-stone-400 pb-2 border-b-2 border-indigo-200 w-full" data-aos="fade-up" data-aos-delay="140">Experience</h3>
-              <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400"><a href="https://flexsoftr.com/our-team/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:text-indigo-700 font-semibold underline underline-offset-2">FlexSoftr</a> , Dhaka — MERN Stack Developer</p>
-              <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400">As a MERN Stack developer, I'll build UIs, manage state,
-                optimize performance, integrate APIs, collaborate with
-                teams, and ensure code quality.</p>
+              <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400"><a href="https://flexsoftr.com/our-team/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:text-indigo-700 font-semibold underline underline-offset-2">FlexSoftr</a> , Dhaka — Jr. Full Stack Developer</p>
+             <div className="space-y-1">
+              <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400">Built scalable web applications using Next.js App Router, React, TypeScript, and Node.js.</p>
+                <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400">Developed RESTful APIs and integrated third-party APIs.</p>
+                <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400">Implemented role-based access control (RBAC) and secure authentication systems.</p>
+                <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400">Optimized application performance, SEO, and database queries.</p>
+                <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400">Worked within Agile development workflows using Git and GitHub. </p>
+              </div>
               <p data-aos="fade-up" data-aos-delay="200" className="text-stone-400 text-sm">May 2024 - PRESENT</p>
               <div className="flex gap-4">
                 <a data-aos="fade-up" data-aos-delay="80" href="https://www.facebook.com/asfaqur.rahman.735?mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="text-indigo-500 hover:text-indigo-600 transition-colors"><FaFacebook className="h-8 w-8" /></a>
@@ -514,7 +596,7 @@ const Home = () => {
           <h2 data-aos="fade-up" data-aos-duration="600" className="text-center text-4xl font-semibold mb-5 mt-24 mb-16">M E R N STACK</h2>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {dbProjects.filter(p => p.category !== 'WordPress').map((p, idx) => (
+          {/* {dbProjects.filter(p => p.category !== 'WordPress').map((p, idx) => (
             <Link key={p._id || idx} to={`/projects/${p._id}`}>
               <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                 <div className="aspect-video overflow-hidden">
@@ -537,55 +619,60 @@ const Home = () => {
                 </div>
               </div>
             </Link>
-          ))}
-          
-          <Link to={'https://launchmybiz.net/'}>
-                        <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
-                          <div className="aspect-video overflow-hidden">
-                            <img className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
-                              src={launch}
-                              alt="Launch" />
-                          </div>
-                          <div className="p-4">
-                          <div className="flex items-start justify-between gap-2">
-                            <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">Launch</h3>
-                            <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Business Formation</span>
-                            </div>
-                            <p className="line-clamp-2 text-sm text-stone-500 mt-1">LaunchMyBiz: Complete Business Formation Platform.</p>
-                            <div className="card-actions justify-start mt-3">
-                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
-                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Node Js</div>
-                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">TypeScript</div>
-                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
+          ))} */}
 
-           <Link to={'https://as-global.vercel.app/'}>
-                        <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
-                          <div className="aspect-video overflow-hidden">
-                            <img className="h-48 w-full"
-                              src={as}
-                              alt="Shoes" />
-                          </div>
-                          <div className="p-4">
-                            <div className="flex items-start justify-between gap-2">
-                            <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">
-                              AS Global Styles
-                              
-                            </h3>
-                            <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">Garment</span>
-                            </div>
-                            <p className="line-clamp-2 text-sm text-stone-500 mt-1">A garment Website using Next.js, React, MongoDB.</p>
-                            <div className="card-actions justify-start mt-3">
-                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">React</div>
-                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">Next Js</div>
-                              <div className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">MongoDB</div>
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
+{dbProjects
+  .filter((p) => p.category !== "WordPress")
+  .sort((a, b) => a.sort - b.sort) // Ascending order
+  .map((p, idx) => (
+    <Link key={p._id || idx} to={`/projects/${p._id}`}>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        className="card-light overflow-hidden group"
+      >
+        <div className="aspect-video overflow-hidden">
+          <img
+            className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
+            src={p.thumbnail}
+            alt={p.title}
+          />
+        </div>
+        <div className="p-4">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="font-semibold text-slate-100">{p.title}</h3>
+            <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-500">
+              {p.type}
+            </span>
+          </div>
+          <p className="line-clamp-2 text-sm text-stone-500 mt-1">
+            {p.description}
+          </p>
+          <div className="flex flex-wrap gap-1 mt-3">
+            {(p.technologies || [])
+              .slice(0, MAX_TECHNOLOGIES_TO_SHOW)
+              .map((t, i) => (
+                <span
+                  key={i}
+                  className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600"
+                >
+                  {t}
+                </span>
+              ))}
+            {(p.technologies || []).length > MAX_TECHNOLOGIES_TO_SHOW ? (
+              <span className="text-xs px-2 py-0.5 rounded text-blue-700 font-medium bg-sky-800/10 ml-2">
+                ... more
+              </span>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    </Link>
+  ))}
+          
+         
+
+          
           
                       <Link to={'https://schedular-asl.vercel.app/'}>
                                     <div data-aos="fade-up" data-aos-delay="120" className="card-light overflow-hidden group">
@@ -981,13 +1068,166 @@ const Home = () => {
             </div>
           </div>
 
-          <p className="text-center mt-10 text-stone-500">Have a question? <Link to="/contact" className="inline-block mt-2 px-5 py-2.5 bg-indigo-900 hover:bg-sky-600 text-white font-medium rounded-xl transition-colors ml-5">Click here</Link></p>
+          <p className="text-center mt-10 text-stone-500">Have a question? <button type="button" onClick={() => { setSubmitError(""); setIsModalOpen(true);}}className="inline-block mt-2 px-5 py-2.5 bg-indigo-900 hover:bg-sky-600 text-white font-medium rounded-xl transition-colors ml-5">Contact Me</button></p>
         </div>
       </section>
 
       <section>
 
       </section>
+
+      
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div
+            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+            onClick={() => setIsModalOpen(false)}
+          />
+
+          <div className="relative w-full max-w-2xl rounded-2xl border border-indigo-200/20 bg-slate-900 shadow-2xl shadow-black/40">
+            <div className="flex items-center justify-between border-b border-indigo-200/15 px-6 py-4">
+              <h4 className="text-xl font-semibold text-slate-100">Send a Message</h4>
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(false)}
+                className="rounded-lg px-3 py-1.5 text-stone-300 hover:text-white hover:bg-white/10 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+
+            <form onSubmit={handleSubmit} className="p-6 space-y-5">
+              {submitError && (
+                <div className="rounded-xl border border-rose-500/40 bg-rose-950/40 text-rose-200 text-sm px-4 py-3">
+                  {submitError}
+                </div>
+              )}
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-stone-300 mb-1.5">
+                  Full Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Enter your full name"
+                  className="w-full rounded-xl border border-white/15 bg-slate-950 text-stone-200 px-4 py-3 outline-none focus:border-indigo-400"
+                />
+                {errors.name && <p className="text-rose-400 text-sm mt-1">{errors.name}</p>}
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-stone-300 mb-1.5">
+                    Email Address
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="you@example.com"
+                    className="w-full rounded-xl border border-white/15 bg-slate-950 text-stone-200 px-4 py-3 outline-none focus:border-indigo-400"
+                  />
+                  {errors.email && <p className="text-rose-400 text-sm mt-1">{errors.email}</p>}
+                </div>
+
+                <div>
+                  <label htmlFor="mobile" className="block text-sm font-medium text-stone-300 mb-1.5">
+                    Mobile Number
+                  </label>
+                  <input
+                    id="mobile"
+                    name="mobile"
+                    type="tel"
+                    value={formData.mobile}
+                    onChange={handleChange}
+                    placeholder="+8801XXXXXXXXX"
+                    className="w-full rounded-xl border border-white/15 bg-slate-950 text-stone-200 px-4 py-3 outline-none focus:border-indigo-400"
+                  />
+                  {errors.mobile && <p className="text-rose-400 text-sm mt-1">{errors.mobile}</p>}
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="description" className="block text-sm font-medium text-stone-300 mb-1.5">
+                  Description (Minimum 50 characters)
+                </label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="5"
+                  value={formData.description}
+                  onChange={handleChange}
+                  placeholder="Please describe your project, goals, and any key requirements..."
+                  className="w-full rounded-xl border border-white/15 bg-slate-950 text-stone-200 px-4 py-3 outline-none focus:border-indigo-400 resize-none"
+                />
+                <div className="mt-1 flex justify-between text-xs">
+                  <span className="text-stone-500">Be as specific as possible.</span>
+                  <span className={`${formData.description.trim().length >= 50 ? "text-emerald-400" : "text-stone-500"}`}>
+                    {formData.description.trim().length}/50
+                  </span>
+                </div>
+                {errors.description && <p className="text-rose-400 text-sm mt-1">{errors.description}</p>}
+              </div>
+
+              <div className="flex items-center justify-end gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(false)}
+                  disabled={isSubmitting}
+                  className="px-5 py-2.5 rounded-xl border border-white/15 text-stone-200 hover:bg-white/10 transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-colors"
+                >
+                  {isSubmitting ? "Sending..." : "Submit"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {showSuccessModal && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+          <div
+            className="absolute inset-0 bg-slate-950/85 backdrop-blur-sm"
+            onClick={() => setShowSuccessModal(false)}
+            aria-hidden="true"
+          />
+          <div
+            className="relative w-full max-w-md rounded-2xl border border-emerald-500/25 bg-slate-900 shadow-2xl shadow-black/50 p-8 text-center"
+            role="dialog"
+            aria-labelledby="success-title"
+            aria-modal="true"
+          >
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-400 text-2xl font-bold">
+              ✓
+            </div>
+            <h3 id="success-title" className="text-xl font-semibold text-slate-100">
+              Message submitted
+            </h3>
+            <p className="mt-3 text-stone-400 text-sm leading-relaxed">
+              Thank you for reaching out. Your message was received successfully. I will get back to you as soon as possible.
+            </p>
+            <button
+              type="button"
+              onClick={() => setShowSuccessModal(false)}
+              className="mt-6 w-full rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
     </>
   );
