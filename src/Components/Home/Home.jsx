@@ -288,7 +288,7 @@ const Home = () => {
       </p>
 
       <a
-        href="https://drive.google.com/file/d/1E22L7jY3SJlENAqf63800QGGSjjHg_iF/view?usp=sharing"
+        href="https://drive.google.com/file/d/1g_CYH_GjmmTVHI0KZP5i7aua4YTRl15q/view?usp=sharing"
         target="_blank"
         rel="noreferrer"
         className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-xl font-medium transition-colors bg-violet-500/20 hover:bg-violet-500/30 text-violet-100 border border-white/10"
