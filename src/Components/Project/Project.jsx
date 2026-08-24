@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { projectService } from '../../services/projectService';
+import { cleanArray, sortProjects } from '../../utils/cleanTags';
 import img from '../../assets/Screenshot 2024-08-15 232322.png'
 import img1 from '../../../public/images/Screenshot 2024-08-31 143207.png'
 import img2 from '../../../public/images/Screenshot 2024-07-16 122933.png'
@@ -20,42 +21,46 @@ import launch from '../../../public/images/launch.png'
 
 const MAX_TECHNOLOGIES_TO_SHOW = 4;
 
-const ProjectCard = ({ title, type, description, thumbnail, technologies = [] }) => (
-  <div data-aos="fade-up" className="card-light overflow-hidden group">
-    <div className="aspect-video overflow-hidden">
-      <img
-        className="h-48 w-full object-auto group-hover:scale-105 transition-transform duration-300"
-        src={thumbnail}
-        alt={title}
-      />
-    </div>
-    <div className="p-4">
-      <div className="flex items-start justify-between gap-2">
-        <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">{title}</h3>
-        {type ? (
-          <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">
-            {type}
-          </span>
-        ) : null}
+const ProjectCard = ({ title, type, description, thumbnail, technologies = [] }) => {
+  const cleanedTechs = cleanArray(technologies);
+
+  return (
+    <div data-aos="fade-up" className="card-light overflow-hidden group">
+      <div className="aspect-video overflow-hidden">
+        <img
+          className="h-48 w-full object-auto group-hover:scale-105 transition-transform duration-300"
+          src={thumbnail}
+          alt={title}
+        />
       </div>
-      <p className="line-clamp-2 text-sm text-stone-500 mt-1">{description}</p>
-      {technologies.length > 0 ? (
-        <div className="flex flex-wrap gap-1 mt-3">
-          {technologies.slice(0, MAX_TECHNOLOGIES_TO_SHOW).map((tech, index) => (
-            <span key={`${tech}-${index}`} className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">
-              {tech}
-            </span>
-          ))}
-          {technologies.length > MAX_TECHNOLOGIES_TO_SHOW ? (
-            <span className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">
-              ... more
+      <div className="p-4">
+        <div className="flex items-start justify-between gap-2">
+          <h3 className="font-semibold text-slate-100 flex items-center gap-2 flex-wrap">{title}</h3>
+          {type ? (
+            <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-600">
+              {type}
             </span>
           ) : null}
         </div>
-      ) : null}
+        <p className="line-clamp-2 text-sm text-stone-500 mt-1">{description}</p>
+        {cleanedTechs.length > 0 ? (
+          <div className="flex flex-wrap gap-1 mt-3">
+            {cleanedTechs.slice(0, MAX_TECHNOLOGIES_TO_SHOW).map((tech, index) => (
+              <span key={`${tech}-${index}`} className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">
+                {tech}
+              </span>
+            ))}
+            {cleanedTechs.length > MAX_TECHNOLOGIES_TO_SHOW ? (
+              <span className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600">
+                ... more
+              </span>
+            ) : null}
+          </div>
+        ) : null}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const ProjectCardLink = ({ to, children }) => {
   const isExternal = /^https?:\/\//.test(to);
@@ -247,20 +252,18 @@ const Project = () => {
                 />
               </ProjectCardLink>
             ))} */}
-            {dbProjects
-  .filter((p) => p.category !== "WordPress")
-  .sort((a, b) => a.sort - b.sort) // ascending
-  .map((p, idx) => (
-    <ProjectCardLink key={p._id || idx} to={`/projects/${p._id}`}>
-      <ProjectCard
-        title={p.title}
-        type={p.type}
-        description={p.description}
-        thumbnail={p.thumbnail}
-        technologies={p.technologies || []}
-      />
-    </ProjectCardLink>
-  ))}
+            {sortProjects(dbProjects.filter((p) => p.category !== "WordPress"))
+              .map((p, idx) => (
+                <ProjectCardLink key={p._id || idx} to={`/projects/${p._id}`}>
+                  <ProjectCard
+                    title={p.title}
+                    type={p.type}
+                    description={p.description}
+                    thumbnail={p.thumbnail}
+                    technologies={p.technologies || []}
+                  />
+                </ProjectCardLink>
+              ))}
 
           {mernStaticProjects.map((project) => (
             <ProjectCardLink key={project.to} to={project.to}>
@@ -278,12 +281,14 @@ const Project = () => {
               
              <h2 className="text-3xl font-semibold text-stone-200 text-center mt-24 mb-8 ">WordPress</h2>
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dbProjects.filter(p => p.category === 'WordPress').map((p, idx) => (
+            {sortProjects(dbProjects.filter(p => p.category === 'WordPress')).map((p, idx) => (
               <ProjectCardLink key={p._id || idx} to={`/projects/${p._id}`}>
                 <ProjectCard
                   title={p.title}
+                  type={p.type}
                   description={p.description}
                   thumbnail={p.thumbnail}
+                  technologies={p.technologies || []}
                 />
               </ProjectCardLink>
             ))}

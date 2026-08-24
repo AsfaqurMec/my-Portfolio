@@ -61,6 +61,7 @@ import fire from '../../../public/images/firebase-icon-logo-png_seeklogo-615938-
 import daisy from '../../../public/images/daisyui-logo-png_seeklogo-554509-removebg-preview.png';
 import ant from '../../../public/images/ant-design-logo-png_seeklogo-380495.png'
 import { projectService } from '../../services/projectService';
+import { cleanArray, sortProjects } from '../../utils/cleanTags';
 import video from '../../../public/images/bb3.mp4'
 import { useRef } from "react";
 import { contactService } from "../../services/contactService";
@@ -234,7 +235,7 @@ const Home = () => {
     <>
       <div>
 
-      <section className="relative min-h-[92vh] flex items-center justify-center  overflow-hidden px-5 lg:px-0">
+      <section className="relative min-h-[92vh] flex items-center justify-center  overflow-hidden px-1 lg:px-0">
 
 {/* Background Video */}
 <video
@@ -349,7 +350,7 @@ const Home = () => {
 
 
 
-      <section className="pt-16 lg:pt-20 bg-slate-950/10 px-5 lg:px-0">
+      <section className="pt-16 lg:pt-20 bg-slate-950/10 px-1 lg:px-0">
         <div className="section-container">
           <h2 className="section-title text-center mb-12 pb-6 border-b-2 border-indigo-200" data-aos="fade-up">About Me</h2>
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
@@ -391,11 +392,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 px-5 lg:px-0">
+      <section className="py-16 lg:py-24 px-1 lg:px-0">
         <div className="section-container">
           <h2 data-aos="fade-up" data-aos-duration="600" className="text-3xl sm:text-4xl font-bold text-slate-100 text-center pb-4 border-b-2 border-indigo-200 mb-12">My Skills</h2>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <div className="card-light flex flex-col space-y-6 p-6">
+            <div className="card-light flex flex-col space-y-6 py-6 px-2 lg:px-6">
                 <h2 data-aos="fade-up" data-aos-duration="600" className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center">Front End</h2>
                 <div className="flex flex-wrap justify-center gap-4">
                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
@@ -449,7 +450,7 @@ const Home = () => {
 
             </div>
 
-            <div className="card-light flex flex-col space-y-6 p-6">
+            <div className="card-light flex flex-col space-y-6 py-6 px-2 lg:px-6">
               <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">Back End</h2>
                 <div className="flex flex-wrap justify-center gap-4">
                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
@@ -475,7 +476,7 @@ const Home = () => {
                  </div>
             </div>
 
-            <div className="card-light flex flex-col space-y-6 p-6">
+            <div className="card-light flex flex-col space-y-6 py-6 px-2 lg:px-6">
               <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">DataBase</h2>
                 <div className="flex flex-wrap justify-center gap-4">
                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
@@ -501,7 +502,7 @@ const Home = () => {
                  </div>
             </div>
 
-            <div className="card-light flex flex-col space-y-6 p-6">
+            <div className="card-light flex flex-col space-y-6 py-6 px-2 lg:px-6">
               <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">Tools</h2>
                 <div className="flex flex-wrap justify-center gap-4">
                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
@@ -529,7 +530,7 @@ const Home = () => {
 
             </div>
 
-            <div className="card-light flex flex-col space-y-6 p-6">
+            <div className="card-light flex flex-col space-y-6 py-6 px-2 lg:px-6">
               <h2 className="text-xl font-bold text-indigo-600 pb-2 border-b border-stone-200 text-center" data-aos="fade-up" data-aos-duration="600">Languages</h2>
                 <div className="flex flex-wrap justify-center gap-4">
                   <div data-aos="fade-up" data-aos-duration="600" className="flex flex-col items-center justify-center p-3 bg-stone-100 rounded-xl w-24 border border-stone-200 hover:border-indigo-300 transition-colors">
@@ -569,7 +570,7 @@ const Home = () => {
       </section>
 
 
-      <section className="py-16 lg:py-24 px-5 lg:px-0">
+      <section className="py-16 lg:py-24 px-0 lg:px-0">
         <div className="section-container">
           <h2 data-aos="fade-up" data-aos-duration="600" className="text-3xl sm:text-4xl font-bold text-slate-100 text-center pb-4 border-b-2 border-indigo-200">Projects</h2>
           <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" className="text-center mt-4 text-stone-500">Below are the projects on <span className="text-indigo-600 font-medium">MERN Stack!</span> & <span className="text-stone-600 font-medium">WordPress</span></p>
@@ -621,54 +622,59 @@ const Home = () => {
             </Link>
           ))} */}
 
-{dbProjects
-  .filter((p) => p.category !== "WordPress")
-  .sort((a, b) => a.sort - b.sort) // Ascending order
-  .map((p, idx) => (
-    <Link key={p._id || idx} to={`/projects/${p._id}`}>
-      <div
-        data-aos="fade-up"
-        data-aos-duration="600"
-        className="card-light overflow-hidden group"
-      >
-        <div className="aspect-video overflow-hidden">
-          <img
-            className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
-            src={p.thumbnail}
-            alt={p.title}
-          />
-        </div>
-        <div className="p-4">
-          <div className="flex items-start justify-between gap-2">
-            <h3 className="font-semibold text-slate-100">{p.title}</h3>
-            <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-500">
-              {p.type}
-            </span>
+{sortProjects(dbProjects.filter((p) => p.category !== "WordPress"))
+  .map((p, idx) => {
+    const cleanedTechs = cleanArray(p.technologies);
+    return (
+      <Link key={p._id || idx} to={`/projects/${p._id}`}>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          className="card-light overflow-hidden group"
+        >
+          <div className="aspect-video overflow-hidden">
+            <img
+              className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              src={p.thumbnail}
+              alt={p.title}
+            />
           </div>
-          <p className="line-clamp-2 text-sm text-stone-500 mt-1">
-            {p.description}
-          </p>
-          <div className="flex flex-wrap gap-1 mt-3">
-            {(p.technologies || [])
-              .slice(0, MAX_TECHNOLOGIES_TO_SHOW)
-              .map((t, i) => (
-                <span
-                  key={i}
-                  className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600"
-                >
-                  {t}
+          <div className="p-4">
+            <div className="flex items-start justify-between gap-2">
+              <h3 className="font-semibold text-slate-100">{p.title}</h3>
+              {p.type && (
+                <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded bg-sky-500/20 text-indigo-500">
+                  {p.type}
                 </span>
-              ))}
-            {(p.technologies || []).length > MAX_TECHNOLOGIES_TO_SHOW ? (
-              <span className="text-xs px-2 py-0.5 rounded text-blue-700 font-medium bg-sky-800/10 ml-2">
-                ... more
-              </span>
-            ) : null}
+              )}
+            </div>
+            <p className="line-clamp-2 text-sm text-stone-500 mt-1">
+              {p.description}
+            </p>
+            {cleanedTechs.length > 0 && (
+              <div className="flex flex-wrap gap-1 mt-3">
+                {cleanedTechs
+                  .slice(0, MAX_TECHNOLOGIES_TO_SHOW)
+                  .map((t, i) => (
+                    <span
+                      key={i}
+                      className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 text-stone-600"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                {cleanedTechs.length > MAX_TECHNOLOGIES_TO_SHOW ? (
+                  <span className="text-xs px-2 py-0.5 rounded text-blue-700 font-medium bg-sky-800/10 ml-2">
+                    ... more
+                  </span>
+                ) : null}
+              </div>
+            )}
           </div>
         </div>
-      </div>
-    </Link>
-  ))}
+      </Link>
+    );
+  })}
           
          
 
@@ -931,7 +937,7 @@ const Home = () => {
                        <h2 className="text-center text-5xl font-semibold mb-5 mt-24">WordPress</h2>
                        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 justify-center mt-20 mx-auto w-full">
                         
-                        {dbProjects.filter(p => p.category == 'WordPress').map((p, idx) => (
+                        {sortProjects(dbProjects.filter(p => p.category === 'WordPress')).map((p, idx) => (
             <Link key={p._id || idx} to={`/projects/${p._id}`}>
               <div data-aos="fade-up" data-aos-duration="600" className="card-light overflow-hidden group">
                 <div className="aspect-video overflow-hidden">

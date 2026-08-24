@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaExternalLinkAlt, FaLightbulb } from 'react-icons/fa';
 import { projectService } from '../../../services/projectService';
+import { cleanArray } from '../../../utils/cleanTags';
 import ProjectImageSlider from './ProjectImageSlider';
 
 const buildSlideImages = (project) => {
@@ -12,21 +13,6 @@ const buildSlideImages = (project) => {
     if (img && !urls.includes(img)) urls.push(img);
   }
   return urls;
-};
-
-/** Drops blank lines / empty entries so list markers do not render alone. */
-const normalizeFeatures = (features) => {
-  if (features == null || features === '') return [];
-  if (Array.isArray(features)) {
-    return features.map((f) => String(f).trim()).filter((f) => f.length > 0);
-  }
-  if (typeof features === 'string') {
-    return features
-      .split(/\r?\n/)
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0);
-  }
-  return [];
 };
 
 const ProjectDetail = () => {
@@ -50,9 +36,13 @@ const ProjectDetail = () => {
 
   const slideImages = useMemo(() => buildSlideImages(project), [project]);
 
-  const displayFeatures = useMemo(() => normalizeFeatures(project?.features), [project?.features]);
+  const displayFeatures = useMemo(() => cleanArray(project?.features), [project?.features]);
+  const displayChallenges = useMemo(() => cleanArray(project?.challenges), [project?.challenges]);
+  const displayTechnologies = useMemo(() => cleanArray(project?.technologies), [project?.technologies]);
+
   const hasFeatures = displayFeatures.length > 0;
-  const hasTechnologies = (project?.technologies || []).length > 0;
+  const hasChallenges = displayChallenges.length > 0;
+  const hasTechnologies = displayTechnologies.length > 0;
 
   if (loading) {
     return (
@@ -166,15 +156,34 @@ const ProjectDetail = () => {
 
             {hasFeatures && (
               <section className="card-light p-6 sm:p-8">
-                <h2 className="font-heading text-xl sm:text-2xl font-semibold text-slate-50 mb-5">Features</h2>
+                <h2 className="font-heading text-xl sm:text-2xl font-semibold text-slate-50 mb-5">Key Features</h2>
                 <ul className="space-y-3">
-                  {displayFeatures.map((t, i) => (
+                  {displayFeatures.map((feat, i) => (
                     <li key={i} className="flex gap-3 text-slate-300">
                       <span
                         className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400 shadow-[0_0_8px_rgba(167,139,250,0.6)]"
                         aria-hidden
                       />
-                      <span className="leading-relaxed">{t}</span>
+                      <span className="leading-relaxed">{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {hasChallenges && (
+              <section className="card-light p-6 sm:p-8 border border-amber-500/20 bg-gradient-to-br from-stone-900/90 to-stone-900/50">
+                <h2 className="font-heading text-xl sm:text-2xl font-semibold text-slate-50 mb-5 flex items-center gap-2">
+                  <FaLightbulb className="text-amber-400 text-lg" /> Challenges & Learn
+                </h2>
+                <ul className="space-y-3">
+                  {displayChallenges.map((ch, i) => (
+                    <li key={i} className="flex gap-3 text-slate-300">
+                      <span
+                        className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.6)]"
+                        aria-hidden
+                      />
+                      <span className="leading-relaxed">{ch}</span>
                     </li>
                   ))}
                 </ul>
@@ -187,7 +196,7 @@ const ProjectDetail = () => {
               <div className="card-light p-6">
                 <h3 className="font-heading text-lg font-semibold text-slate-50 mb-4">Tech stack</h3>
                 <div className="flex flex-wrap gap-2">
-                  {(project.technologies || []).map((t, i) => (
+                  {displayTechnologies.map((t, i) => (
                     <span
                       key={i}
                       className="px-3 py-1.5 rounded-lg text-sm bg-violet-500/15 text-violet-200 border border-violet-400/20"
@@ -220,3 +229,4 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
+

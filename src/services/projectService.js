@@ -74,5 +74,12 @@ export const projectService = {
     const response = await api.delete(`/projects/${id}`);
     return response.data;
   },
+
+  // Reorder projects
+  reorderProjects: async (projectIds) => {
+    const response = await api.put('/projects/reorder', { projectIds });
+    return response.data;
+  },
 };
+
 
